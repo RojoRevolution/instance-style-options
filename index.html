@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/ico" href="img/favicon.ico" sizes="16x16">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <!-- Line awesome Icons -->
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <title>Bevy Styling options</title>
+</head>
+
+<body class="clip">
+  <div class="login">
+    <div class="login-form">
+      <form>
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Enter" class="btn primary">
+      </form>
+      <div class="errors"></div>
+    </div>
+  </div>
+  <div class="editor">
+    <div class="main">
+      <button class="btn switch-page"><a href="virtual/bvc">View Bevy Virtual</a></button>
+      <button class="show-edditable-sections" title="Show editable sections (Where to click)">
+        <i class="las la-question-circle"></i>
+      </button>
+      <div class="top-bar">
+        <!-- <button class="toggle-global-settings" data-editable="yes" data-panel="global">
+            <i class="las la-tv"></i>
+            <span class="label">View Bevy Virtual</span>
+          </button> -->
+        <button class="toggle-global-settings" data-editable="yes" data-panel="global">
+          <i class="las la-globe-americas"></i>
+          <span class="label">Global settings</span>
+        </button>
+        <button class="home-sections" data-editable="yes" data-panel="home-sections">
+          <i class="las la-th-list"></i>
+          <span class="label">Home sections</span>
+        </button>
+      </div>
+      <ul class="page-tabs">
+        <li>
+          <button class="selected" data-page="home">Home</button>
+        </li>
+        <li>
+          <button data-page="chapter">Chapter</button>
+        </li>
+        <li>
+          <button data-page="events">Event</button>
+        </li>
+      </ul>
+      <div class="page-container" data-page="home">
+        <div class="page" data-control-font="body" data-control-theme="page">
+          <header class="main-nav" data-editable="yes" data-panel="header" data-control-theme="header"
+            data-control-border="header">
+            <div class="container">
+              <a href="#" class="logo">
+                <img src="img/logo-dark.svg" alt="Company Name" class="light">
+                <img src="img/logo-light.svg" alt="Company Name" class="dark">
+              </a>
+              <nav>
+                <ul>
+                  <li class="nav-item" data-control-display="toggle-nav"><a href="#" data-control-text-style="nav"
+                      data-editable-text="yes">Chapters</a></li>
+                  <li class="nav-item" data-control-display="toggle-nav"><a href="#" data-control-text-style="nav"
+                      data-editable-text="yes">Events</a></li>
+                  <li class="search" data-control-display="toggle-search"><i class="las la-search"></i></li>
+                </ul>
+                <a href="#" class="avatar">
+                  <img src="img/avatar.png" alt="Name">
+                </a>
+              </nav>
+            </div>
+          </header>
+          <div class="global-announcement hide" data-editable="yes" data-panel="global-announcement"
+            data-control-theme="global-announcement" data-control-display="global-announcement">
+            <div class="container" data-editable-text="yes">
+              <h3>Global announcement</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+          </div>
+          <div class="marketing-promo hide" data-control-display="marketing-promo">
+            <div class="container">
+              <h3 data-editable-text="yes">Marketing promo homepage</h3>
+            </div>
+          </div>
+          <div class="slider" data-editable="yes" data-panel="slider" data-control-theme="slider"
+            data-control-background="slider" data-control-height="slider" data-control-text-style="slider"
+            data-control-display="slider">
+            <h2 data-control-font="headings" data-control-display="slider-title" data-editable-text="yes">Slider title
+            </h2>
+            <h3 data-control-font="headings" data-control-display="slider-subtitle" data-editable-text="yes">Slider
+              subtitle</h3>
+            <ul class="slider-controls">
+              <li><i class="las la-pause"></i></li>
+              <li><i class="las la-angle-left"></i></li>
+              <li><i class="las la-angle-right"></i></li>
+            </ul>
+          </div>
+          <div class="join-bar" data-editable="yes" data-panel="join-bar" data-control-theme="join-bar"
+            data-control-text-style="join-bar">
+            <h3 class="hide" data-control-display="join-title" data-editable-text="yes">Join us bar title</h3>
+            <h4 class="hide" data-control-display="join-subtitle" data-editable-text="yes">Join us bar subtitle</h4>
+            <button class="btn primary" data-editable="yes" data-panel="buttons" data-editable-text="yes"
+              data-control-text-style="button" data-control-theme="button" data-control-radius="button"
+              data-control-border="button">Join us</button>
+          </div>
+          <div class="intro-text" data-editable="yes" data-panel="intro" data-control-theme="intro-text"
+            data-control-display="intro-text">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="intro-title"
+                data-editable-text="yes">Welcome</h2>
+              <p data-control-display="intro-text" data-editable-text="yes">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed quis orci nec lacus venenatis gravida ac sit amet est. Vivamus nec nisi vel lorem
+                sollicitudin scelerisque. Sed nec porttitor leo, et tincidunt odio. Nunc imperdiet magna ligula, sit
+                amet ultrices orci vulputate vehicula. Mauris vitae massa arcu.</p>
+            </div>
+          </div>
+          <div class="upcoming-events" data-editable="yes" data-panel="upcoming-events"
+            data-control-theme="upcoming-events" data-control-display="upcoming-events">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="upcoming-events-title"
+                data-editable-text="yes">Upcoming events</h2>
+              <div class="search-field">
+                <label>Search for a city to find events</label>
+                <i class="las la-search"></i>
+              </div>
+              <dl class="tags hide" data-control-display="upcoming-events-tags">
+                <dt>Filter by:</dt>
+                <dd>Community</dd>
+                <dd>Webinar</dd>
+                <dd>Marketing</dd>
+                <dd>Ads/Traffic Analytics</dd>
+                <dd>Android</dd>
+              </dl>
+              <div class="events-list" data-editable="yes" data-panel="upcoming-events-cards"
+                data-control-theme="upcoming-event-card" data-control-border="upcoming-event-card"
+                data-control-theme="upcoming-event-card" data-control-radius="upcoming-event-card"
+                data-control-shadow="upcoming-event-card" data-control-shape="upcoming-event-card"
+                data-control-text-style="upcoming-event-card" data-dynamic-content="yes">
+                <div class="events-nav">
+                  <i class="las la-angle-left"></i>
+                  <i class="las la-angle-right"></i>
+                </div>
+                <div class="event-card">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="Event title">
+                  </div>
+                  <h3>Event title</h3>
+                  <div class="event-data">
+                    <div class="chapter"><i class="las la-users"></i> Central city</div>
+                    <div class="date"><i class="las la-calendar"></i> Mar 29</div>
+                  </div>
+                </div>
+                <div class="event-card">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="Event title">
+                  </div>
+                  <h3>Event title</h3>
+                  <div class="event-data">
+                    <div class="chapter"><i class="las la-users"></i> Central city</div>
+                    <div class="date"><i class="las la-calendar"></i> Mar 29</div>
+                  </div>
+                </div>
+                <div class="event-card">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="Event title">
+                  </div>
+                  <h3>Event title</h3>
+                  <div class="event-data">
+                    <div class="chapter"><i class="las la-users"></i> Central city</div>
+                    <div class="date"><i class="las la-calendar"></i> Mar 29</div>
+                  </div>
+                </div>
+                <div class="event-card">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="Event title">
+                  </div>
+                  <h3>Event title</h3>
+                  <div class="event-data">
+                    <div class="chapter"><i class="las la-users"></i> Central city</div>
+                    <div class="date"><i class="las la-calendar"></i> Mar 29</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-video hide" data-control-display="home-video">
+            <div class="container">
+              <div class="yt-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rOUQt9rW93E?controls=0"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="map-section" data-editable="yes" data-panel="map" data-control-theme="map"
+            data-control-display="map">
+            <div class="map">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <img src="img/map.svg" alt="">
+            </div>
+            <h2 class="general-h2 hide" data-editable="yes" data-control-display="map-title" data-panel="headings"
+              data-control-text-style="h2" data-control-theme="h2" data-control-font="headings"
+              data-control-display="upcoming-events-title" data-editable-text="yes">Find communities</h2>
+            <div class="chapter-search" data-control-shadow="map-search" data-control-border="map-search">
+              <label>Search for a city, country, or region</label>
+              <i class="las la-search"></i>
+            </div>
+          </div>
+          <div class="explore-by-region" data-editable="yes" data-panel="regions" data-control-theme="regions"
+            data-control-display="explore-by-regions">
+            <div class="container">
+              <div class="regions-panel" data-dynamic-content="yes">
+                <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                  data-control-theme="h2" data-control-font="headings">Explore by region</h2>
+                <ul class="regions-tabs" data-control-border="region-tabs">
+                  <li class="selected">North America</li>
+                  <li>South America</li>
+                </ul>
+                <div class="regions-list">
+                  <div class="region-item">
+                    <h4>Central City, MI</h4>
+                    <strong>United States <span></span></strong>
+                  </div>
+                  <div class="region-item">
+                    <h4>Central City, MI</h4>
+                    <strong>United States <span></span></strong>
+                  </div>
+                  <div class="region-item">
+                    <h4>Central City, MI</h4>
+                    <strong>United States <span></span></strong>
+                  </div>
+                  <div class="region-item">
+                    <h4>Central City, MI</h4>
+                    <strong>United States <span></span></strong>
+                  </div>
+                  <div class="region-item">
+                    <h4>Central City, MI</h4>
+                    <strong>United States <span></span></strong>
+                  </div>
+                  <div class="region-item">
+                    <h4>Central City, MI</h4>
+                    <strong>United States <span></span></strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog" data-editable="yes" data-panel="blog" data-control-display="blog">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="blog-title"
+                data-editable-text="yes">Blog posts from the community</h2>
+              <div class="posts-list" data-editable-text="yes">
+                <div class="blog-post card" data-editable="yes" data-panel="cards" data-control-shadow="cards"
+                  data-control-border="cards" data-control-text-style="cards" data-control-theme="cards"
+                  data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="">
+                  </div>
+                  <div class="post-info">
+                    <h3>ASK to Be Hired: Three Ways to Prepare for Your Next Job Interview</h3>
+                    <div class="author">
+                      <span class="avatar">
+                        <img src="img/avatar.png" alt="">
+                      </span>
+                      <strong>Barry Allen • 1 month ago</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-post card" data-editable="yes" data-panel="cards" data-control-shadow="cards"
+                  data-control-border="cards" data-control-text-style="cards" data-control-theme="cards"
+                  data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="">
+                  </div>
+                  <div class="post-info">
+                    <h3>ASK to Be Hired: Three Ways to Prepare for Your Next Job Interview</h3>
+                    <div class="author">
+                      <span class="avatar">
+                        <img src="img/avatar.png" alt="">
+                      </span>
+                      <strong>Barry Allen • 1 month ago</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-post card" data-editable="yes" data-panel="cards" data-control-shadow="cards"
+                  data-control-border="cards" data-control-text-style="cards" data-control-theme="cards"
+                  data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="">
+                  </div>
+                  <div class="post-info">
+                    <h3>ASK to Be Hired: Three Ways to Prepare for Your Next Job Interview</h3>
+                    <div class="author">
+                      <span class="avatar">
+                        <img src="img/avatar.png" alt="">
+                      </span>
+                      <strong>Barry Allen • 1 month ago</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn primary" data-editable="yes" data-panel="buttons" data-editable-text="yes"
+                data-control-text-style="button" data-control-theme="button" data-control-radius="button"
+                data-control-border="button">Keep reading</button>
+            </div>
+          </div>
+          <div class="hompage-cta" data-editable="yes" data-panel="homepage-cta" data-control-theme="homepage-cta"
+            data-control-display="cta-banner">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="cta-title"
+                data-editable-text="yes">Join our community</h2>
+              <p data-control-text-style="homepage-cta-text" data-control-display="cta-text" data-editable-text="yes">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis orci nec lacus venenatis gravida ac
+                sit amet est. Vivamus nec nisi vel lorem sollicitudin scelerisque. Sed nec porttitor leo, et tincidunt
+                odio. Nunc imperdiet magna ligula, sit amet ultrices orci vulputate vehicula. Mauris vitae massa arcu.
+              </p>
+              <button class="btn primary" data-editable="yes" data-panel="buttons" data-editable-text="yes"
+                data-control-text-style="button" data-control-theme="button" data-control-radius="button"
+                data-control-border="button" data-control-display="cta-button" data-editable-text="yes">Find an
+                event</button>
+            </div>
+          </div>
+          <footer data-editable="yes" data-panel="footer" data-control-theme="footer" data-control-border="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="footer-content">
+                  <div class="company">
+                    <img src="img/logo-light.svg" class="light" alt="">
+                    <img src="img/logo-dark.svg" class="dark" alt="">
+                    <p data-control-display="footer-description" data-editable-text="yes">Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. Sed quis orci nec lacus venenatis gravida ac sit amet est.</p>
+                  </div>
+                  <div class="quick-links" data-control-display="quick-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                      <li data-editable-text="yes">Chapters</li>
+                      <li data-editable-text="yes">Events</li>
+                    </ul>
+                  </div>
+                  <div class="footer-social">
+                    <h4>Social</h4>
+                    <p data-control-display="social-hashtag" data-editable-text="yes">#BuildWithBevy</p>
+                    <ul data-control-display="social-icons">
+                      <li><i class="lab la-pinterest-p"></i></li>
+                      <li><i class="lab la-facebook-f"></i></li>
+                      <li><i class="lab la-twitter"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bar">
+              <div class="container">
+                <div class="copyright">
+                  <p data-editable-text="yes">&copy; 2021 All Rights Reserved.</p>
+                </div>
+                <div class="powered-by">
+                  <p>Powered by</p>
+                  <img src="img/logo-light-solid.svg" class="light" alt="">
+                  <img src="img/logo-dark-solid.svg" class="dark" alt="">
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="page-container hide" data-page="events">
+        <div class="page" data-control-font="body" data-control-theme="page">
+          <header class="main-nav" data-editable="yes" data-panel="header" data-control-theme="header"
+            data-control-border="header">
+            <div class="container">
+              <a href="#" class="logo">
+                <img src="img/logo-dark.svg" alt="Company Name" class="light">
+                <img src="img/logo-light.svg" alt="Company Name" class="dark">
+              </a>
+              <nav>
+                <ul>
+                  <li class="nav-item" data-control-display="toggle-nav"><a href="#" data-control-text-style="nav"
+                      data-editable-text="yes">Chapters</a></li>
+                  <li class="nav-item" data-control-display="toggle-nav"><a href="#" data-control-text-style="nav"
+                      data-editable-text="yes">Events</a></li>
+                  <li class="search" data-control-display="toggle-search"><i class="las la-search"></i></li>
+                </ul>
+                <a href="#" class="avatar">
+                  <img src="img/avatar.png" alt="Name">
+                </a>
+              </nav>
+            </div>
+          </header>
+          <div class="banner" data-editable="yes" data-panel="banner" data-control-theme="banner"
+            data-control-background="banner">
+            <div class="container">
+              <h1 data-dynamic-content="yes" data-control-font="headings">Conference test</h1>
+              <h3 class="chapter" data-control-display="toggle-chapter" data-editable-text="yes">Buenos Aires</h3>
+              <div class="event-date-time" data-dynamic-content="yes">Mar 29 - 30, 10:00 AM (GMT-3)</div>
+              <h4 class="event-attendees" data-dynamic-content="yes">2 RSVP'ed</h4>
+              <ul class="social" data-control-display="toggle-social">
+                <li><i class="lab la-pinterest-p"></i></li>
+                <li><i class="lab la-facebook-f"></i></li>
+                <li><i class="lab la-twitter"></i></li>
+              </ul>
+              <div class="description" data-control-display="toggle-description">
+                <p data-dynamic-content="yes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis orci nec
+                  lacus venenatis gravida ac sit amet est. Vivamus nec nisi vel lorem sollicitudin scelerisque. Sed nec
+                  porttitor leo, et tincidunt odio. Nunc imperdiet magna ligula, sit amet ultrices orci vulputate
+                  vehicula. Mauris vitae massa arcu.</p>
+              </div>
+              <ul class="tags" data-control-display="toggle-tags">
+                <li data-dynamic-content="yes">Webinar</li>
+                <li data-dynamic-content="yes">Marketing</li>
+                <li data-dynamic-content="yes">Android</li>
+                <li data-dynamic-content="yes">Cloud</li>
+                <li data-dynamic-content="yes">Data</li>
+                <li class="more">View more</li>
+              </ul>
+              <button class="btn primary join-event" data-editable="yes" data-panel="buttons"
+                data-control-text-style="button" data-control-theme="button" data-control-radius="button"
+                data-control-border="button">Join Virtual Event </button>
+            </div>
+          </div>
+          <div class="rsvp" data-editable="no">
+            <div class="container">
+              <div class="panel">
+                <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                  data-control-theme="h2" data-control-font="headings">RSVP for this <span
+                    data-editable-text="yes">event</span> now! </h2>
+                <ul class="rsvp-row">
+                  <li><strong data-dynamic-content="yes">RSVP</strong></li>
+                  <li>Availability ends in about 3 hours</li>
+                  <li>
+                    <button class="btn primary" data-editable="yes" data-panel="buttons" data-editable-text="yes"
+                      data-control-text-style="button" data-control-theme="button" data-control-radius="button"
+                      data-control-border="button">RSVP </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="about">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings">About this <span
+                  data-editable-text="yes">event</span></h2>
+              <p data-dynamic-content="yes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis orci nec
+                lacus venenatis gravida ac sit amet est. Vivamus nec nisi vel lorem sollicitudin scelerisque. Sed nec
+                porttitor leo, et tincidunt odio. Nunc imperdiet magna ligula, sit amet ultrices orci vulputate
+                vehicula. Mauris vitae massa arcu.</p>
+            </div>
+          </div>
+          <div class="speakers">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings"><span data-editable-text="yes">Speakers</span></h2>
+              <div class="cards">
+                <div class="card" data-editable="yes" data-panel="cards" data-dynamic-content="yes"
+                  data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                  data-control-theme="cards" data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/avatar-2.png" alt="">
+                    <span class="twitter" data-control-display="toggle-twitter">
+                      <i class="lab la-twitter"></i>
+                    </span>
+                  </div>
+                  <h3>Alice Todd</h3>
+                  <h4><strong>Figma</strong> Community Manager</h4>
+                  <button class="btn secondary" data-editable="yes" data-panel="buttons-secondary"
+                    data-control-text-style="button-secondary" data-control-theme="button-secondary"
+                    data-control-radius="button-secondary" data-control-border="button-secondary">See Bio</button>
+                </div>
+                <div class="card" data-editable="yes" data-panel="cards" data-dynamic-content="yes"
+                  data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                  data-control-theme="cards" data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/avatar-3.png" alt="">
+                    <span class="twitter" data-control-display="toggle-twitter">
+                      <i class="lab la-twitter"></i>
+                    </span>
+                  </div>
+                  <h3>Elbert Day</h3>
+                  <h4><strong>Asana</strong> Community Manager</h4>
+                  <button class="btn secondary" data-editable="yes" data-panel="buttons-secondary"
+                    data-control-text-style="button-secondary" data-control-theme="button-secondary"
+                    data-control-radius="button-secondary" data-control-border="button-secondary">See Bio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="agenda">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings">Agenda </h2>
+              <h4 class="time-zone">Displayed in your timezone</h4>
+              <div class="agenda-component">
+                <ul class="tabs" data-control-theme="agenda-cards">
+                  <li class="selected" data-dynamic-content="yes">Mar 29</li>
+                  <li data-dynamic-content="yes">Mar 30</li>
+                </ul>
+                <div class="filters" data-editable="yes" data-panel="agenda-cards" data-control-radius="agenda-card"
+                  data-control-theme="agenda-cards">
+                  <div class="field search">
+                    <label>Search</label>
+                    <i class="las la-search"></i>
+                  </div>
+                  <div class="field filter">
+                    <label>Filter</label>
+                    <i class="las la-angle-down"></i>
+                  </div>
+                </div>
+                <div class="agenda-card" data-editable="yes" data-panel="agenda-cards" data-dynamic-content="yes"
+                  data-control-radius="agenda-card" data-control-theme="agenda-cards">
+                  <div class="when">
+                    <div class="time">10:00 AM — 11:00 AM</div>
+                    <div class="place"><i class="las la-map-marker-alt"></i> Session</div>
+                  </div>
+                  <h3>Agenda item title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis orci nec lacus venenatis gravida
+                    ac sit amet est. Vivamus nec nisi vel lorem sollicitudin scelerisque. Sed nec porttitor leo, et
+                    tincidunt odio. Nunc imperdiet magna ligula, sit amet ultrices orci vulputate vehicula. Mauris vitae
+                    massa arcu.</p>
+                  <ul class="speakers-list">
+                    <li>
+                      <div class="image">
+                        <img src="img/avatar-2.png" alt="">
+                      </div>
+                      <div class="info">
+                        <h4>Alice Todd</h4>
+                        <h5>Community Manager <strong>Figma</strong></h5>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="image">
+                        <img src="img/avatar-3.png" alt="">
+                      </div>
+                      <div class="info">
+                        <h4>Elbert Day</h4>
+                        <h5>Community Manager <strong>Asana</strong></h5>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="actions">
+                    <button>
+                      <i class="las la-calendar-plus"></i>
+                      Add to calendar
+                    </button>
+                  </div>
+                </div>
+                <div class="agenda-card" data-editable="yes" data-panel="agenda-cards" data-dynamic-content="yes"
+                  data-control-radius="agenda-card" data-control-theme="agenda-cards">
+                  <div class="when">
+                    <div class="time">10:00 AM — 11:00 AM</div>
+                    <div class="place"><i class="las la-map-marker-alt"></i> Session</div>
+                  </div>
+                  <h3>Agenda item title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis orci nec lacus venenatis gravida
+                    ac sit amet est. Vivamus nec nisi vel lorem sollicitudin scelerisque. Sed nec porttitor leo, et
+                    tincidunt odio. Nunc imperdiet magna ligula, sit amet ultrices orci vulputate vehicula. Mauris vitae
+                    massa arcu.</p>
+                  <ul class="speakers-list">
+                    <li>
+                      <div class="image">
+                        <img src="img/avatar-2.png" alt="">
+                      </div>
+                      <div class="info">
+                        <h4>Alice Todd</h4>
+                        <h5>Community Manager <strong>Figma</strong></h5>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="image">
+                        <img src="img/avatar-3.png" alt="">
+                      </div>
+                      <div class="info">
+                        <h4>Elbert Day</h4>
+                        <h5>Community Manager <strong>Asana</strong></h5>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="actions">
+                    <button>
+                      <i class="las la-calendar-plus"></i>
+                      Add to calendar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="speakers">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings"><span data-editable-text="yes">Organizers</span>
+              </h2>
+              <div class="cards">
+                <div class="card" data-editable="yes" data-panel="cards" data-dynamic-content="yes"
+                  data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                  data-control-theme="cards" data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/avatar-2.png" alt="">
+                  </div>
+                  <h3>Alice Todd</h3>
+                  <h4>Community Manager</h4>
+                  <button class="btn secondary" data-editable="yes" data-panel="buttons-secondary"
+                    data-control-text-style="button-secondary" data-control-theme="button-secondary"
+                    data-control-radius="button-secondary" data-control-border="button-secondary">See Bio</button>
+                </div>
+                <div class="card" data-editable="yes" data-panel="cards" data-dynamic-content="yes"
+                  data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                  data-control-theme="cards" data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/avatar-3.png" alt="">
+                  </div>
+                  <h3>Elbert Day</h3>
+                  <h4>Community Manager</h4>
+                  <button class="btn secondary" data-editable="yes" data-panel="buttons-secondary"
+                    data-control-text-style="button-secondary" data-control-theme="button-secondary"
+                    data-control-radius="button-secondary" data-control-border="button-secondary">See Bio</button>
+                </div>
+              </div>
+              <button class="btn primary" data-editable="yes" data-panel="buttons" data-control-text-style="button"
+                data-control-theme="button" data-control-radius="button" data-control-border="button"><i
+                  class="las la-envelope"></i> Contact us </button>
+            </div>
+          </div>
+          <div class="collaborators">
+            <div class="container">
+              <div class="sponsors">
+                <h3 data-control-font="headings">Global Sponsor</h3>
+                <div class="sponsor-card">
+                  <img src="img/logo-dark.svg" alt="">
+                </div>
+              </div>
+              <div class="sponsors partners">
+                <h3 data-control-font="headings">Partner</h3>
+                <div class="sponsor-card" data-dynamic-content="yes">
+                  <img src="img/logo-dark.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer data-editable="yes" data-panel="footer" data-control-theme="footer" data-control-border="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="footer-content">
+                  <div class="company">
+                    <img src="img/logo-light.svg" class="light" alt="">
+                    <img src="img/logo-dark.svg" class="dark" alt="">
+                    <p data-control-display="footer-description" data-editable-text="yes">Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. Sed quis orci nec lacus venenatis gravida ac sit amet est.</p>
+                  </div>
+                  <div class="quick-links" data-control-display="quick-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                      <li data-editable-text="yes">Chapters</li>
+                      <li data-editable-text="yes">Events</li>
+                    </ul>
+                  </div>
+                  <div class="footer-social">
+                    <h4>Social</h4>
+                    <p data-control-display="social-hashtag" data-editable-text="yes">#BuildWithBevy</p>
+                    <ul data-control-display="social-icons">
+                      <li><i class="lab la-pinterest-p"></i></li>
+                      <li><i class="lab la-facebook-f"></i></li>
+                      <li><i class="lab la-twitter"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bar">
+              <div class="container">
+                <div class="copyright">
+                  <p data-editable-text="yes">&copy; 2021 All Rights Reserved.</p>
+                </div>
+                <div class="powered-by">
+                  <p>Powered by</p>
+                  <img src="img/logo-light-solid.svg" class="light" alt="">
+                  <img src="img/logo-dark-solid.svg" class="dark" alt="">
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="page-container hide" data-page="chapter">
+        <div class="page" data-control-font="body" data-control-theme="page">
+          <header class="main-nav" data-editable="yes" data-panel="header" data-control-theme="header"
+            data-control-border="header">
+            <div class="container">
+              <a href="#" class="logo">
+                <img src="img/logo-dark.svg" alt="Company Name" class="light">
+                <img src="img/logo-light.svg" alt="Company Name" class="dark">
+              </a>
+              <nav>
+                <ul>
+                  <li class="nav-item" data-control-display="toggle-nav"><a href="#" data-control-text-style="nav"
+                      data-editable-text="yes">Chapters</a></li>
+                  <li class="nav-item" data-control-display="toggle-nav"><a href="#" data-control-text-style="nav"
+                      data-editable-text="yes">Events</a></li>
+                  <li class="search" data-control-display="toggle-search"><i class="las la-search"></i></li>
+                </ul>
+                <a href="#" class="avatar">
+                  <img src="img/avatar.png" alt="Name">
+                </a>
+              </nav>
+            </div>
+          </header>
+          <div class="chapter-banner" data-editable="yes" data-panel="chapter-banner"
+            data-control-theme="chapter-banner" data-control-background="chapter-banner">
+            <div class="container">
+              <h4 data-control-display="toggle-country" data-dynamic-content="yes" data-control-font="headings">Country
+              </h4>
+              <h1 data-dynamic-content="yes" data-control-font="headings">Chapter name</h1>
+              <h5 data-dynamic-content="yes">212 Group Members</h5>
+              <ul class="social" data-control-display="toggle-social">
+                <li data-dynamic-content="yes"><i class="lab la-pinterest-p"></i></li>
+                <li data-dynamic-content="yes"><i class="lab la-facebook-f"></i></li>
+                <li data-dynamic-content="yes"><i class="lab la-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="join-bar" data-editable="yes" data-panel="join-bar" data-control-theme="join-bar"
+            data-control-text-style="join-bar">
+            <h3 class="hide" data-control-display="join-title" data-editable-text="yes">Join chapter</h3>
+            <h4 class="hide" data-control-display="join-subtitle" data-editable-text="yes">Join chapter subtitle</h4>
+            <button class="btn primary" data-editable="yes" data-panel="buttons" data-editable-text="yes"
+              data-control-text-style="button" data-control-theme="button" data-control-radius="button"
+              data-control-border="button">Join us</button>
+          </div>
+          <div class="container">
+            <ul class="chapter-tabs">
+              <li>About</li>
+              <li>Upcoming Events</li>
+              <li>Past Events</li>
+              <li>Organizer</li>
+              <li>Photos</li>
+              <li>Video</li>
+            </ul>
+          </div>
+          <div class="chapter-description">
+            <div class="container" data-dynamic-content="yes">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="blog-title">About</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+          <div class="chapter-events">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="blog-title">Upcoming Events
+              </h2>
+              <div class="v-event-card" data-editable="yes" data-dynamic-content="yes" data-panel="cards"
+                data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                data-control-theme="cards" data-control-radius="cards" data-control-shape="chapter-cards">
+                <div class="image">
+                  <img src="./img/event-thb.png" alt="Event image">
+                </div>
+                <div class="event-info">
+                  <div class="date">
+                    <strong>Jan 1, 2030</strong>
+                    <span>- Virtual Event</span>
+                  </div>
+                  <h3>Sample Virtual Event</h3>
+                  <ul class="event-tags">
+                    <li>Community</li>
+                    <li>Webinar</li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                  <button class="btn primary" data-editable="yes" data-panel="buttons" data-control-text-style="button"
+                    data-control-theme="button" data-control-radius="button" data-control-border="button">View
+                    Details</button>
+                </div>
+              </div>
+              <div class="v-event-card" data-editable="yes" data-dynamic-content="yes" data-panel="cards"
+                data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                data-control-theme="cards" data-control-radius="cards" data-control-shape="chapter-cards">
+                <div class="image">
+                  <img src="./img/event-thb.png" alt="Event image">
+                </div>
+                <div class="event-info">
+                  <div class="date">
+                    <strong>Jan 1, 2030</strong>
+                    <span>- Virtual Event</span>
+                  </div>
+                  <h3>Sample Virtual Event</h3>
+                  <ul class="event-tags">
+                    <li>Community</li>
+                    <li>Webinar</li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                  <button class="btn primary" data-editable="yes" data-panel="buttons" data-control-text-style="button"
+                    data-control-theme="button" data-control-radius="button" data-control-border="button">View
+                    Details</button>
+                </div>
+              </div>
+              <div class="v-event-card" data-editable="yes" data-dynamic-content="yes" data-panel="cards"
+                data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                data-control-theme="cards" data-control-radius="cards" data-control-shape="chapter-cards">
+                <div class="image">
+                  <img src="./img/event-thb.png" alt="Event image">
+                </div>
+                <div class="event-info">
+                  <div class="date">
+                    <strong>Jan 1, 2030</strong>
+                    <span>- Virtual Event</span>
+                  </div>
+                  <h3>Sample Virtual Event</h3>
+                  <ul class="event-tags">
+                    <li>Community</li>
+                    <li>Webinar</li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                  <button class="btn primary" data-editable="yes" data-panel="buttons" data-control-text-style="button"
+                    data-control-theme="button" data-control-radius="button" data-control-border="button">View
+                    Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="past-events">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="blog-title">Past Events</h2>
+              <div class="past-events-list">
+                <div class="event-card" data-editable="yes" data-dynamic-content="yes" data-panel="cards"
+                  data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                  data-control-theme="cards" data-control-radius="cards" data-control-shape="chapter-cards">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="Event title">
+                  </div>
+                  <div class="event-info">
+                    <strong class="date">APR 21 - 2021</strong>
+                    <strong class="type">Virtual</strong>
+                    <h3>Event title</h3>
+                    <h4>Chapter name</h4>
+                  </div>
+                </div>
+                <div class="event-card" data-editable="yes" data-dynamic-content="yes" data-panel="cards"
+                  data-control-shadow="cards" data-control-border="cards" data-control-text-style="cards"
+                  data-control-theme="cards" data-control-radius="cards" data-control-shape="chapter-cards">
+                  <div class="image">
+                    <img src="img/event-thb.png" alt="Event title">
+                  </div>
+                  <div class="event-info">
+                    <strong class="date">APR 21 - 2021</strong>
+                    <strong class="type">Virtual</strong>
+                    <h3>Event title</h3>
+                    <h4>Chapter name</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collaborators chapter-collaborators">
+            <div class="container">
+              <div class="sponsors partners">
+                <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                  data-control-theme="h2" data-control-font="headings" data-control-display="blog-title"><span
+                    data-editable-text="yes">Partner</span></h2>
+                <div class="sponsor-card" data-dynamic-content="yes">
+                  <img src="img/logo-dark.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="speakers">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings"><span data-editable-text="yes">Organizer</span>
+              </h2>
+              <div class="cards">
+                <div class="card" data-editable="yes" data-dynamic-content="yes" data-panel="cards"
+                  data-dynamic-content="yes" data-control-shadow="cards" data-control-border="cards"
+                  data-control-text-style="cards" data-control-theme="cards" data-control-radius="cards">
+                  <div class="image">
+                    <img src="img/avatar-2.png" alt="">
+                  </div>
+                  <h3>Alice Todd</h3>
+                  <h4>Community Manager</h4>
+                  <button class="btn secondary" data-editable="yes" data-panel="buttons-secondary"
+                    data-control-text-style="button-secondary" data-control-theme="button-secondary"
+                    data-control-radius="button-secondary" data-control-border="button-secondary">See Bio</button>
+                </div>
+              </div>
+              <button class="btn primary" data-editable="yes" data-panel="buttons" data-control-text-style="button"
+                data-control-theme="button" data-control-radius="button" data-control-border="button"
+                data-editable-text="yes"><i class="las la-envelope"></i> Contact us </button>
+            </div>
+          </div>
+          <div class="chapter-photos">
+            <div class="container">
+              <h2 class="general-h2" data-editable="yes" data-panel="headings" data-control-text-style="h2"
+                data-control-theme="h2" data-control-font="headings" data-control-display="blog-title">Chapter photos
+              </h2>
+              <ul class="photos">
+                <li><img src="./img/chapter-photo-01.jpg" alt=""></li>
+                <li><img src="./img/chapter-photo-02.jpg" alt=""></li>
+                <li><img src="./img/chapter-photo-03.jpg" alt=""></li>
+                <li><img src="./img/chapter-photo-02.jpg" alt=""></li>
+                <li><img src="./img/chapter-photo-03.jpg" alt=""></li>
+                <li><img src="./img/chapter-photo-01.jpg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="chapter-video" data-dynamic-content="yes">
+            <div class="container">
+              <div class="yt-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rOUQt9rW93E?controls=0"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <footer data-editable="yes" data-panel="footer" data-control-theme="footer" data-control-border="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="footer-content">
+                  <div class="company">
+                    <img src="img/logo-light.svg" class="light" alt="">
+                    <img src="img/logo-dark.svg" class="dark" alt="">
+                    <p data-control-display="footer-description" data-editable-text="yes">Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. Sed quis orci nec lacus venenatis gravida ac sit amet est.</p>
+                  </div>
+                  <div class="quick-links" data-control-display="quick-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                      <li data-editable-text="yes">Chapters</li>
+                      <li data-editable-text="yes">Events</li>
+                    </ul>
+                  </div>
+                  <div class="footer-social">
+                    <h4>Social</h4>
+                    <p data-control-display="social-hashtag" data-editable-text="yes">#BuildWithBevy</p>
+                    <ul data-control-display="social-icons">
+                      <li><i class="lab la-pinterest-p"></i></li>
+                      <li><i class="lab la-facebook-f"></i></li>
+                      <li><i class="lab la-twitter"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bar">
+              <div class="container">
+                <div class="copyright">
+                  <p data-editable-text="yes">&copy; 2021 All Rights Reserved.</p>
+                </div>
+                <div class="powered-by">
+                  <p>Powered by</p>
+                  <img src="img/logo-light-solid.svg" class="light" alt="">
+                  <img src="img/logo-dark-solid.svg" class="dark" alt="">
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Settings -->
+    <div class="settings">
+      <a href="#" class="close"><i class="las la-times-circle"></i></a>
+      <div class="section-settings global-settings" data-panel="global">
+        <h3><strong>Customization settings</strong> Global</h3>
+        <div class="message">
+          <p><i class="las la-exclamation-circle"></i> These changes will affect all your pages globally.</p>
+        </div>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="page">
+              <strong>Page background color</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-font="headings">
+              <strong>Headings: custom font</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-font="body">
+              <strong>Body: custom font</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+        <div class="settings-bar">
+          <ul>
+            <li>
+              <button class="toggle-editable-text">
+                <i class="las la-font"></i>
+                <span class="label">editable global text</span>
+              </button>
+            </li>
+            <li>
+              <button class="toggle-dynamic-content">
+                <i class="las la-calendar"></i>
+                <span class="label">chapter / event content</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-settings home-sections-settings" data-panel="home-sections">
+        <h3><strong>Customization settings</strong> Home sections</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-display="global-announcement">
+              <strong>Show Announcements</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="marketing-promo">
+              <strong>Show Marketing promo</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="slider">
+              <strong>Hide Slideshow</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="intro-text">
+              <strong>Hide Intro text</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="upcoming-events">
+              <strong>Hide Upcoming events</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="home-video">
+              <strong>Show Video</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="map">
+              <strong>Hide Map</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="explore-by-regions">
+              <strong>Hide Explore by region</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="blog">
+              <strong>Hide Blog</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="cta-banner">
+              <strong>Hide CTA banner</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings" data-panel="buttons">
+        <h3><strong>Customization settings</strong> Primary buttons</h3>
+        <div class="message">
+          <p><i class="las la-exclamation-circle"></i> This element style is shared, changes in one instance will affect
+            them all.</p>
+        </div>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-text-style="button">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-radius="button">
+              <strong>Custom shape</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-border="button">
+              <strong>Custom border</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-theme="button">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings" data-panel="buttons-secondary">
+        <h3><strong>Customization settings</strong> Secondary buttons</h3>
+        <div class="message">
+          <p><i class="las la-exclamation-circle"></i> This element style is shared, changes in one instance will affect
+            them all.</p>
+        </div>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-text-style="button-secondary">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-radius="button-secondary">
+              <strong>Custom shape</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-border="button-secondary">
+              <strong>Custom border</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-theme="button-secondary">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings headings-settings" data-panel="headings">
+        <h3><strong>Customization settings</strong> Headings</h3>
+        <div class="message">
+          <p><i class="las la-exclamation-circle"></i> This element style is shared, changes in one instance will affect
+            them all.</p>
+        </div>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-text-style="h2">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-theme="h2">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings header-settings" data-panel="header">
+        <h3><strong>Customization settings</strong> Header</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="header">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-border="header">
+              <strong>Custom border</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-text-style="nav">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="toggle-search">
+              <strong>Hide Search</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="toggle-nav">
+              <strong>Hide Menu</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings global-announcement-settings" data-panel="global-announcement">
+        <h3><strong>Customization settings</strong> Global announcements</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="global-announcement">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings slider-settings" data-panel="slider">
+        <h3><strong>Customization settings</strong> Slider</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="slider">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-background="slider">
+              <strong>Background image</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-height="slider">
+              <strong>Custom height</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-text-style="slider">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="slider-title">
+              <strong>Hide Title</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="slider-subtitle">
+              <strong>Hide Subtitle</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings join-settings" data-panel="join-bar">
+        <h3><strong>Customization settings</strong> Join bar</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="join-bar">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="join-title">
+              <strong>Show Title</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="join-subtitle">
+              <strong>Show Subtitle</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-text-style="join-bar">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings intro-settings" data-panel="intro">
+        <h3><strong>Customization settings</strong> Intro section</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="intro-text">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="intro-title">
+              <strong>Hide Title</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="intro-text">
+              <strong>Hide paragraph</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings upcoming-events-settings" data-panel="upcoming-events">
+        <h3><strong>Customization settings</strong> Upcoming events</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="upcoming-events">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="upcoming-events-title">
+              <strong>Hide Title</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="upcoming-events-tags">
+              <strong>Show Tags</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings upcoming-events-cards-settings" data-panel="upcoming-events-cards">
+        <h3><strong>Customization settings</strong> Upcoming events cards</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-border="upcoming-event-card">
+              <strong>Custom borders</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-theme="upcoming-event-card">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-radius="upcoming-event-card">
+              <strong>Custom corners</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-shadow="upcoming-event-card">
+              <strong>Custom shadows</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-shape="upcoming-event-card">
+              <strong>Square images</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-text-style="upcoming-event-card">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings map-settings" data-panel="map">
+        <h3><strong>Customization settings</strong> Map</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="map">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-shadow="map-search">
+              <strong>Field custom shadows</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-border="map-search">
+              <strong>Field custom borders</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch selected" data-control-display="map-title">
+              <strong>Show Title</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings regions-settings" data-panel="regions">
+        <h3><strong>Customization settings</strong> Explore by region</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="regions">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-border="region-tabs">
+              <strong>Custom Tabs</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings blog-settings" data-panel="blog">
+        <h3><strong>Customization settings</strong> Blog</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-display="blog-title">
+              <strong>Hide Title</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings home-cta-settings" data-panel="homepage-cta">
+        <h3><strong>Customization settings</strong> Homepage CTA banner</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="homepage-cta">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-text-style="homepage-cta-text">
+              <strong>Custom text style</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="cta-title">
+              <strong>Hide Title</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="cta-text">
+              <strong>Hide paragraph</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="cta-button">
+              <strong>Hide CTA</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings banner-settings" data-panel="banner">
+        <h3><strong>Customization settings</strong> Banner</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-display="toggle-chapter">
+              <strong>Hide Chapter</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="toggle-social">
+              <strong>Hide Social icons</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="toggle-description">
+              <strong>Hide Description</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="toggle-tags">
+              <strong>Hide tags</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-theme="banner">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-background="banner">
+              <strong>Background image</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings footer-settings" data-panel="footer">
+        <h3><strong>Customization settings</strong> Footer</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="footer">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-border="footer">
+              <strong>Custom border</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="footer-description">
+              <strong>Hide description</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="quick-links">
+              <strong>Hide quick links</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="social-icons">
+              <strong>Hide social icons</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="social-hashtag">
+              <strong>Hide social hashtag</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings cards-settings" data-panel="cards">
+        <h3><strong>Customization settings</strong> Cards</h3>
+        <div class="message">
+          <p><i class="las la-exclamation-circle"></i> This element style is shared, changes in one instance will affect
+            them all.</p>
+        </div>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-border="cards">
+              <strong>Custom borders</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-theme="cards">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-radius="cards">
+              <strong>Custom corners</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-shadow="cards">
+              <strong>Custom shadows</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-shape="chapter-cards">
+              <strong>Square images</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <!-- <li>
+              <button class="switch" data-control-display="toggle-twitter">
+                <strong>Hide Social icon</strong>
+                <span class="track">
+                  <span class="thumb"></span>
+                </span>
+              </button>
+            </li> -->
+        </ul>
+      </div>
+      <div class="section-settings cards-settings" data-panel="agenda-cards">
+        <h3><strong>Customization settings</strong> Agenda</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-theme="agenda-cards">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-radius="agenda-card">
+              <strong>Custom corners</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="section-settings chapter-banner-settings" data-panel="chapter-banner">
+        <h3><strong>Customization settings</strong> Chapter banner</h3>
+        <ul class="controls">
+          <li>
+            <button class="switch" data-control-display="toggle-country">
+              <strong>Hide Country</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-display="toggle-social">
+              <strong>Hide Social icons</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-theme="chapter-banner">
+              <strong>Custom colors</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button class="switch" data-control-background="chapter-banner">
+              <strong>Background image</strong>
+              <span class="track">
+                <span class="thumb"></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</html>

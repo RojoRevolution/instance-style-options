@@ -1,0 +1,1423 @@
+/* This is Repeating from other file */
+
+/* CSS Variables */
+:root {
+	--primary: #8252FF;
+	--secondary: #12E5E0;
+	--light: #fff;
+	--soft-light: #F6F9FB;
+	--dark: #3C4153;
+	--soft-dark: #4D546A;
+	--light-borders: #E4ECF3;
+	--dark-borders: #8E9BAA;
+    --text-primary: #3C4153;
+    --text-secondary: #838899;
+	--purple-gradient: linear-gradient(to right, #6C00EB 0%,#8252FF 100%);
+	--aqua-gradient: linear-gradient(to right, #9652ff 0%,#33d2f7 100%);
+	--gap-xs: 0.625rem; /* 10px */
+	--gap-sm: 1.25rem; /* 20px */
+	--gap-md: 1.875rem; /* 30px */
+	--gap-lg: 2.5rem; /* 40px */
+	--gap-xl: 3.75rem; /* 60px */
+	--radius: 0.25rem; /* 4px */
+}
+
+
+/* ===== Add New Styles for Virtual in this file ===== */
+
+/* Universal */
+.btn.tertiary {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    color: var(--primary);
+}
+
+.editor .main.virtual .page {
+    background: var(--light);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img {
+    width: 99%;
+}
+
+.flex {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.grow-2 {
+    flex-grow: 2;
+}
+
+.relative {
+    position: relative
+}
+
+.outer-content {
+    display: flex;
+    flex-grow: 2;
+    position: relative;
+}
+
+.min-width {
+    min-width: 1120px;
+}
+
+
+#bvc .show-edditable-sections {
+    right: 140px;
+}
+
+#bvc .switch-page {
+    right: 10px;
+}
+
+.bt {
+    border-top: 1px solid var(--light-borders);
+}
+
+
+/* ===== Cover Styles ===== */
+.cover {
+    background-color: var(--soft-light);
+    height: 858px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.WelcomeScreen {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    flex-grow: 1;
+    width: 50%;
+}
+
+.WelcomeScreen-Main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.WelcomeScreen .WelcomeScreen-Main .btn.primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--dark);
+}
+
+#test-results .WelcomeScreen-Main {
+    padding: 80px 50px;
+    justify-content: space-between;
+}
+
+#test-results .WelcomeScreen-Main ol {
+    /* list-style-type: number; */
+    list-style: none; 
+    counter-reset: li
+}
+
+#test-results .WelcomeScreen-Main ol li {
+    counter-increment: li;
+    font-size: 16px;
+    margin: 5px 0;
+    padding-left: 10px;
+}
+
+#test-results .WelcomeScreen-Main ol li.one:before, #test-results .WelcomeScreen-Main ol li.two:before  {
+    color: var(--primary);
+    display: inline-block; 
+    width: 1.5em;
+    margin-left: -1.5em;
+}
+
+#test-results .WelcomeScreen-Main ol li.one:before {
+    content: "1."
+}
+
+#test-results .WelcomeScreen-Main ol li.two:before {
+    content: "2."
+}
+
+.test-panel, .test-panel2 {
+    background: var(--light);
+}
+
+.test-panel[data-panel="errors"] hr {
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: #e4ecf3;
+    margin: 20px 0;
+}
+.test-panel[data-panel="errors"] ol {
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    max-width: 510px;
+    padding: 0;
+    list-style: none;
+    counter-reset: steps;
+}
+
+.test-panel[data-panel="errors"] ol li {
+    padding: 10px 0;
+    counter-increment: steps;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.test-panel[data-panel="errors"] ol li:before {
+    content: counter(steps) ". ";
+    color: var(--linkColor);
+    margin-right: 10px;
+}
+
+.test-panel[data-panel="errors"] .WelcomeScreen-Main h2, 
+.test-panel[data-panel="errors"] .WelcomeScreen-Main p, 
+.test-panel[data-panel="errors"] .WelcomeScreen-Main ol, 
+.test-panel[data-panel="errors"] .WelcomeScreen-Main div, 
+.test-panel[data-panel="errors"] .WelcomeScreen-Main button {
+    margin: 0 0 .75rem 0;
+}
+
+.coverlogo {
+    width: 230px;
+    display: block;
+}
+
+.cover > .WelcomeScreen > .WelcomeScreen-Main > .coverlogo > .coverlogo.dark {
+    display: none;
+}
+
+.cover > .WelcomeScreen > .WelcomeScreen-Main > .coverlogo > .coverlogo.dark {
+    display: none;
+}
+
+.coverlogo , .WelcomeScreen-Main h1, .WelcomeScreen-Main button {
+    margin: var(--gap-xs);
+}
+
+.WelcomeScreen-Main h1 {
+    font-size: 31px;
+}
+
+.WelcomeScreen-Main h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cover-main-btn {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.coverRowRight {
+    display: flex;
+    padding: var(--gap-xs) 0;
+    width: 100%;
+    justify-content: flex-end;
+    color: var(--primary);
+}
+
+.coverFooter {
+    display: flex;
+    padding: var(--gap-xs) 0;
+}
+
+.coverFooter p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.ProgressBar {
+    background: var(--soft-light);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    height: 8px;
+    margin: 20px 0;
+    /* max-width: 320px; */
+    position: relative;
+    width: 360px;
+}
+
+.Progress {
+    background: var(--primary);
+    padding: 4px 0;
+    width: 50%;
+    border-radius: 4px;
+}
+
+.error-icon {
+    display: inline-block;
+    width: 24px;
+    margin: 4px 4px 0 4px;
+    color: var(--primary);
+}
+
+.help-btn {
+    text-indent: 6px;
+    color: var(--primary);
+    border-width: 0;
+}
+
+.support-data {
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px 10px 20px;
+    background: var(--soft-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.support-data p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.copied {
+    display: flex;
+    justify-content: center;
+}
+
+.copied-icon {
+    color: var(--primary);
+}
+
+.btn.tertiary.copy-data {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.message {
+    display: none;
+}
+
+.thumb-info {
+    display: block;
+}
+
+.settings-info {
+    display: flex;
+    background: var(--soft-light);
+    padding: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid var(--light-borders);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.settings-info .settings-icon {
+    font-size: 20px;
+    margin-right: 6px;
+    color: var(--primary);
+}
+
+.virtual-settings > ul > li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.virtual-settings > ul > li a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.virtual-settings  .controls .switch {
+    display: block;
+    width: auto;
+}
+
+#dynamic-controls {
+    padding-top: 20px;
+}
+
+.cover-interaction {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 0;
+}
+
+
+
+/* ul.cover-interaction li {
+    margin: 5px 0;
+} */
+
+.cover-interaction > li > .btn.primary {
+    color: var(--light);
+}
+
+ul.cover-interaction li button {
+    border-radius: 6px;
+}
+
+.btn.show-dynamic {
+    cursor: pointer;
+    font-size: 12px;
+    width: 75px;
+    color: var(--soft-dark);
+}
+
+.btn.show-dynamic .btn-icons {
+    color: black;
+    padding: 4px;
+}
+
+
+
+/* ============================== */
+/* ====== Virtual Interior ====== */
+/* ============================== */
+
+
+
+/* ==== Header ==== */
+
+.virtual-header, .virtual-header nav, .virtual-header nav ul, .virtual-header nav ul a {
+    display: flex;
+}
+
+.virtual-header {
+    position: relative;
+    height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--light-borders);
+    background: var(--light);
+}
+
+.virtual-header nav {
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.virtual-header > nav > img.light {
+    display: block;
+}
+
+.virtual-header  > nav > img.dark  {
+    display: none;
+}
+
+/* #virtual-header nav img {
+    width: 90px;
+} */
+
+.virtual-header .coverlogo {
+    width: 90px;
+}
+
+.virtual-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+.virtual-header nav ul {
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.virtual-header nav ul a {
+    height: 100%;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 0 20px;
+    color: var(--dark)
+}
+
+.virtual-header nav ul a.activenav {
+    color: var(--primary);
+}
+
+.virtual-header nav ul a svg {
+    width: 16px;
+    margin-right: 10px;
+}
+
+/* ==== Virtual Content Area Container ==== */
+.virtual-body {
+    display: flex;
+    height: 810px;
+}
+
+
+/* ==== Agenda ==== */
+.sidebar-left {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    max-width: 249px;
+    border-right: 1px solid var(--light-borders);
+}
+
+.agenda-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    height: 62px;
+    padding-left: 15px;
+    border-bottom: 1px solid var(--light-borders);
+}
+
+.agenda-header p {
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.agenda-header button {
+    height: 100%;
+    width: 45px;
+    cursor: pointer;
+    padding: 0;
+    color: var(--dark);
+}
+
+.agenda-toggle {
+    display: flex;
+}
+
+.agenda-controls {
+    display: flex;
+    width: 100%;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--light-borders);
+    justify-content: space-around;
+}
+.agenda-select {
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+    border-radius: 8px;
+    width: 200px;
+    border: 2px solid #f2f2f2;
+}
+
+.agenda-select span {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.agenda-select span.active {
+    background: white;
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.agenda-list {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 90%;
+}
+
+.agenda-item {
+    display: flex;
+    flex-direction: column;
+    margin: 28px 0 0 0;
+}
+
+.agenda-name, .agenda-item-time {
+    color: var(--text-primary);
+}
+
+.agenda-icon {
+    margin-top: 10px;
+    color: var(--text-secondary);
+}
+
+.agenda-item:first-of-type{
+    margin: 8px 0 0 0;
+}
+
+.agenda-item p {
+    font-weight: 700;
+    font-size: .875rem;
+}
+
+.agenda-item-time {
+    display: flex;
+    font-size: .75rem;
+    text-transform: capitalize;
+    justify-content: space-between;
+}
+
+.agenda-item-time p {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.agenda-item .round, .agenda-name button {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    line-height: 8px;
+}
+
+.agenda-item button:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+.join {
+    font-size: .75rem !important;
+    width: fit-content;
+    padding: 8px 12px !important;
+}
+
+.view-full-agenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: .875rem;
+    padding: 20px;
+}
+
+.agenda-card .agenda-name p {
+    margin-right: 15px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.agenda-min {
+    background: var(--light);
+    padding: 10px 12px;
+    border: 1px solid var(--light-borders);
+    border-bottom-right-radius: 8px;
+}
+
+
+/* === Main Content === */
+.virtual-main-content, .virtual-main-content-col {
+    overflow: scroll;
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    padding: 20px;
+}
+
+[data-page="stage"] .virtual-main-content-col {
+    overflow: unset;
+}
+
+.virtual-main-content-col  {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.lobby-intro {
+    color: var(--text-primary);
+}
+
+.lobby-video {
+    padding: 20px;
+}
+
+.lobby-sponsors {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--light-borders);
+    font-size: 1rem;
+}
+
+.lobby-sponsor-images {
+    display: flex;
+    justify-content: center;
+    padding: 20px; 
+}
+
+.lobby-sponsor-images img {
+    width: 135px;
+    height: 40px;
+}
+
+/* Page Title for virtual */
+.page-title-container {
+    background: var(--light);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 11px 15px;
+    font-size: 16px;
+}
+
+
+
+[data-page="stage"] .page-title-container, [data-page="networking"] .page-title-container, [data-page="booths"] .page-title-container {
+    padding: 0 0;
+}
+
+[data-page="stage"] .page-title-container {
+    background: #262626;
+}
+
+.page-title {
+    display: flex;
+    font-weight: 600;
+}
+
+[data-page="stage"] .page-title, [data-page="networking"] .page-title, [data-page="booths"] .page-title {
+    padding: 0 15px;
+}
+
+[data-page="stage"] .page-title {
+    color: var(--light);
+}
+
+/* Agenda */
+.agenda-tabs, .agenda-tabs ul, .agenda-tabs ul li,
+.agenda-search, .agenda-search ul, .agenda-search ul li,
+.agenda-name, .agenda-description, .agenda-actions, .agenda-calendar, .join-event-btn, .agenda-speakers, .agenda-speaker-img, .agenda-speaker-info, .active-chat, .chat-info {
+    display: flex;
+}
+
+.agenda-tabs {
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.agenda-tabs ul li {
+    padding: 7px 20px;
+    font-size: 1rem;
+}
+
+.agenda-tabs ul li.active {
+    border-bottom: 3px solid var(--primary);
+}
+
+.agenda-tabs ul li.completed {
+    font-size: .75rem;
+    color: var(--text-secondary);
+}
+
+.agenda-search {
+    background: var(--light);
+    border: 1px solid var(--light-borders);
+    margin: 15px;
+    padding: 15px;
+}
+
+.agenda-section  {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.agenda-search ul li {
+    background: var(--light);
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    border: 1px solid var(--light-borders);
+    width: 250px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.agenda-search ul li span {
+    display: flex;
+}
+
+.agenda-section .agenda-item-time {
+    justify-content: flex-start;
+}
+
+.agenda-description p {
+    font-size: .875rem;
+    color: var(--text-secondary);
+}
+
+.agenda-description ul {
+    display: flex;
+}
+
+.agenda-description ul li {
+    display: flex;
+    align-items: center;
+    background: var(--soft-light);
+    border-radius: 24px;
+    padding: 3px 10px;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid var(--dark-borders);
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.agenda-description ul li span {
+    margin-right: 6px;
+}
+
+.agenda-speakers {
+    border-bottom: 1px solid var(--light-borders);
+    margin: 20px 0;
+}
+
+.agenda-speaker-img {
+    width: 48px;
+    height: 48px;
+    margin: 0 10px 0 0;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.agenda-speaker-info p{
+    font-size: .75rem;
+}
+
+.agenda-calendar {
+    align-items: center;
+    color: var(--primary);
+}
+
+.agenda-calendar  span {
+    margin: 0 25px 0 5px;
+    font-size: .875rem;
+    font-weight: 400;
+}
+
+.agenda-actions {
+    justify-content: end;
+}
+
+.card-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.booth-img-container {
+    display: flex;
+    padding: 35px 0;
+    border-bottom: 1px solid var(--light-borders);
+    margin-bottom: 20px;
+}
+
+[data-page="networking"] .agenda-card, [data-page="booths"] .agenda-card {
+    max-width: 318px;
+    margin-right: 20px;
+}
+
+[data-page="networking"] .agenda-card .btn.primary, [data-page="booths"] .agenda-card .btn.primary {
+    font-size: .75rem;
+}
+
+.agenda-speakers {
+
+}
+
+/* Stage */
+.stage, .stage .placeholde,  .stage-footer, .stage-footer .controls, .single-control, .single-contol button, .single-contol button span {
+    display: flex;
+}
+
+.stage {
+    background: #000;
+    color: #fff;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.stage-footer {
+    background: var(--light);
+    justify-content: center;
+}
+
+
+.controls {
+    justify-content: space-between;
+}
+
+.single-control {
+    flex-direction: row;
+}
+
+.control-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+
+.controls .single-control .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--dark-borders);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.controls .label {
+    font-size: 12px;
+    justify-content: center;
+    color: #303442;
+}
+
+
+/* ===Right Side Bar === */
+.sidebar-right {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border-left: 1px solid var(--light-borders);
+    position: relative;
+    max-width: 320px;
+}
+
+.sidebar-right .close {
+    position: absolute;
+    left: 0;
+}
+
+.sidebar-right .tabs {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background: var(--soft-light);
+    justify-content: center;
+}
+
+.sidebar-right .tabs .main {
+    display: flex;
+}
+
+.sidebar-right .tabs button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.sidebar-right .tabs button.active {
+    background: var(--light);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.sidebar-right .sub-tabs{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.sidebar-right .sub-tabs li {
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.sidebar-right .sub-tabs li button.active {
+    background: var(--light);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.sidebar-right .chat {
+    padding: 0;
+    height: 80%;
+}
+
+.sidebar-right .chat .empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-secondary);
+}
+
+.sidebar-right .chat .empty p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    padding: 10px 20%;
+}
+
+.sidebar-right .chat .empty .active-chat {
+    position: relative;
+    padding: 0 10px;
+}
+
+.sidebar-right .chat .empty .active-chat .chat-info > p.chat-message {
+    padding:0 5px 24px 10px;
+    text-align: left;
+    font-size: 14px;
+    list-style: 1rem;
+    color: #303442;
+}
+
+/* .sidebar-right .chat .empty .active-chat .chat-info > p.chat-message:last-of-type {
+    padding-bottom: 10px;
+} */
+
+.chat-avatar {
+    border-radius: 100%;
+    width: 30px;
+}
+
+.chat-name {
+    font-weight: 700;
+    margin-right: 5px;
+    color: (--text-primary);
+}
+
+.chat-time {
+    color: var(--text-secondary);
+}
+
+
+.chat-info {
+    flex-direction: column;
+}
+
+.options-icons {
+    display: flex;
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+
+.options-icons ul {
+    background: var(--light);
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--light-borders);
+    border-radius: 2px;
+}
+
+.options-icons ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 35px;
+    height: 100%;
+}
+
+.options-icons ul li.active {
+    color: var(--dark) !important;
+    background: var(--soft-light);
+}
+
+.sidebar-right .chat .chat-options {
+    position: relative;
+    background-color: var(--soft-light);
+    padding: 10px;
+    border-top: 1px solid var(--light-borders);
+    border-bottom: 1px solid var(--light-borders);
+}
+
+.sidebar-right .chat .chat-options ul li {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.sidebar-right .chat .chat-options ul:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 1px solid var(--light-borders);
+    border-top: 1px solid var(--light-borders);
+    border-bottom: 7px solid var( --color-soft-light);
+    background: var( --soft-light);
+    transform: rotate(45deg);
+    padding: 5px;
+    margin: 0;
+    top: -7px;
+    right: 20px;
+}
+
+.sidebar-right .chat-type {
+    display: flex;
+    height: 90px;
+    border-top: 1px solid var(--light-borders);
+}
+
+.sidebar-right .chat-type .your-message {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    /* width: 60%; */
+    padding: 10px;
+}
+
+.send-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-right .chat-type .send-buttons button {
+    height: 100%;
+    margin: 0 10px;
+    padding: 0 10px;
+    color: var(--soft-dark);
+    width: 40px;
+}
+
+.sidebar-right .send {
+    background-image: url(https://static.bevylabs.com/static/images/boe/icon_send.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 27px 21px;
+    border: none;
+}
+
+
+/* Settings Panel */
+.divider {
+    border-top: 1px solid var(--light-borders);
+    padding-top: 20px;
+}
+
+
+.btn-icons {
+    font-size: 20px !important;
+  }
+
+
+/* ============================== */
+/* Cover Page Toggle Overwrites */
+/* ============================== */
+
+.cover.themed {
+    background: var(--dark);
+    transition: all .3s ease;
+}
+
+.cover.background {
+    background: var(--dark);
+    transition: all .3s ease;
+}
+
+.cover > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > .event-thb.thumb {
+    display: block;
+    transition: all .3s ease;
+}
+
+.cover.background > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > .coverlogo > .coverlogo.light  {
+    display: none;
+    transition: all .3s ease;
+}
+
+.cover.background > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > .coverlogo > .coverlogo.dark  {
+    display: block;
+    transition: all .3s ease;
+}
+
+.cover.themed > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > h1 {
+    color:var(--light);
+    transition: all .3s ease;
+}
+
+.cover > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > h1.text-color{
+    color:var(--secondary);
+    transition: all .3s ease;
+}
+
+.cover > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > .btn.tertiary.links{
+    color:var(--secondary);
+    transition: all .3s ease;
+}
+
+.cover > .WelcomeScreen.primary-Cover > .coverFooter > p.text-color{
+    color:var(--secondary);
+    transition: all .3s ease;
+}
+
+.cover.themed > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > .cover-main-btn > .btn.primary {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--dark);
+    transition: all .3s ease;
+}
+
+.cover > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > .cover-main-btn > .btn.primary.btn-colors, .btn.primary.join.btn-colors  {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--dark);
+    transition: all .3s ease;
+}
+
+.cover.themed > .WelcomeScreen.primary-Cover > .WelcomeScreen-Main > .tertiary {
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.cover.themed > .WelcomeScreen.primary-Cover > .coverFooter > p {
+    color: var(--light);
+    transition: all .3s ease;
+}
+
+/* ========================== */
+/* Virtual Toggle Overwrites */
+/* ========================== */
+
+
+/*dark bg */
+.virtual-header.background, .virtual-main-content-col.background, .stage.background, .stage.background {
+    background: var(--dark);
+    transition: all .3s ease;
+}
+
+
+/* soft-dark bg */
+.page-title-container.background, .stage-footer.background, .page-title-container.active-background {
+    background: var(--soft-dark);
+    transition: all .3s ease;
+}
+
+/* header */
+.virtual-header.background > nav > img.light {
+    display: none;
+    transition: all .3s ease;
+}
+
+.virtual-header.background  > nav > img.dark  {
+    display: block;
+    transition: all .3s ease;
+}
+
+.virtual-header.custom-border {
+    border-color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.virtual-header nav ul a.nav-static {
+    color: var(--text-secondary);
+    transition: all .3s ease;
+}
+
+.virtual-header nav ul a.active.nav-active, .page-title-container .agenda-min.nav-active  {
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+/* right sidebar */
+.sidebar-right .tabs.background {
+    background: var(--dark);
+    transition: all .3s ease;
+}
+
+.sidebar-right .tabs > .close > button.nav-static, .sidebar-right .tabs > button.nav-static, .sidebar-right .sub-tabs li button.nav-static, .agenda-header button.nav-static {
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.sidebar-right .tabs > button.active.nav-active {
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.sidebar-right .tabs > button.active.nav-active, .agenda-min.nav-active {
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.sidebar-right .tabs > button.active.active-background {
+    background: var(--soft-dark);
+    transition: all .3s ease;
+}
+
+.page-title.background {
+    color: var(--soft-dark);
+    transition: all .3s ease;
+}
+
+.sidebar-right .sub-tabs li button.active.nav-active {
+    color: var(--secondary);   
+    transition: all .3s ease; 
+}
+
+/* .sidebar-right .sub-tabs li button.nav-static, .agenda-header button.nav-static {
+    color: var(--text-secondary); 
+} */
+
+/* General text color */
+.page-title-container .page-title.text-color {
+    color: var(--primary);
+    transition: all .3s ease;
+}
+
+/* Primary text */
+.sidebar-right .chat-type.primary-text, 
+.sidebar-left .agenda-header.primary-text, 
+.agenda-select span.active.primary-text, 
+.agenda-list .agenda-item .agenda-item-time.primary-text, 
+.agenda-list .agenda-item .agenda-name.primary-text,
+.agenda-tabs ul.primary-text, .agenda-search ul li.primary-text,
+.agenda-card .agenda-item-time.primary-text, .agenda-card .agenda-name p.primary-text,
+.agenda-card .agenda-speakers .agenda-speaker-info p.primary-text, .agenda-card .agenda-description p.primary-text,
+.center-content .lobby-intro.primary-text, .chat-name.primary-text {
+    color: var(--primary);
+    transition: all .3s ease;
+}
+
+
+
+/* Secondary Text */
+.WelcomeScreen-Main.secondary-text,
+.WelcomeScreen-Main h2.secondary-text, .WelcomeScreen-Main p.secondary-text,
+.sidebar-right .chat .empty.secondary-text,
+ .sidebar-left .agenda-toggle .agenda-controls .agenda-select span:last-child.secondary-text,
+ .agenda-list .agenda-item .agenda-icon.secondary-text,
+ .sidebar-left .view-full-agenda.secondary-text,
+ .agenda-tabs ul li.completed.secondary-text, .agenda-search ul li.secondary-text,
+ .agenda-card .agenda-description ul li.secondary-text, .agenda-description p.secondary-text,
+ .center-content .lobby-sponsors.secondary-text, .chat-time.secondary-text, .WelcomeScreen-Main ol li.secondary-text
+  {
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.agenda-list .agenda-item .agenda-item-time .round.btn-colors-2, .agenda-name button.btn-colors-2 {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.agenda-item button.round.secondary-button {
+    background:var(--light);
+    border: var(--secondary);
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.agenda-item .agenda-item-time button.btn-colors-2 {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.agenda-tabs .active.links {
+    border-color:var(--secondary);
+    transition: all .3s ease;
+
+}
+
+.coverRowRight.links, .agenda-card .agenda-actions .agenda-calendar.links, .error-icon.links,
+#test-results .WelcomeScreen-Main ol li.one.links:before, #test-results .WelcomeScreen-Main ol li.two.links:before {
+    color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.agenda-card .agenda-actions button.btn-colors {
+    background: var(--secondary);
+    border-color:var(--secondary);
+    color: var(--dark);
+    transition: all .3s ease;
+}
+
+/* Cards */
+.agenda-card.background, .agenda-search.background {
+    background-color: var(--soft-dark);
+    transition: all .3s ease;
+}
+
+.agenda-card.radius, .agenda-search.radius {
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+
+.agenda-card.custom-border, .agenda-search.custom-border, 
+.agenda-card .agenda-speakers.custom-border, .booth-img-container.custom-border{
+    border-color: var(--secondary);
+    transition: all .3s ease;
+}
+
+.hide {
+    display: none;
+    transition: all .3s ease;
+}
+
+.Progress.btn-colors-2 {
+    background: var(--soft-dark);
+    transition: all .3s ease;
+}
+
+.help-btn.btn-colors-2 {
+    color: var(--soft-dark);
+    border-color: var(--soft-dark);
+    transition: all .3s ease;
+}
+
+.btn.secondary.btn-colors-2 {
+    border-color: var(--soft-dark);
+    color: var(--soft-dark);
+}
+
+.btn.tertiary.btn-colors-2, .btn.tertiary.copy-data.btn-colors-2 {
+    color: var(--soft-dark);
+}
+
+.btn.tertiary.copy-data > span {
+    color: var(--primary);
+}
+
+.btn.tertiary.copy-data > span.links {
+    color: var(--secondary);
+    transition: all .3s ease;
+}

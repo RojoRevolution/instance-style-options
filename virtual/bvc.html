@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/ico" href="../img/favicon.ico" sizes="16x16">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <!-- Line awesome Icons -->
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="../css/virtual.css" type="text/css" media="screen">
+  <title>Bevy Styling options</title>
+</head>
+<!-- <body class="clip"> -->
+
+<body class="">
+  <div class="login">
+    <div class="login-form">
+      <form>
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Enter" class="btn primary">
+      </form>
+      <div class="errors"></div>
+    </div>
+  </div>
+  <div class="editor">
+    <div id="bvc" class="main virtual">
+      <!-- Question Mark Icon (Show Editable Sections) -->
+      <button class="btn switch-page"><a href="../index">Back to homepage</a></button>
+      <button class="show-edditable-sections" title="Show editable sections (Where to click)">
+        <i class="las la-question-circle"></i>
+      </button>
+      <!-- Tab Navigation -->
+      <ul class="page-tabs">
+        <li>
+          <button class="selected" data-page="cover">Welcome</button>
+        </li>
+        <li>
+          <button data-page="lobby">Lobby</button>
+        </li>
+        <li>
+          <button data-page="agenda">Agenda</button>
+        </li>
+        <li>
+          <button data-page="stage">Stage</button>
+        </li>
+        <li>
+          <button data-page="networking">Networking</button>
+        </li>
+        <li>
+          <button data-page="booths">Booths</button>
+        </li>
+      </ul>
+      <!-- ========== -->
+      <!-- Cover -->
+      <div class="page-container min-width">
+        <div class="cover" data-control-font="body" data-page="cover" data-editable="yes" data-panel="cover"
+          data-control-theme="cover" data-control-cover-bg="cover">
+          <!-- Testing Audio and Video -->
+          <div id="test-progress" class="WelcomeScreen test-panel hide" data-control-test="start">
+            <div class="coverRowRight" data-control-links="virtual">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.6007 0.41295C17.3456 0.157315 16.9993 0.0136519 16.6382 0.0136519C16.2771 0.0136519 15.9308 0.157315 15.6758 0.41295L9 7.07507L2.32423 0.399298C2.06917 0.143663 1.72289 0 1.36177 0C1.00066 0 0.654378 0.143663 0.399317 0.399298C-0.133106 0.931721 -0.133106 1.79179 0.399317 2.32421L7.07509 8.99998L0.399317 15.6757C-0.133106 16.2082 -0.133106 17.0682 0.399317 17.6007C0.931741 18.1331 1.79181 18.1331 2.32423 17.6007L9 10.9249L15.6758 17.6007C16.2082 18.1331 17.0683 18.1331 17.6007 17.6007C18.1331 17.0682 18.1331 16.2082 17.6007 15.6757L10.9249 8.99998L17.6007 2.32421C18.1195 1.80544 18.1195 0.931721 17.6007 0.41295Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="WelcomeScreen-Main">
+              <h2 class="" data-control-secondary-text="virtual">Testing Audio and Video</h2>
+              <div class="ProgressBar">
+                <div class="Progress" data-control-btn-secondary="secondary"></div>
+              </div>
+              <p data-control-secondary-text="virtual">Test in progress...</p>
+            </div>
+            <div class="coverRowRight">
+              <button class="btn help-btn" data-control-btn-secondary="secondary">
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 6.3175C1 3.10389 4.40554 0.5 8.6075 0.5C12.8095 0.5 16.215 3.10389 16.215 6.3175C16.215 9.53111 12.8095 12.135 8.6075 12.135C7.46637 12.135 6.38765 11.9364 5.41592 11.5924C4.68488 12.1406 3.20796 13.03 1.23773 13.03C1.14264 13.03 1.05943 12.9797 1.0208 12.8958C0.98217 12.8118 1 12.7168 1.06538 12.6524C1.08024 12.6384 2.3224 11.3826 2.69386 9.97302C1.63594 8.97453 1 7.70475 1 6.3175Z"
+                    stroke="currentColor"></path>
+                </svg>
+                Help
+              </button>
+            </div>
+          </div>
+          <div id="test-results" class="WelcomeScreen test-panel hide" data-control-results="continue">
+            <div class="coverRowRight" data-control-links="virtual">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.6007 0.41295C17.3456 0.157315 16.9993 0.0136519 16.6382 0.0136519C16.2771 0.0136519 15.9308 0.157315 15.6758 0.41295L9 7.07507L2.32423 0.399298C2.06917 0.143663 1.72289 0 1.36177 0C1.00066 0 0.654378 0.143663 0.399317 0.399298C-0.133106 0.931721 -0.133106 1.79179 0.399317 2.32421L7.07509 8.99998L0.399317 15.6757C-0.133106 16.2082 -0.133106 17.0682 0.399317 17.6007C0.931741 18.1331 1.79181 18.1331 2.32423 17.6007L9 10.9249L15.6758 17.6007C16.2082 18.1331 17.0683 18.1331 17.6007 17.6007C18.1331 17.0682 18.1331 16.2082 17.6007 15.6757L10.9249 8.99998L17.6007 2.32421C18.1195 1.80544 18.1195 0.931721 17.6007 0.41295Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="WelcomeScreen-Main" data-control-secondary-text="virtual"">
+              <h2 class="">Testing Audio and Video</h2>
+              <p data-control-secondary-text=" virtual"><span class="error-icon" data-control-links="virtual"><svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M633.8 458.1l-55-42.5c15.4-1.4 29.2-13.7 29.2-31.1v-257c0-25.5-29.1-40.4-50.4-25.8L448 177.3v137.2l-32-24.7v-178c0-26.4-21.4-47.8-47.8-47.8H123.9L45.5 3.4C38.5-2 28.5-.8 23 6.2L3.4 31.4c-5.4 7-4.2 17 2.8 22.4L42.7 82 416 370.6l178.5 138c7 5.4 17 4.2 22.5-2.8l19.6-25.3c5.5-6.9 4.2-17-2.8-22.4zM32 400.2c0 26.4 21.4 47.8 47.8 47.8h288.4c11.2 0 21.4-4 29.6-10.5L32 154.7v245.5z"
+                    fill="currentColor"></path>
+                </svg></span>
+              Microphone & Camera error
+              </p>
+              <ol>
+                <li class="one" data-control-links="virtual" data-control-secondary-text="virtual">If on Chrome desktop,
+                  click on lock icon to the left of the URL bar, and ensure the Microphone &
+                  Camera is set to “Allow.”</li>
+                <li class="two" data-control-links="virtual" data-control-secondary-text="virtual">In Chrome, visit
+                  Preferences > Site Preferences > View permissions and data stored across sites >
+                  Site URL > switch Microphone & Camera to “Ask.” Then refresh this page.</li>
+              </ol>
+              <div class="cover-main-btn">
+                <button class="btn secondary" style="max-width: 100px;"
+                  data-control-btn-secondary="secondary">Retry</button>
+                <button class="btn tertiary" data-control-btn-secondary="secondary">Join Anyway</button>
+              </div>
+              <div>
+                <button class="btn tertiary copy-data" data-control-btn-secondary="secondary"><span
+                    style="margin-right: 5px;" data-control-links="virtual"><svg width="12" height="14"
+                      viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.31911 0H1.31911C0.619114 0 0.0463867 0.572727 0.0463867 1.27273V9.54544C0.0463867 9.89544 0.33275 10.1818 0.68275 10.1818C1.03275 10.1818 1.31911 9.89544 1.31911 9.54544V1.90909C1.31911 1.55909 1.60548 1.27273 1.95548 1.27273H8.31911C8.66911 1.27273 8.95548 0.986363 8.95548 0.636363C8.95548 0.286363 8.66911 0 8.31911 0ZM8.69457 2.92091L11.7682 5.99454C12.0037 6.23 12.1373 6.55454 12.1373 6.89181V12.7273C12.1373 13.4273 11.5646 14 10.8646 14H3.85821C3.15821 14 2.59184 13.4273 2.59184 12.7273L2.59821 3.81818C2.59821 3.11818 3.16457 2.54545 3.86457 2.54545H7.79093C8.12821 2.54545 8.45275 2.67909 8.69457 2.92091ZM11.1828 6.99999H8.31912C7.96912 6.99999 7.68276 6.71363 7.68276 6.36363V3.5L11.1828 6.99999Z"
+                        fill="currentColor"></path>
+                    </svg></span>
+                  Copy data to send to support</button>
+              </div>
+              <!-- <div class="support-data">
+                <p class="copied"><span class="copied-icon"><svg width="15" height="18" viewBox="0 0 25 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.29186 13.2878L3.39379 7.62568C3.07623 7.32013 2.64509 7.14842 2.19548 7.14842C1.74587 7.14842 1.31474 7.32013 0.997172 7.62568C0.334276 8.26206 0.334276 9.29005 0.997172 9.92643L8.10205 16.7471C8.76495 17.3835 9.83578 17.3835 10.4987 16.7471L24.0028 3.27803C24.6657 2.64165 24.6657 1.61365 24.0028 0.977272C23.6853 0.671724 23.2541 0.500011 22.8045 0.500011C22.3549 0.500011 21.9238 0.671724 21.6062 0.977272L9.29186 13.2878Z"
+                        fill="currentColor"></path>
+                    </svg></span>
+                  Copied to clipboard</p>
+                <p style="width: 1000px;">Session:
+                  1_MX40NzA4Mzg0NH5-MTYzNDg0MDU3NTQyOX43aHZXdmhGWkk0UVlFKzFGaVVDU3g5TGN-fg <br>
+                  Error: InitPublisherError</p>
+              </div> -->
+            </div>
+            <div class="coverRowRight">
+              <button class="btn help-btn" data-control-btn-secondary="secondary">
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 6.3175C1 3.10389 4.40554 0.5 8.6075 0.5C12.8095 0.5 16.215 3.10389 16.215 6.3175C16.215 9.53111 12.8095 12.135 8.6075 12.135C7.46637 12.135 6.38765 11.9364 5.41592 11.5924C4.68488 12.1406 3.20796 13.03 1.23773 13.03C1.14264 13.03 1.05943 12.9797 1.0208 12.8958C0.98217 12.8118 1 12.7168 1.06538 12.6524C1.08024 12.6384 2.3224 11.3826 2.69386 9.97302C1.63594 8.97453 1 7.70475 1 6.3175Z"
+                    stroke="currentColor"></path>
+                </svg>
+                Help
+              </button>
+            </div>
+          </div>
+          <!-- Cover -->
+          <div class="WelcomeScreen primary-Cover">
+            <div class="WelcomeScreen-Main">
+              <div data-panel="thumb">
+                <img src="../img/event_thumbnail.png" alt="Event thumbnail" data-panel="cover"
+                  data-control-thumb="event-thumb" class="event-thb">
+              </div>
+
+              <a href="#" class="coverlogo">
+                <img src="../img/logo-dark.svg" alt="Company Name" class="coverlogo light">
+                <img src="../img/logo-light.svg" alt="Company Name" class="coverlogo dark">
+              </a>
+
+              <h1 data-control-textcolor="cover">Conference Title</h1>
+              <div class="cover-main-btn">
+                <button class="btn primary" data-control-btn-primary="primary" data-control-text-style="button"
+                  data-control-btn-primary="primary" data-control-radius="button" data-control-border="button">Join
+                  Event</button>
+              </div>
+              <button class="btn tertiary" data-control-links="virtual" data-panel="cover">Test audio and video</button>
+            </div>
+            <div class="coverFooter">
+              <p data-control-textColor="cover" data-panel="cover" data-control-text-style="text-primary"
+                data-control-theme="text-primary" data-control-font="text-primary" data-control-display="text-primary">
+                <span class="bold">Only hosts and presenters</span> have audio and video enabled. Please note that this
+                event might be <span class="bold">recorded.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========== -->
+      <!-- Lobby-->
+      <div class="page-container min-width hide" data-page="lobby" data-panel="lobby" data-editable="no"
+        data-control-theme="lobby">
+        <div class="page" data-control-font="body" data-control-theme="page">
+          <!-- Header -->
+          <header class="virtual-header" data-page="virtual-header" data-panel="virtual-header" data-editable="yes"
+            data-control-header-bg="header" data-control-border="virtual-header">
+            <nav>
+              <img src="../img/logo-dark.svg" alt="Company Name" class="coverlogo light">
+              <img src="../img/logo-light.svg" alt="Company Name" class="coverlogo dark">
+              <ul>
+                <li>
+                  <a href="#" class="activenav" data-page="virtual-header" data-panel="virtual-header"
+                    data-editable="no" data-control-nav-active="virtual-header">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.06061 15.5C7.33675 15.5 7.56061 15.2761 7.56061 15V10.5588H10.4394V15C10.4394 15.2761 10.6633 15.5 10.9394 15.5H15.3879C15.664 15.5 15.8879 15.2761 15.8879 15V8.91176H17C17.2057 8.91176 17.3904 8.78578 17.4655 8.59426C17.5406 8.40274 17.4907 8.18479 17.3398 8.04498L9.33981 0.633219C9.14809 0.455594 8.85191 0.455594 8.66019 0.633219L0.660188 8.04498C0.509289 8.18479 0.459413 8.40274 0.534495 8.59426C0.609576 8.78578 0.794292 8.91176 1 8.91176H2.11212V15C2.11212 15.2761 2.33598 15.5 2.61212 15.5H7.06061Z"
+                        stroke="currentColor" stroke-linejoin="round"></path>
+                    </svg>
+                    Lobby
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="">
+                      <path
+                        d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                    Agenda
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="path-1-inside-1" fill="white">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2 0C0.895431 0 0 0.89543 0 2V8.57992C0 9.68449 0.895431 10.5799 2 10.5799H14.2225C15.3271 10.5799 16.2225 9.68449 16.2225 8.57992V2C16.2225 0.895431 15.3271 0 14.2225 0H2ZM2 11.6473C0.895431 11.6473 0 12.5427 0 13.6473V13.9999C0 15.1045 0.895429 15.9999 2 15.9999H2.35266C3.45723 15.9999 4.35266 15.1045 4.35266 13.9999V13.6473C4.35266 12.5427 3.45723 11.6473 2.35266 11.6473H2ZM5.82363 13.6473C5.82363 12.5427 6.71906 11.6473 7.82363 11.6473H8.17629C9.28086 11.6473 10.1763 12.5427 10.1763 13.6473V13.9999C10.1763 15.1045 9.28086 15.9999 8.17629 15.9999H7.82363C6.71906 15.9999 5.82363 15.1045 5.82363 13.9999V13.6473ZM13.6473 11.6473C12.5427 11.6473 11.6473 12.5427 11.6473 13.6473V13.9999C11.6473 15.1045 12.5427 15.9999 13.6473 15.9999H13.9999C15.1045 15.9999 15.9999 15.1045 15.9999 13.9999V13.6473C15.9999 12.5427 15.1045 11.6473 13.9999 11.6473H13.6473Z">
+                        </path>
+                      </mask>
+                      <path
+                        d="M1 2C1 1.44772 1.44772 1 2 1V-1C0.343146 -1 -1 0.343145 -1 2H1ZM1 8.57992V2H-1V8.57992H1ZM2 9.57992C1.44772 9.57992 1 9.13221 1 8.57992H-1C-1 10.2368 0.343147 11.5799 2 11.5799V9.57992ZM14.2225 9.57992H2V11.5799H14.2225V9.57992ZM15.2225 8.57992C15.2225 9.13221 14.7748 9.57992 14.2225 9.57992V11.5799C15.8794 11.5799 17.2225 10.2368 17.2225 8.57992H15.2225ZM15.2225 2V8.57992H17.2225V2H15.2225ZM14.2225 1C14.7748 1 15.2225 1.44772 15.2225 2H17.2225C17.2225 0.343145 15.8794 -1 14.2225 -1V1ZM2 1H14.2225V-1H2V1ZM1 13.6473C1 13.095 1.44771 12.6473 2 12.6473V10.6473C0.343147 10.6473 -1 11.9904 -1 13.6473H1ZM1 13.9999V13.6473H-1V13.9999H1ZM2 14.9999C1.44771 14.9999 1 14.5522 1 13.9999H-1C-1 15.6568 0.343143 16.9999 2 16.9999V14.9999ZM2.35266 14.9999H2V16.9999H2.35266V14.9999ZM3.35266 13.9999C3.35266 14.5522 2.90494 14.9999 2.35266 14.9999V16.9999C4.00951 16.9999 5.35266 15.6568 5.35266 13.9999H3.35266ZM3.35266 13.6473V13.9999H5.35266V13.6473H3.35266ZM2.35266 12.6473C2.90494 12.6473 3.35266 13.095 3.35266 13.6473H5.35266C5.35266 11.9904 4.00951 10.6473 2.35266 10.6473V12.6473ZM2 12.6473H2.35266V10.6473H2V12.6473ZM7.82363 10.6473C6.16678 10.6473 4.82363 11.9904 4.82363 13.6473H6.82363C6.82363 13.095 7.27135 12.6473 7.82363 12.6473V10.6473ZM8.17629 10.6473H7.82363V12.6473H8.17629V10.6473ZM11.1763 13.6473C11.1763 11.9904 9.83315 10.6473 8.17629 10.6473V12.6473C8.72857 12.6473 9.17629 13.095 9.17629 13.6473H11.1763ZM11.1763 13.9999V13.6473H9.17629V13.9999H11.1763ZM8.17629 16.9999C9.83314 16.9999 11.1763 15.6568 11.1763 13.9999H9.17629C9.17629 14.5522 8.72857 14.9999 8.17629 14.9999V16.9999ZM7.82363 16.9999H8.17629V14.9999H7.82363V16.9999ZM4.82363 13.9999C4.82363 15.6568 6.16677 16.9999 7.82363 16.9999V14.9999C7.27135 14.9999 6.82363 14.5522 6.82363 13.9999H4.82363ZM4.82363 13.6473V13.9999H6.82363V13.6473H4.82363ZM12.6473 13.6473C12.6473 13.095 13.095 12.6473 13.6473 12.6473V10.6473C11.9904 10.6473 10.6473 11.9904 10.6473 13.6473H12.6473ZM12.6473 13.9999V13.6473H10.6473V13.9999H12.6473ZM13.6473 14.9999C13.095 14.9999 12.6473 14.5522 12.6473 13.9999H10.6473C10.6473 15.6568 11.9904 16.9999 13.6473 16.9999V14.9999ZM13.9999 14.9999H13.6473V16.9999H13.9999V14.9999ZM14.9999 13.9999C14.9999 14.5522 14.5522 14.9999 13.9999 14.9999V16.9999C15.6568 16.9999 16.9999 15.6568 16.9999 13.9999H14.9999ZM14.9999 13.6473V13.9999H16.9999V13.6473H14.9999ZM13.9999 12.6473C14.5522 12.6473 14.9999 13.095 14.9999 13.6473H16.9999C16.9999 11.9904 15.6568 10.6473 13.9999 10.6473V12.6473ZM13.6473 12.6473H13.9999V10.6473H13.6473V12.6473Z"
+                        fill="currentColor" mask="url(#path-1-inside-1)"></path>
+                    </svg>
+                    Stage
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.5 11.5C4.5 12.6046 3.60457 13.5 2.5 13.5C1.39543 13.5 0.5 12.6046 0.5 11.5C0.5 10.3954 1.39543 9.5 2.5 9.5C3.60457 9.5 4.5 10.3954 4.5 11.5Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M15.1665 11.5C15.1665 12.6046 14.2711 13.5 13.1665 13.5C12.0619 13.5 11.1665 12.6046 11.1665 11.5C11.1665 10.3954 12.0619 9.5 13.1665 9.5C14.2711 9.5 15.1665 10.3954 15.1665 11.5Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M14.3018 7.59717C14.2081 6.70039 13.9473 5.89067 13.5193 5.168C13.0912 4.44532 12.4959 3.8097 11.7335 3.26113"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M5.3418 14C6.21774 14.3709 7.09652 14.5625 7.97814 14.5747C8.85977 14.587 9.74424 14.42 10.6316 14.0737"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M1.78174 8C1.80691 7.09925 2.00548 6.27415 2.37747 5.5247C2.74946 4.77525 3.29486 4.10145 4.01367 3.5033"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M9.8335 2.5C9.8335 3.60457 8.93807 4.5 7.8335 4.5C6.72893 4.5 5.8335 3.60457 5.8335 2.5C5.8335 1.39543 6.72893 0.5 7.8335 0.5C8.93807 0.5 9.8335 1.39543 9.8335 2.5Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                    Networking
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.5713 3.99243L14.7912 1.25611C14.6179 0.512361 14.389 0 13.6719 0H2.7274C2.01825 0 1.88433 0.520625 1.71886 1.25611L0.844247 3.99243C0.65514 4.83535 0.649189 5.26495 0.844247 5.62907C1.10991 6.125 1.46731 6.33041 1.52488 6.45339V12.3472C1.52488 13.2562 1.77399 14 2.64073 14H13.6719C14.5387 14 14.7912 13.2562 14.7912 12.3472V6.125C14.8622 6.05062 15.0746 6.03493 15.4685 5.50569C15.7437 5.13576 15.7683 4.83535 15.5713 3.99243ZM13.601 0.866736L14.4284 4.38083C14.5072 4.72792 14.4363 5.075 14.2314 5.34771C14.1211 5.49646 13.8847 5.73611 13.4907 5.73611C13.0101 5.73611 12.5925 5.33118 12.5373 4.79403L12.0803 0.875L13.601 0.866736ZM8.94428 0.875H10.4887L10.9141 4.51306C10.9535 4.83535 10.859 5.15764 10.6541 5.39729C10.4808 5.61215 10.2286 5.73611 9.90557 5.73611C9.37765 5.73611 8.94428 5.24854 8.94428 4.65354V0.875ZM5.39065 4.51306L5.82402 0.875H7.3684V4.65354C7.3684 5.24854 6.93502 5.73611 6.35195 5.73611C6.08404 5.73611 5.83978 5.61215 5.65068 5.39729C5.45369 5.15764 5.35914 4.83535 5.39065 4.51306ZM1.8843 4.38083L2.68013 0.875H4.23238L3.77537 4.79403C3.71233 5.33118 3.3026 5.73611 2.82196 5.73611C2.43586 5.73611 2.1916 5.49646 2.08917 5.34771C1.87643 5.08326 1.80551 4.72792 1.8843 4.38083ZM2.64073 13.125V6.4891C2.70377 6.49736 2.75892 6.51389 2.82196 6.51389C3.50747 6.51389 4.12994 6.21639 4.58695 5.72882C5.05972 6.22465 5.69007 6.51389 6.4071 6.51389C7.09261 6.51389 7.70721 6.21639 8.16422 5.74535C8.62911 6.21639 9.25946 6.51389 9.96861 6.51389C10.6305 6.51389 11.2608 6.22465 11.7336 5.72882C12.1906 6.21639 12.8131 6.51389 13.4986 6.51389C13.5616 6.51389 13.6168 6.49736 13.6798 6.4891V13.125H2.64073Z"
+                        fill="currentColor"></path>
+                    </svg>
+                    Booths
+                  </a>
+                </li>
+              </ul>
+              <!-- Empty UL for spacing -->
+              <ul></ul>
+            </nav>
+          </header>
+          <div class="virtual-body">
+            <!-- Agenda -->
+            <div class="sidebar-left" data-panel="agenda-sidebar" data-editable="yes">
+              <div class="agenda-header" data-control-primary-text="virtual">
+                <p>Up next</p>
+                <button data-control-tab-static="virtual"><svg width="17" height="9" viewBox="0 0 17 9" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.5575 7.9425L2.8725 5.25L13.5 5.25L13.5 3.75L2.8725 3.75L5.565 1.0575L4.5 -1.09276e-06L3.93402e-07 4.5L4.5 9L5.5575 7.9425ZM16.9998 9L16.9998 -9.53674e-07L15.4998 -1.08481e-06L15.4998 9L16.9998 9Z"
+                      fill="currentColor"></path>
+                  </svg></button>
+              </div>
+              <div class="agenda-toggle">
+                <div class="agenda-controls">
+                  <div class="agenda-select">
+                    <span class="active" data-control-primary-text="virtual">Today's Agenda</span>
+                    <span data-control-secondary-text="virtual">My Agenda</span>
+                  </div>
+                </div>
+              </div>
+              <div class="agenda-list">
+                <div class="agenda-item">
+                  <div class="agenda-item-time" data-control-primary-text="virtual">
+                    <p>12:00PM</p>
+                    <button class="round" data-control-btn-secondary="secondary">
+                      <span>
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.42857 4.57143H4.57143V7.42857C4.57143 7.74286 4.31429 8 4 8C3.68571 8 3.42857 7.74286 3.42857 7.42857V4.57143H0.571429C0.257143 4.57143 0 4.31429 0 4C0 3.68571 0.257143 3.42857 0.571429 3.42857H3.42857V0.571429C3.42857 0.257143 3.68571 0 4 0C4.31429 0 4.57143 0.257143 4.57143 0.571429V3.42857H7.42857C7.74286 3.42857 8 3.68571 8 4C8 4.31429 7.74286 4.57143 7.42857 4.57143Z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <p class="agenda-name" data-control-primary-text="virtual">Agenda Item Name</p>
+                  <p class="agenda-icon" data-control-secondary-text="virtual">
+                    <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="ScheduleDetail-Summarized-audienceTypeIcon-JYATT" width="16" height="12"
+                      role="presentation" alt="StageIcon" data-testid="StageIcon" data-tip="Stage"
+                      data-for="213_stage_tooltip" color="currentColor" currentItem="false">
+                      <path
+                        d="M1.316 3.234C1.316 2 2.315 1 3.548 1h8.895c1.234 0 2.233 1 2.233 2.234v5.11a.75.75 0 0 1-1.5 0v-5.11a.733.733 0 0 0-.733-.734H3.548a.733.733 0 0 0-.732.734v5.11a.75.75 0 1 1-1.5 0v-5.11Z"
+                        fill="currentColor"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.712 10.336a1.998 1.998 0 0 0-3.26 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM9.429 10.336a1.998 1.998 0 0 0-3.261 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM11.328 10.336a1.999 1.999 0 0 1 3.26 2.18 2 2 0 1 1-3.26-2.18Zm1.06 1.06a.498.498 0 0 1 .815.545.5.5 0 1 1-.814-.545Z"
+                        fill="currentColor"></path>
+                      <path
+                        d="M10.815 15.447c-.69-.815-1.812-1.152-2.82-1.152-1.01 0-2.132.337-2.821 1.152a.75.75 0 0 0 1.145.969c.31-.366.936-.62 1.676-.62.74 0 1.366.254 1.675.62a.75.75 0 1 0 1.145-.969ZM.08 15.915c.689-1.38 2.313-1.816 3.455-1.583a.75.75 0 1 1-.3 1.47c-.662-.136-1.504.164-1.814.784a.75.75 0 1 1-1.342-.67ZM12.462 14.33c1.142-.232 2.768.203 3.459 1.585a.75.75 0 0 1-1.342.67c-.31-.62-1.154-.92-1.817-.785a.75.75 0 1 1-.3-1.47Z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </p>
+                  <button class="btn primary join" data-control-btn-primary="primary">Join</button>
+                </div>
+                <div class="agenda-item">
+                  <div class="agenda-item-time" data-control-primary-text="virtual">
+                    <p>12:00PM</p>
+                    <button class="round" data-control-btn-secondary="secondary">
+                      <span>
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.42857 4.57143H4.57143V7.42857C4.57143 7.74286 4.31429 8 4 8C3.68571 8 3.42857 7.74286 3.42857 7.42857V4.57143H0.571429C0.257143 4.57143 0 4.31429 0 4C0 3.68571 0.257143 3.42857 0.571429 3.42857H3.42857V0.571429C3.42857 0.257143 3.68571 0 4 0C4.31429 0 4.57143 0.257143 4.57143 0.571429V3.42857H7.42857C7.74286 3.42857 8 3.68571 8 4C8 4.31429 7.74286 4.57143 7.42857 4.57143Z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <p class="agenda-name" data-control-primary-text="virtual">Agenda Item Name</p>
+                  <p class="agenda-icon" data-control-secondary-text="virtual>
+                    <svg viewBox=" 0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="ScheduleDetail-Summarized-audienceTypeIcon-JYATT" width="16" height="12" role="presentation"
+                    alt="StageIcon" data-testid="StageIcon" data-tip="Stage" data-for="213_stage_tooltip"
+                    color="currentColor" currentItem="false">
+                    <path
+                      d="M1.316 3.234C1.316 2 2.315 1 3.548 1h8.895c1.234 0 2.233 1 2.233 2.234v5.11a.75.75 0 0 1-1.5 0v-5.11a.733.733 0 0 0-.733-.734H3.548a.733.733 0 0 0-.732.734v5.11a.75.75 0 1 1-1.5 0v-5.11Z"
+                      fill="currentColor"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.712 10.336a1.998 1.998 0 0 0-3.26 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM9.429 10.336a1.998 1.998 0 0 0-3.261 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM11.328 10.336a1.999 1.999 0 0 1 3.26 2.18 2 2 0 1 1-3.26-2.18Zm1.06 1.06a.498.498 0 0 1 .815.545.5.5 0 1 1-.814-.545Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M10.815 15.447c-.69-.815-1.812-1.152-2.82-1.152-1.01 0-2.132.337-2.821 1.152a.75.75 0 0 0 1.145.969c.31-.366.936-.62 1.676-.62.74 0 1.366.254 1.675.62a.75.75 0 1 0 1.145-.969ZM.08 15.915c.689-1.38 2.313-1.816 3.455-1.583a.75.75 0 1 1-.3 1.47c-.662-.136-1.504.164-1.814.784a.75.75 0 1 1-1.342-.67ZM12.462 14.33c1.142-.232 2.768.203 3.459 1.585a.75.75 0 0 1-1.342.67c-.31-.62-1.154-.92-1.817-.785a.75.75 0 1 1-.3-1.47Z"
+                      fill="currentColor"></path>
+                    </svg>
+                  </p>
+                </div>
+
+              </div>
+              <div class="view-full-agenda" data-control-secondary-text="virtual">
+                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="MiniAgenda-styles-agendaIcon-25EUW">
+                  <path
+                    d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                    stroke="currentColor"></path>
+                </svg>
+                <span style="margin:0 10px;">View Full Agenda</span>
+                <svg width="9" height="9" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="MiniAgenda-styles-arrowIcon-3n0EW">
+                  <path
+                    d="M0.676381 13.9336C0.299604 13.5458 0.299269 12.9288 0.675622 12.5407L4.88786 8.19609C5.26392 7.80822 5.26392 7.19178 4.88786 6.80391L0.675624 2.45935C0.299271 2.07117 0.299607 1.45415 0.676384 1.06639L0.995354 0.738114C1.38807 0.333943 2.03703 0.333943 2.42975 0.738115L8.32288 6.80313C8.69995 7.1912 8.69995 7.8088 8.32288 8.19687L2.42974 14.2619C2.03703 14.6661 1.38807 14.6661 0.995352 14.2619L0.676381 13.9336Z"
+                    fill="currentColor"></path>
+                </svg>
+              </div>
+            </div>
+            <!-- Lobby -->
+            <div class="grow-2" data-panel="lobby" data-editable="yes">
+              <div class="virtual-main-content">
+                <div class="center-content">
+                  <div class="text-center lobby-intro" data-control-primary-text="virtual">
+                    This is your Lobby Custom Text Section
+                  </div>
+                  <div class="lobby-video">
+                    <img class="img" src="../img/virtual/lobby_video.png">
+                  </div>
+                  <div>
+                    <div>
+                      <div class="text-center lobby-sponsors" data-control-secondary-text="virtual">
+                        Supporting this event
+                      </div>
+                      <div class="lobby-sponsor-images">
+                        <img src="../img/virtual/booth_logo_1.png">
+                        <img src="../img/virtual/booth_logo_2.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Rightside bar / Chat -->
+            <div class="sidebar-right" data-panel="chat-sidebar" data-editable="yes">
+              <div class="tabs" data-control-tab-bg="chat-tabs">
+                <div class="close">
+                  <button data-control-tab-static="virtual">
+                    <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.4423 1.0575L14.1273 3.75L3.49976 3.75V5.25L14.1273 5.25L11.4348 7.9425L12.4998 9L16.9998 4.5L12.4998 0L11.4423 1.0575ZM0 1.2458e-06L0 9H1.5L1.5 1.2458e-06L0 1.2458e-06Z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </button>
+                </div>
+                <button class="active" data-control-tab-active="virtual" data-control-active-background="chat-tabs">
+                  <span>
+                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.3175C1 3.10389 4.40554 0.5 8.6075 0.5C12.8095 0.5 16.215 3.10389 16.215 6.3175C16.215 9.53111 12.8095 12.135 8.6075 12.135C7.46637 12.135 6.38765 11.9364 5.41592 11.5924C4.68488 12.1406 3.20796 13.03 1.23773 13.03C1.14264 13.03 1.05943 12.9797 1.0208 12.8958C0.98217 12.8118 1 12.7168 1.06538 12.6524C1.08024 12.6384 2.3224 11.3826 2.69386 9.97302C1.63594 8.97453 1 7.70475 1 6.3175Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                  </span>
+                  Chat
+                </button>
+                <button data-control-tab-static="virtual">
+                  <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.51515 3.95775C4.51515 2.32113 5.8827 1 7.57683 1C9.27096 1 10.6385 2.32113 10.6385 3.95775C10.6385 5.59437 9.27096 6.91549 7.57683 6.91549C5.8827 6.91549 4.51515 5.59437 4.51515 3.95775Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M13.7002 11.8254C12.3837 13.738 10.1282 15 7.57683 15C5.02543 15 2.77 13.738 1.45347 11.8254C1.48409 9.86338 5.54592 8.78873 7.57683 8.78873C9.61795 8.78873 13.6696 9.86338 13.7002 11.8254Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                  </span>
+                  Attendees
+                </button>
+                <button data-control-tab-static="virtual">
+                  <span>
+                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.26392 14.1765H5.19529C4.58886 14.1765 4.09725 13.6849 4.09725 13.0784C4.09725 12.472 4.58886 11.9804 5.19529 11.9804H5.26392C5.87035 11.9804 6.36196 12.472 6.36196 13.0784C6.36196 13.6849 5.87035 14.1765 5.26392 14.1765Z"
+                        stroke="currentColor" stroke-width="0.75"></path>
+                      <path
+                        d="M0.729085 4.89305C0.98443 2.70161 2.90115 1 5.22961 1C7.73211 1 9.75902 2.96549 9.75902 5.39216C9.75902 7.94116 6.82996 8.35994 6.41149 10.3848C6.3556 10.6552 6.1381 10.8824 5.86196 10.8824H4.59725C4.32111 10.8824 4.09395 10.6555 4.12132 10.3807C4.42467 7.33482 7.49431 7.47972 7.49431 5.39216C7.49431 4.18431 6.47519 3.19608 5.22961 3.19608C4.1596 3.19608 3.25671 3.92535 3.02343 4.89663C2.95894 5.16513 2.74104 5.39216 2.4649 5.39216H1.2002C0.924053 5.39216 0.697126 5.16733 0.729085 4.89305Z"
+                        stroke="currentColor" stroke-width="0.75"></path>
+                    </svg>
+                  </span>
+                  Help
+                </button>
+                <ul></ul>
+              </div>
+              <ul class="sub-tabs">
+                <li><button class="active" data-control-tab-active="virtual">General</button></li>
+                <li><button data-control-tab-static="virtual">DMs</button></li>
+              </ul>
+              <!-- Chat Empty -->
+              <!-- <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 35 35">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.23284 6.81591C8.40867 4.38743 12.7492 2.91667 17.5 2.91667C22.2508 2.91667 26.5913 4.38743 29.7672 6.81591C32.944 9.24518 35 12.6779 35 16.553C35 20.428 32.944 23.8607 29.7672 26.29C26.5913 28.7185 22.2508 30.1893 17.5 30.1893C15.1211 30.1893 12.859 29.8088 10.7921 29.1396C8.994 30.3943 5.78084 32.1211 1.5924 32.1211C0.997467 32.1211 0.416274 31.7952 0.143817 31.2034C-0.130849 30.6069 -0.000325137 29.9139 0.463416 29.4576L0.480503 29.4408C0.480503 29.4408 0.486665 29.4343 0.493003 29.4276C0.587912 29.3283 1.16194 28.7272 1.81734 27.8288C2.44967 26.9619 3.11251 25.879 3.51151 24.751C1.33661 22.5015 0 19.6718 0 16.553C0 12.6779 2.05597 9.24518 5.23284 6.81591ZM6.54398 8.53055C3.77795 10.6457 2.1585 13.4915 2.1585 16.553C2.1585 19.1981 3.36761 21.6684 5.47621 23.6585L5.9424 24.0985L5.77905 24.7184C5.32863 26.4277 4.36961 27.9926 3.56116 29.1008C3.34889 29.3918 3.14274 29.6571 2.95281 29.8912C6.2027 29.5493 8.6571 28.055 9.9635 27.0754L10.4261 26.7285L10.9712 26.9215C12.9554 27.6239 15.1621 28.0308 17.5 28.0308C21.8191 28.0308 25.6889 26.6913 28.456 24.5754C31.222 22.4603 32.8415 19.6144 32.8415 16.553C32.8415 13.4915 31.222 10.6457 28.456 8.53055C25.6889 6.41464 21.8191 5.07516 17.5 5.07516C13.1809 5.07516 9.31106 6.41464 6.54398 8.53055Z"
+                      fill="currentColor"></path>
+                    <path fill="currentColor" fill-rule="evenodd"
+                      d="M5.233 6.816c3.176-2.429 7.516-3.9 12.267-3.9 4.75 0 9.091 1.471 12.267 3.9C32.944 9.246 35 12.678 35 16.553s-2.056 7.308-5.233 9.737c-3.176 2.428-7.516 3.9-12.267 3.9-2.379 0-4.641-.381-6.708-1.05-1.798 1.254-5.011 2.981-9.2 2.981a1.583 1.583 0 01-1.448-.918 1.538 1.538 0 01.32-1.745l.017-.017.012-.013c.095-.1.669-.7 1.324-1.6.633-.866 1.296-1.949 1.695-3.077C1.337 22.501 0 19.671 0 16.553c0-3.875 2.056-7.308 5.233-9.737zM6.544 8.53c-2.766 2.115-4.385 4.96-4.385 8.022 0 2.645 1.209 5.115 3.317 7.105l.466.44-.163.62c-.45 1.71-1.41 3.275-2.218 4.383a19.47 19.47 0 01-.608.79c3.25-.342 5.704-1.836 7.01-2.816l.463-.346.545.193c1.984.702 4.191 1.109 6.529 1.109 4.32 0 8.189-1.34 10.956-3.456 2.766-2.115 4.386-4.96 4.386-8.022 0-3.062-1.62-5.907-4.386-8.022-2.767-2.116-6.637-3.456-10.956-3.456-4.32 0-8.189 1.34-10.956 3.456z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <p>There are no messages yet. Use the text input below to chat.</p>
+                </div>
+              </div> -->
+              <!-- Chat Messages -->
+              <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <div class="active-chat">
+                    <div class="chat-avatar">
+                      <img src="../img/virtual/Alice.png" class="chat-avatar">
+                    </div>
+                    <div class="chat-info">
+                      <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Alice
+                          Todd</span><span class="chat-time" data-control-secondary-text="virtual">12:15 PM</span><br>
+                        This is just a chat line that can get as long as needed</p>
+                    </div>
+                  </div>
+                  <div class="active-chat">
+                    <div class="options-icons">
+                      <ul>
+                        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M3.18182 5.72733C3.18182 5.19915 3.60818 4.77278 4.13636 4.77278C4.66455 4.77278 5.09091 5.19915 5.09091 5.72733C5.09091 6.25551 4.66455 6.68187 4.13636 6.68187C3.60818 6.68187 3.18182 6.25551 3.18182 5.72733ZM6.36364 10.8182C7.84636 10.8182 9.10636 9.88915 9.61545 8.59096H3.11182C3.62091 9.88915 4.88091 10.8182 6.36364 10.8182ZM8.59091 6.68187C9.11909 6.68187 9.54545 6.25551 9.54545 5.72733C9.54545 5.19915 9.11909 4.77278 8.59091 4.77278C8.06273 4.77278 7.63636 5.19915 7.63636 5.72733C7.63636 6.25551 8.06273 6.68187 8.59091 6.68187ZM12.7273 0.318237H11.4545V1.59096H10.1818V2.86369H11.4545V4.13642H12.7273V2.86369H14V1.59096H12.7273V0.318237ZM11.4545 7.31824C11.4545 10.131 9.17636 12.4091 6.36364 12.4091C3.55091 12.4091 1.27273 10.131 1.27273 7.31824C1.27273 4.50551 3.55091 2.22733 6.36364 2.22733C7.29273 2.22733 8.15818 2.48187 8.90909 2.9146V1.48915C8.12636 1.14551 7.26727 0.954601 6.35727 0.954601C2.84455 0.954601 0 3.80551 0 7.31824C0 10.831 2.84455 13.6819 6.35727 13.6819C9.87636 13.6819 12.7273 10.831 12.7273 7.31824C12.7273 6.65006 12.6191 6.01369 12.4282 5.40915H11.0727C11.3145 6.00096 11.4545 6.64369 11.4545 7.31824Z"
+                              fill="#3C4153"></path>
+                          </svg></li>
+                        <li class="active"><svg height="24" width="3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 64 512">
+                            <path
+                              d="M32 224c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM0 136c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32zm0 240c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32z"
+                              fill="#3C4153"></path>
+                          </svg></li>
+                      </ul>
+                    </div>
+                    <div class="chat-avatar">
+                      <img src="../img/virtual/Desmond.png" class="chat-avatar">
+                    </div>
+                    <div class="chat-info">
+                      <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Desmond
+                          Patrick</span><span class="chat-time" data-control-secondary-text="virtual">30 seconds
+                          ago</span><br>
+                        This is a different attendee adding to the chat</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-options">
+                  <div class="carot-block"></div>
+                  <ul>
+                    <li>Add reaction</li>
+                    <li>Pin message</li>
+                    <li>Send a direct message (DM)</li>
+                    <li>Invite to my private room</li>
+                    <li>Delete message</li>
+                    <li>Block chat</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chat-type" data-control-primary-text="virtual">
+                <p class="your-message">Type your message here...</p>
+                <div class="send-buttons">
+                  <button>
+                    <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                      <path
+                        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </button>
+                  <button class="send"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========== -->
+      <!-- Agenda -->
+      <div class="page-container min-width hide" data-page="agenda" data-panel="agenda" data-editable="no"
+        data-control-theme="agenda">
+        <div class="page" data-control-font="body" data-control-theme="page">
+          <!-- Header -->
+          <header class="virtual-header" data-page="virtual-header" data-panel="virtual-header" data-editable="yes"
+            data-control-header-bg="header" data-control-border="virtual-header">
+            <nav>
+              <img src="../img/logo-dark.svg" alt="Company Name" class="coverlogo light">
+              <img src="../img/logo-light.svg" alt="Company Name" class="coverlogo dark">
+              <ul>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.06061 15.5C7.33675 15.5 7.56061 15.2761 7.56061 15V10.5588H10.4394V15C10.4394 15.2761 10.6633 15.5 10.9394 15.5H15.3879C15.664 15.5 15.8879 15.2761 15.8879 15V8.91176H17C17.2057 8.91176 17.3904 8.78578 17.4655 8.59426C17.5406 8.40274 17.4907 8.18479 17.3398 8.04498L9.33981 0.633219C9.14809 0.455594 8.85191 0.455594 8.66019 0.633219L0.660188 8.04498C0.509289 8.18479 0.459413 8.40274 0.534495 8.59426C0.609576 8.78578 0.794292 8.91176 1 8.91176H2.11212V15C2.11212 15.2761 2.33598 15.5 2.61212 15.5H7.06061Z"
+                        stroke="currentColor" stroke-linejoin="round"></path>
+                    </svg>
+                    Lobby
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="activenav" data-page="virtual-header" data-panel="virtual-header"
+                    data-editable="no" data-control-nav-active="virtual-header">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="">
+                      <path
+                        d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                    Agenda
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="path-1-inside-2" fill="white">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2 0C0.895431 0 0 0.89543 0 2V8.57992C0 9.68449 0.895431 10.5799 2 10.5799H14.2225C15.3271 10.5799 16.2225 9.68449 16.2225 8.57992V2C16.2225 0.895431 15.3271 0 14.2225 0H2ZM2 11.6473C0.895431 11.6473 0 12.5427 0 13.6473V13.9999C0 15.1045 0.895429 15.9999 2 15.9999H2.35266C3.45723 15.9999 4.35266 15.1045 4.35266 13.9999V13.6473C4.35266 12.5427 3.45723 11.6473 2.35266 11.6473H2ZM5.82363 13.6473C5.82363 12.5427 6.71906 11.6473 7.82363 11.6473H8.17629C9.28086 11.6473 10.1763 12.5427 10.1763 13.6473V13.9999C10.1763 15.1045 9.28086 15.9999 8.17629 15.9999H7.82363C6.71906 15.9999 5.82363 15.1045 5.82363 13.9999V13.6473ZM13.6473 11.6473C12.5427 11.6473 11.6473 12.5427 11.6473 13.6473V13.9999C11.6473 15.1045 12.5427 15.9999 13.6473 15.9999H13.9999C15.1045 15.9999 15.9999 15.1045 15.9999 13.9999V13.6473C15.9999 12.5427 15.1045 11.6473 13.9999 11.6473H13.6473Z">
+                        </path>
+                      </mask>
+                      <path
+                        d="M1 2C1 1.44772 1.44772 1 2 1V-1C0.343146 -1 -1 0.343145 -1 2H1ZM1 8.57992V2H-1V8.57992H1ZM2 9.57992C1.44772 9.57992 1 9.13221 1 8.57992H-1C-1 10.2368 0.343147 11.5799 2 11.5799V9.57992ZM14.2225 9.57992H2V11.5799H14.2225V9.57992ZM15.2225 8.57992C15.2225 9.13221 14.7748 9.57992 14.2225 9.57992V11.5799C15.8794 11.5799 17.2225 10.2368 17.2225 8.57992H15.2225ZM15.2225 2V8.57992H17.2225V2H15.2225ZM14.2225 1C14.7748 1 15.2225 1.44772 15.2225 2H17.2225C17.2225 0.343145 15.8794 -1 14.2225 -1V1ZM2 1H14.2225V-1H2V1ZM1 13.6473C1 13.095 1.44771 12.6473 2 12.6473V10.6473C0.343147 10.6473 -1 11.9904 -1 13.6473H1ZM1 13.9999V13.6473H-1V13.9999H1ZM2 14.9999C1.44771 14.9999 1 14.5522 1 13.9999H-1C-1 15.6568 0.343143 16.9999 2 16.9999V14.9999ZM2.35266 14.9999H2V16.9999H2.35266V14.9999ZM3.35266 13.9999C3.35266 14.5522 2.90494 14.9999 2.35266 14.9999V16.9999C4.00951 16.9999 5.35266 15.6568 5.35266 13.9999H3.35266ZM3.35266 13.6473V13.9999H5.35266V13.6473H3.35266ZM2.35266 12.6473C2.90494 12.6473 3.35266 13.095 3.35266 13.6473H5.35266C5.35266 11.9904 4.00951 10.6473 2.35266 10.6473V12.6473ZM2 12.6473H2.35266V10.6473H2V12.6473ZM7.82363 10.6473C6.16678 10.6473 4.82363 11.9904 4.82363 13.6473H6.82363C6.82363 13.095 7.27135 12.6473 7.82363 12.6473V10.6473ZM8.17629 10.6473H7.82363V12.6473H8.17629V10.6473ZM11.1763 13.6473C11.1763 11.9904 9.83315 10.6473 8.17629 10.6473V12.6473C8.72857 12.6473 9.17629 13.095 9.17629 13.6473H11.1763ZM11.1763 13.9999V13.6473H9.17629V13.9999H11.1763ZM8.17629 16.9999C9.83314 16.9999 11.1763 15.6568 11.1763 13.9999H9.17629C9.17629 14.5522 8.72857 14.9999 8.17629 14.9999V16.9999ZM7.82363 16.9999H8.17629V14.9999H7.82363V16.9999ZM4.82363 13.9999C4.82363 15.6568 6.16677 16.9999 7.82363 16.9999V14.9999C7.27135 14.9999 6.82363 14.5522 6.82363 13.9999H4.82363ZM4.82363 13.6473V13.9999H6.82363V13.6473H4.82363ZM12.6473 13.6473C12.6473 13.095 13.095 12.6473 13.6473 12.6473V10.6473C11.9904 10.6473 10.6473 11.9904 10.6473 13.6473H12.6473ZM12.6473 13.9999V13.6473H10.6473V13.9999H12.6473ZM13.6473 14.9999C13.095 14.9999 12.6473 14.5522 12.6473 13.9999H10.6473C10.6473 15.6568 11.9904 16.9999 13.6473 16.9999V14.9999ZM13.9999 14.9999H13.6473V16.9999H13.9999V14.9999ZM14.9999 13.9999C14.9999 14.5522 14.5522 14.9999 13.9999 14.9999V16.9999C15.6568 16.9999 16.9999 15.6568 16.9999 13.9999H14.9999ZM14.9999 13.6473V13.9999H16.9999V13.6473H14.9999ZM13.9999 12.6473C14.5522 12.6473 14.9999 13.095 14.9999 13.6473H16.9999C16.9999 11.9904 15.6568 10.6473 13.9999 10.6473V12.6473ZM13.6473 12.6473H13.9999V10.6473H13.6473V12.6473Z"
+                        fill="currentColor" mask="url(#path-1-inside-2)"></path>
+                    </svg>
+                    Stage
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.5 11.5C4.5 12.6046 3.60457 13.5 2.5 13.5C1.39543 13.5 0.5 12.6046 0.5 11.5C0.5 10.3954 1.39543 9.5 2.5 9.5C3.60457 9.5 4.5 10.3954 4.5 11.5Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M15.1665 11.5C15.1665 12.6046 14.2711 13.5 13.1665 13.5C12.0619 13.5 11.1665 12.6046 11.1665 11.5C11.1665 10.3954 12.0619 9.5 13.1665 9.5C14.2711 9.5 15.1665 10.3954 15.1665 11.5Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M14.3018 7.59717C14.2081 6.70039 13.9473 5.89067 13.5193 5.168C13.0912 4.44532 12.4959 3.8097 11.7335 3.26113"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M5.3418 14C6.21774 14.3709 7.09652 14.5625 7.97814 14.5747C8.85977 14.587 9.74424 14.42 10.6316 14.0737"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M1.78174 8C1.80691 7.09925 2.00548 6.27415 2.37747 5.5247C2.74946 4.77525 3.29486 4.10145 4.01367 3.5033"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M9.8335 2.5C9.8335 3.60457 8.93807 4.5 7.8335 4.5C6.72893 4.5 5.8335 3.60457 5.8335 2.5C5.8335 1.39543 6.72893 0.5 7.8335 0.5C8.93807 0.5 9.8335 1.39543 9.8335 2.5Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                    Networking
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.5713 3.99243L14.7912 1.25611C14.6179 0.512361 14.389 0 13.6719 0H2.7274C2.01825 0 1.88433 0.520625 1.71886 1.25611L0.844247 3.99243C0.65514 4.83535 0.649189 5.26495 0.844247 5.62907C1.10991 6.125 1.46731 6.33041 1.52488 6.45339V12.3472C1.52488 13.2562 1.77399 14 2.64073 14H13.6719C14.5387 14 14.7912 13.2562 14.7912 12.3472V6.125C14.8622 6.05062 15.0746 6.03493 15.4685 5.50569C15.7437 5.13576 15.7683 4.83535 15.5713 3.99243ZM13.601 0.866736L14.4284 4.38083C14.5072 4.72792 14.4363 5.075 14.2314 5.34771C14.1211 5.49646 13.8847 5.73611 13.4907 5.73611C13.0101 5.73611 12.5925 5.33118 12.5373 4.79403L12.0803 0.875L13.601 0.866736ZM8.94428 0.875H10.4887L10.9141 4.51306C10.9535 4.83535 10.859 5.15764 10.6541 5.39729C10.4808 5.61215 10.2286 5.73611 9.90557 5.73611C9.37765 5.73611 8.94428 5.24854 8.94428 4.65354V0.875ZM5.39065 4.51306L5.82402 0.875H7.3684V4.65354C7.3684 5.24854 6.93502 5.73611 6.35195 5.73611C6.08404 5.73611 5.83978 5.61215 5.65068 5.39729C5.45369 5.15764 5.35914 4.83535 5.39065 4.51306ZM1.8843 4.38083L2.68013 0.875H4.23238L3.77537 4.79403C3.71233 5.33118 3.3026 5.73611 2.82196 5.73611C2.43586 5.73611 2.1916 5.49646 2.08917 5.34771C1.87643 5.08326 1.80551 4.72792 1.8843 4.38083ZM2.64073 13.125V6.4891C2.70377 6.49736 2.75892 6.51389 2.82196 6.51389C3.50747 6.51389 4.12994 6.21639 4.58695 5.72882C5.05972 6.22465 5.69007 6.51389 6.4071 6.51389C7.09261 6.51389 7.70721 6.21639 8.16422 5.74535C8.62911 6.21639 9.25946 6.51389 9.96861 6.51389C10.6305 6.51389 11.2608 6.22465 11.7336 5.72882C12.1906 6.21639 12.8131 6.51389 13.4986 6.51389C13.5616 6.51389 13.6168 6.49736 13.6798 6.4891V13.125H2.64073Z"
+                        fill="currentColor"></path>
+                    </svg>
+                    Booths
+                  </a>
+                </li>
+              </ul>
+              <!-- Empty UL for spacing -->
+              <ul></ul>
+            </nav>
+          </header>
+          <div class="virtual-body">
+            <div class="outer-content" data-panel="agenda" data-editable="yes">
+              <div class="virtual-main-content-col" data-control-content-bg="content">
+                <!-- Page Header -->
+                <div class="page-title-container" data-control-title-bg="page-title">
+                  <div class="page-title">
+                    Event Name
+                  </div>
+                </div>
+                <!-- Tabs -->
+                <div class="agenda-tabs">
+                  <ul data-control-primary-text="virtual">
+                    <li class="active" data-control-links="virtual">Nov 24</li>
+                    <li>Nov 25</li>
+                    <li>My Agenda</li>
+                  </ul>
+                  <ul>
+                    <li class="completed" data-control-secondary-text="virtual">Show completed sessions</li>
+                  </ul>
+                </div>
+                <!-- Agenda Search -->
+                <div class="agenda-search" data-control-card-border="card-border" data-control-card-bg="card">
+                  <ul>
+                    <li data-control-primary-text="virtual" data-control-border="agenda"><span>Search</span><svg
+                        width="20" height="24" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                          fill="currentColor"></path>
+                      </svg></li>
+                    <li data-control-secondary-text="virtual" data-control-border="agenda"><span>Filter</span><svg
+                        width="24" height="24" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 10l5 5 5-5z"></path>
+                      </svg></li>
+                  </ul>
+                </div>
+                <!-- Agenda Items -->
+                <div class="agenda-section">
+                  <!-- Agenda Cards -->
+                  <div class="agenda-card" data-control-card-border="card-border" data-control-card-bg="card"
+                    data-control-radius="agenda">
+                    <div class="agenda-item-time" data-control-primary-text="virtual">
+                      10:00 AM - 11:00 AM
+                    </div>
+                    <div class="agenda-name">
+                      <p data-control-primary-text="virtual">Event Kick Off Presentation</p>
+                      <button data-control-btn-secondary="secondary"><svg width="8" height="8" viewBox="0 0 8 8"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.42857 4.57143H4.57143V7.42857C4.57143 7.74286 4.31429 8 4 8C3.68571 8 3.42857 7.74286 3.42857 7.42857V4.57143H0.571429C0.257143 4.57143 0 4.31429 0 4C0 3.68571 0.257143 3.42857 0.571429 3.42857H3.42857V0.571429C3.42857 0.257143 3.68571 0 4 0C4.31429 0 4.57143 0.257143 4.57143 0.571429V3.42857H7.42857C7.74286 3.42857 8 3.68571 8 4C8 4.31429 7.74286 4.57143 7.42857 4.57143Z"
+                            fill="currentColor"></path>
+                        </svg></button>
+                    </div>
+                    <div class="agenda-description">
+                      <p data-control-secondary-text="virtual">Join us for the welcome presentation.</p>
+                    </div>
+                    <div class="agenda-description">
+                      <ul>
+                        <li data-control-secondary-text="virtual">
+                          <span><svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" width="16"
+                              height="12" role="presentation" alt="StageIcon" data-testid="StageIcon"
+                              color="currentColor">
+                              <path
+                                d="M1.316 3.234C1.316 2 2.315 1 3.548 1h8.895c1.234 0 2.233 1 2.233 2.234v5.11a.75.75 0 0 1-1.5 0v-5.11a.733.733 0 0 0-.733-.734H3.548a.733.733 0 0 0-.732.734v5.11a.75.75 0 1 1-1.5 0v-5.11Z"
+                                fill="currentColor"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.712 10.336a1.998 1.998 0 0 0-3.26 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM9.429 10.336a1.998 1.998 0 0 0-3.261 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM11.328 10.336a1.999 1.999 0 0 1 3.26 2.18 2 2 0 1 1-3.26-2.18Zm1.06 1.06a.498.498 0 0 1 .815.545.5.5 0 1 1-.814-.545Z"
+                                fill="currentColor"></path>
+                              <path
+                                d="M10.815 15.447c-.69-.815-1.812-1.152-2.82-1.152-1.01 0-2.132.337-2.821 1.152a.75.75 0 0 0 1.145.969c.31-.366.936-.62 1.676-.62.74 0 1.366.254 1.675.62a.75.75 0 1 0 1.145-.969ZM.08 15.915c.689-1.38 2.313-1.816 3.455-1.583a.75.75 0 1 1-.3 1.47c-.662-.136-1.504.164-1.814.784a.75.75 0 1 1-1.342-.67ZM12.462 14.33c1.142-.232 2.768.203 3.459 1.585a.75.75 0 0 1-1.342.67c-.31-.62-1.154-.92-1.817-.785a.75.75 0 1 1-.3-1.47Z"
+                                fill="currentColor"></path>
+                            </svg></span>
+                          Stage
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="agenda-speakers" data-control-card-inner-border="card-divider">
+                      <div class="agenda-speaker-img">
+                        <img src="../img/virtual/beth_mcintyre.png">
+                      </div>
+                      <div class="agenda-speaker-info">
+                        <p data-control-primary-text="virtual">
+                          <strong style="font-weight:700">Beth McIntyre</strong><br>
+                          Chapter Organizer<br>
+                          Bevy<br>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="agenda-actions">
+                      <div class="agenda-calendar" data-control-links="virtual"><svg fill="currentColor"
+                          preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40"
+                          class="AddToCalendar-styles-titleIcon-2qLrf" style="vertical-align: middle;">
+                          <g>
+                            <path
+                              d="m35.8 5.7q1.1 0 2 0.9t0.8 2v28.5q0 1.2-0.8 2.1t-2 0.8h-31.4q-1.2 0-2.1-0.9t-0.8-2v-28.5q0-1.2 0.8-2t2.1-0.9h2.8v-2.1q0-1.5 1.1-2.6t2.5-1h1.4q1.5 0 2.5 1.1t1.1 2.5v2.1h8.6v-2.1q0-1.5 1-2.6t2.5-1h1.5q1.4 0 2.5 1.1t1 2.5v2.1h2.9z m-8.6-2.1v6.4q0 0.3 0.2 0.5t0.5 0.2h1.5q0.3 0 0.5-0.2t0.2-0.5v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.5q-0.3 0-0.5 0.2t-0.2 0.5z m-17.1 0v6.4q0 0.3 0.2 0.5t0.5 0.2h1.4q0.3 0 0.5-0.2t0.2-0.5v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.4q-0.3 0-0.5 0.2t-0.2 0.5z m25.7 33.5v-22.8h-31.4v22.8h31.4z m-14.3-12.8h5q0.3 0 0.5 0.2t0.2 0.5v1.4q0 0.3-0.2 0.5t-0.5 0.2h-5v5q0 0.4-0.2 0.6t-0.5 0.2h-1.4q-0.4 0-0.6-0.2t-0.2-0.6v-5h-5q-0.3 0-0.5-0.2t-0.2-0.5v-1.4q0-0.3 0.2-0.5t0.5-0.2h5v-5q0-0.3 0.2-0.5t0.6-0.2h1.4q0.3 0 0.5 0.2t0.2 0.5v5z">
+                            </path>
+                          </g>
+                        </svg>
+                        <span>Add To Calendar</span>
+                      </div>
+                      <button class="btn primary join-event-btn" data-control-btn-primary="primary">Join Event</button>
+                    </div>
+                  </div>
+                  <div class="agenda-card" data-control-card-border="card-border" data-control-card-bg="card"
+                    data-control-radius="agenda">
+                    <div class="agenda-item-time">
+                      11:10 AM - 11:30 AM
+                    </div>
+                    <div class="agenda-name">
+                      <p data-control-primary-text="virtual">Side Session</p>
+                      <button data-control-btn-secondary="secondary"><svg width="8" height="8" viewBox="0 0 8 8"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.42857 4.57143H4.57143V7.42857C4.57143 7.74286 4.31429 8 4 8C3.68571 8 3.42857 7.74286 3.42857 7.42857V4.57143H0.571429C0.257143 4.57143 0 4.31429 0 4C0 3.68571 0.257143 3.42857 0.571429 3.42857H3.42857V0.571429C3.42857 0.257143 3.68571 0 4 0C4.31429 0 4.57143 0.257143 4.57143 0.571429V3.42857H7.42857C7.74286 3.42857 8 3.68571 8 4C8 4.31429 7.74286 4.57143 7.42857 4.57143Z"
+                            fill="currentColor"></path>
+                        </svg></button>
+                    </div>
+                    <div class="agenda-description">
+                      <ul>
+                        <li data-control-secondary-text="virtual">
+                          <span><svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                              class="ScheduleDetail-styles-audienceTypeIcon-34Ud4" width="16" height="12"
+                              role="presentation" alt="SessionIcon" data-testid="SessionIcon" color="currentColor">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.75.608A1.75 1.75 0 0 0 0 2.358v.29c0 .6.302 1.13.763 1.445v7.185a2.276 2.276 0 0 0 2.276 2.276h5.342a.75.75 0 0 0 0-1.5H3.039a.776.776 0 0 1-.776-.776v-6.88H13.723a.747.747 0 0 0 .415-.127 1.75 1.75 0 0 0 1.098-1.624v-.29a1.75 1.75 0 0 0-1.75-1.75H1.75Zm11.739 2.29a.25.25 0 0 0 .247-.25v-.29a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.29c0 .136.11.247.247.25h11.742Z"
+                                fill="currentColor"></path>
+                              <path
+                                d="M3.815 6.7a.75.75 0 0 1 .75-.75h3.816a.75.75 0 0 1 0 1.5H4.565a.75.75 0 0 1-.75-.75ZM4.565 8.239a.75.75 0 0 0 0 1.5h1.527a.75.75 0 0 0 0-1.5H4.565Z"
+                                fill="currentColor"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.988 6.7a1.895 1.895 0 1 1 3.79 0 1.895 1.895 0 0 1-3.79 0Zm1.895-.395a.395.395 0 1 0 0 .79.395.395 0 0 0 0-.79ZM14.467 9.002h-3.015a1.47 1.47 0 0 0-1.532 1.532v1.43a1.835 1.835 0 0 0 .262.847c.02.033.04.063.065.092l.589.707v1.465a1.471 1.471 0 0 0 1.532 1.532h1.183a1.471 1.471 0 0 0 1.532-1.532V13.61l.59-.707a.742.742 0 0 0 .064-.09 1.835 1.835 0 0 0 .262-.848v-1.431a1.472 1.472 0 0 0-1.532-1.532Zm-2.118 6.105h-.013v-1.769a.75.75 0 0 0-.174-.48l-.717-.86a.335.335 0 0 1-.025-.08v-1.416H14.499v1.416a.335.335 0 0 1-.025.08l-.717.86a.75.75 0 0 0-.174.48v1.769H12.35Z"
+                                fill="currentColor"></path>
+                            </svg></span>
+                          Session
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="agenda-speakers" data-control-card-inner-border="card-divider">
+                      <div class="agenda-speaker-img">
+                        <img src="../img/virtual/beth_mcintyre.png">
+                      </div>
+                      <div class="agenda-speaker-info">
+                        <p data-control-primary-text="virtual">
+                          <strong style="font-weight:700">Beth McIntyre</strong><br>
+                          Chapter Organizer<br>
+                          Bevy<br>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="agenda-actions">
+                      <div class="agenda-calendar" data-control-links="virtual"><svg fill="currentColor"
+                          preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40"
+                          class="AddToCalendar-styles-titleIcon-2qLrf" style="vertical-align: middle;">
+                          <g>
+                            <path
+                              d="m35.8 5.7q1.1 0 2 0.9t0.8 2v28.5q0 1.2-0.8 2.1t-2 0.8h-31.4q-1.2 0-2.1-0.9t-0.8-2v-28.5q0-1.2 0.8-2t2.1-0.9h2.8v-2.1q0-1.5 1.1-2.6t2.5-1h1.4q1.5 0 2.5 1.1t1.1 2.5v2.1h8.6v-2.1q0-1.5 1-2.6t2.5-1h1.5q1.4 0 2.5 1.1t1 2.5v2.1h2.9z m-8.6-2.1v6.4q0 0.3 0.2 0.5t0.5 0.2h1.5q0.3 0 0.5-0.2t0.2-0.5v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.5q-0.3 0-0.5 0.2t-0.2 0.5z m-17.1 0v6.4q0 0.3 0.2 0.5t0.5 0.2h1.4q0.3 0 0.5-0.2t0.2-0.5v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.4q-0.3 0-0.5 0.2t-0.2 0.5z m25.7 33.5v-22.8h-31.4v22.8h31.4z m-14.3-12.8h5q0.3 0 0.5 0.2t0.2 0.5v1.4q0 0.3-0.2 0.5t-0.5 0.2h-5v5q0 0.4-0.2 0.6t-0.5 0.2h-1.4q-0.4 0-0.6-0.2t-0.2-0.6v-5h-5q-0.3 0-0.5-0.2t-0.2-0.5v-1.4q0-0.3 0.2-0.5t0.5-0.2h5v-5q0-0.3 0.2-0.5t0.6-0.2h1.4q0.3 0 0.5 0.2t0.2 0.5v5z">
+                            </path>
+                          </g>
+                        </svg>
+                        <span>Add To Calendar</span>
+                      </div>
+                      <!-- <button class="btn primary join-event-btn">Join Event</button> -->
+                    </div>
+                  </div>
+                  <div class="agenda-card" data-control-card-border="card-border" data-control-card-bg="card"
+                    data-control-radius="agenda">
+                    <div class="agenda-item-time">
+                      12:00 PM - 2:00 PM
+                    </div>
+                    <div class="agenda-name">
+                      <p data-control-primary-text="virtual">Keynote Presentation</p>
+                      <button data-control-btn-secondary="secondary"><svg width="8" height="8" viewBox="0 0 8 8"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.42857 4.57143H4.57143V7.42857C4.57143 7.74286 4.31429 8 4 8C3.68571 8 3.42857 7.74286 3.42857 7.42857V4.57143H0.571429C0.257143 4.57143 0 4.31429 0 4C0 3.68571 0.257143 3.42857 0.571429 3.42857H3.42857V0.571429C3.42857 0.257143 3.68571 0 4 0C4.31429 0 4.57143 0.257143 4.57143 0.571429V3.42857H7.42857C7.74286 3.42857 8 3.68571 8 4C8 4.31429 7.74286 4.57143 7.42857 4.57143Z"
+                            fill="currentColor"></path>
+                        </svg></button>
+                    </div>
+                    <div class="agenda-description">
+                      <p data-control-secondary-text="virtual">Join us for the first keynote of the day.</p>
+                    </div>
+                    <div class="agenda-description">
+                      <ul>
+                        <li data-control-secondary-text="virtual">
+                          <span><svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                              class="ScheduleDetail-styles-audienceTypeIcon-34Ud4" width="16" height="12"
+                              role="presentation" alt="StageIcon" data-testid="StageIcon" color="currentColor">
+                              <path
+                                d="M1.316 3.234C1.316 2 2.315 1 3.548 1h8.895c1.234 0 2.233 1 2.233 2.234v5.11a.75.75 0 0 1-1.5 0v-5.11a.733.733 0 0 0-.733-.734H3.548a.733.733 0 0 0-.732.734v5.11a.75.75 0 1 1-1.5 0v-5.11Z"
+                                fill="currentColor"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.712 10.336a1.998 1.998 0 0 0-3.26 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM9.429 10.336a1.998 1.998 0 0 0-3.261 2.18 2 2 0 1 0 3.26-2.18Zm-1.061 1.06a.498.498 0 0 0-.814.545.5.5 0 1 0 .814-.545ZM11.328 10.336a1.999 1.999 0 0 1 3.26 2.18 2 2 0 1 1-3.26-2.18Zm1.06 1.06a.498.498 0 0 1 .815.545.5.5 0 1 1-.814-.545Z"
+                                fill="currentColor"></path>
+                              <path
+                                d="M10.815 15.447c-.69-.815-1.812-1.152-2.82-1.152-1.01 0-2.132.337-2.821 1.152a.75.75 0 0 0 1.145.969c.31-.366.936-.62 1.676-.62.74 0 1.366.254 1.675.62a.75.75 0 1 0 1.145-.969ZM.08 15.915c.689-1.38 2.313-1.816 3.455-1.583a.75.75 0 1 1-.3 1.47c-.662-.136-1.504.164-1.814.784a.75.75 0 1 1-1.342-.67ZM12.462 14.33c1.142-.232 2.768.203 3.459 1.585a.75.75 0 0 1-1.342.67c-.31-.62-1.154-.92-1.817-.785a.75.75 0 1 1-.3-1.47Z"
+                                fill="currentColor"></path>
+                            </svg></span>
+                          Stage
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="agenda-speakers" data-control-card-inner-border="card-divider">
+                      <div class="agenda-speaker-img">
+                        <img src="../img/virtual/beth_mcintyre.png">
+                      </div>
+                      <div class="agenda-speaker-info">
+                        <p data-control-primary-text="virtual">
+                          <strong style="font-weight:700">Beth McIntyre</strong><br>
+                          Chapter Organizer<br>
+                          Bevy<br>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="agenda-actions">
+                      <div class="agenda-calendar" data-control-links="virtual"><svg fill="currentColor"
+                          preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40"
+                          class="AddToCalendar-styles-titleIcon-2qLrf" style="vertical-align: middle;">
+                          <g>
+                            <path
+                              d="m35.8 5.7q1.1 0 2 0.9t0.8 2v28.5q0 1.2-0.8 2.1t-2 0.8h-31.4q-1.2 0-2.1-0.9t-0.8-2v-28.5q0-1.2 0.8-2t2.1-0.9h2.8v-2.1q0-1.5 1.1-2.6t2.5-1h1.4q1.5 0 2.5 1.1t1.1 2.5v2.1h8.6v-2.1q0-1.5 1-2.6t2.5-1h1.5q1.4 0 2.5 1.1t1 2.5v2.1h2.9z m-8.6-2.1v6.4q0 0.3 0.2 0.5t0.5 0.2h1.5q0.3 0 0.5-0.2t0.2-0.5v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.5q-0.3 0-0.5 0.2t-0.2 0.5z m-17.1 0v6.4q0 0.3 0.2 0.5t0.5 0.2h1.4q0.3 0 0.5-0.2t0.2-0.5v-6.4q0-0.3-0.2-0.5t-0.5-0.2h-1.4q-0.3 0-0.5 0.2t-0.2 0.5z m25.7 33.5v-22.8h-31.4v22.8h31.4z m-14.3-12.8h5q0.3 0 0.5 0.2t0.2 0.5v1.4q0 0.3-0.2 0.5t-0.5 0.2h-5v5q0 0.4-0.2 0.6t-0.5 0.2h-1.4q-0.4 0-0.6-0.2t-0.2-0.6v-5h-5q-0.3 0-0.5-0.2t-0.2-0.5v-1.4q0-0.3 0.2-0.5t0.5-0.2h5v-5q0-0.3 0.2-0.5t0.6-0.2h1.4q0.3 0 0.5 0.2t0.2 0.5v5z">
+                            </path>
+                          </g>
+                        </svg>
+                        <span>Add To Calendar</span>
+                      </div>
+                      <!-- <button class="btn primary join-event-btn">Join Event</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Rightside bar / Chat -->
+            <div class="sidebar-right" data-panel="chat-sidebar" data-editable="yes">
+              <div class="tabs" data-control-tab-bg="chat-tabs">
+                <div class="close">
+                  <button data-control-tab-static="virtual">
+                    <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.4423 1.0575L14.1273 3.75L3.49976 3.75V5.25L14.1273 5.25L11.4348 7.9425L12.4998 9L16.9998 4.5L12.4998 0L11.4423 1.0575ZM0 1.2458e-06L0 9H1.5L1.5 1.2458e-06L0 1.2458e-06Z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </button>
+                </div>
+                <button class="active" data-control-tab-active="virtual" data-control-active-background="chat-tabs">
+                  <span>
+                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.3175C1 3.10389 4.40554 0.5 8.6075 0.5C12.8095 0.5 16.215 3.10389 16.215 6.3175C16.215 9.53111 12.8095 12.135 8.6075 12.135C7.46637 12.135 6.38765 11.9364 5.41592 11.5924C4.68488 12.1406 3.20796 13.03 1.23773 13.03C1.14264 13.03 1.05943 12.9797 1.0208 12.8958C0.98217 12.8118 1 12.7168 1.06538 12.6524C1.08024 12.6384 2.3224 11.3826 2.69386 9.97302C1.63594 8.97453 1 7.70475 1 6.3175Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                  </span>
+                  Chat
+                </button>
+                <button data-control-tab-static="virtual">
+                  <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.51515 3.95775C4.51515 2.32113 5.8827 1 7.57683 1C9.27096 1 10.6385 2.32113 10.6385 3.95775C10.6385 5.59437 9.27096 6.91549 7.57683 6.91549C5.8827 6.91549 4.51515 5.59437 4.51515 3.95775Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M13.7002 11.8254C12.3837 13.738 10.1282 15 7.57683 15C5.02543 15 2.77 13.738 1.45347 11.8254C1.48409 9.86338 5.54592 8.78873 7.57683 8.78873C9.61795 8.78873 13.6696 9.86338 13.7002 11.8254Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                  </span>
+                  Attendees
+                </button>
+                <button data-control-tab-static="virtual">
+                  <span>
+                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.26392 14.1765H5.19529C4.58886 14.1765 4.09725 13.6849 4.09725 13.0784C4.09725 12.472 4.58886 11.9804 5.19529 11.9804H5.26392C5.87035 11.9804 6.36196 12.472 6.36196 13.0784C6.36196 13.6849 5.87035 14.1765 5.26392 14.1765Z"
+                        stroke="currentColor" stroke-width="0.75"></path>
+                      <path
+                        d="M0.729085 4.89305C0.98443 2.70161 2.90115 1 5.22961 1C7.73211 1 9.75902 2.96549 9.75902 5.39216C9.75902 7.94116 6.82996 8.35994 6.41149 10.3848C6.3556 10.6552 6.1381 10.8824 5.86196 10.8824H4.59725C4.32111 10.8824 4.09395 10.6555 4.12132 10.3807C4.42467 7.33482 7.49431 7.47972 7.49431 5.39216C7.49431 4.18431 6.47519 3.19608 5.22961 3.19608C4.1596 3.19608 3.25671 3.92535 3.02343 4.89663C2.95894 5.16513 2.74104 5.39216 2.4649 5.39216H1.2002C0.924053 5.39216 0.697126 5.16733 0.729085 4.89305Z"
+                        stroke="currentColor" stroke-width="0.75"></path>
+                    </svg>
+                  </span>
+                  Help
+                </button>
+                <ul></ul>
+              </div>
+              <ul class="sub-tabs">
+                <li><button class="active" data-control-tab-active="virtual">General</button></li>
+                <li><button data-control-tab-static="virtual">DMs</button></li>
+              </ul>
+              <!-- Chat Empty -->
+              <!-- <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 35 35">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.23284 6.81591C8.40867 4.38743 12.7492 2.91667 17.5 2.91667C22.2508 2.91667 26.5913 4.38743 29.7672 6.81591C32.944 9.24518 35 12.6779 35 16.553C35 20.428 32.944 23.8607 29.7672 26.29C26.5913 28.7185 22.2508 30.1893 17.5 30.1893C15.1211 30.1893 12.859 29.8088 10.7921 29.1396C8.994 30.3943 5.78084 32.1211 1.5924 32.1211C0.997467 32.1211 0.416274 31.7952 0.143817 31.2034C-0.130849 30.6069 -0.000325137 29.9139 0.463416 29.4576L0.480503 29.4408C0.480503 29.4408 0.486665 29.4343 0.493003 29.4276C0.587912 29.3283 1.16194 28.7272 1.81734 27.8288C2.44967 26.9619 3.11251 25.879 3.51151 24.751C1.33661 22.5015 0 19.6718 0 16.553C0 12.6779 2.05597 9.24518 5.23284 6.81591ZM6.54398 8.53055C3.77795 10.6457 2.1585 13.4915 2.1585 16.553C2.1585 19.1981 3.36761 21.6684 5.47621 23.6585L5.9424 24.0985L5.77905 24.7184C5.32863 26.4277 4.36961 27.9926 3.56116 29.1008C3.34889 29.3918 3.14274 29.6571 2.95281 29.8912C6.2027 29.5493 8.6571 28.055 9.9635 27.0754L10.4261 26.7285L10.9712 26.9215C12.9554 27.6239 15.1621 28.0308 17.5 28.0308C21.8191 28.0308 25.6889 26.6913 28.456 24.5754C31.222 22.4603 32.8415 19.6144 32.8415 16.553C32.8415 13.4915 31.222 10.6457 28.456 8.53055C25.6889 6.41464 21.8191 5.07516 17.5 5.07516C13.1809 5.07516 9.31106 6.41464 6.54398 8.53055Z"
+                      fill="currentColor"></path>
+                    <path fill="currentColor" fill-rule="evenodd"
+                      d="M5.233 6.816c3.176-2.429 7.516-3.9 12.267-3.9 4.75 0 9.091 1.471 12.267 3.9C32.944 9.246 35 12.678 35 16.553s-2.056 7.308-5.233 9.737c-3.176 2.428-7.516 3.9-12.267 3.9-2.379 0-4.641-.381-6.708-1.05-1.798 1.254-5.011 2.981-9.2 2.981a1.583 1.583 0 01-1.448-.918 1.538 1.538 0 01.32-1.745l.017-.017.012-.013c.095-.1.669-.7 1.324-1.6.633-.866 1.296-1.949 1.695-3.077C1.337 22.501 0 19.671 0 16.553c0-3.875 2.056-7.308 5.233-9.737zM6.544 8.53c-2.766 2.115-4.385 4.96-4.385 8.022 0 2.645 1.209 5.115 3.317 7.105l.466.44-.163.62c-.45 1.71-1.41 3.275-2.218 4.383a19.47 19.47 0 01-.608.79c3.25-.342 5.704-1.836 7.01-2.816l.463-.346.545.193c1.984.702 4.191 1.109 6.529 1.109 4.32 0 8.189-1.34 10.956-3.456 2.766-2.115 4.386-4.96 4.386-8.022 0-3.062-1.62-5.907-4.386-8.022-2.767-2.116-6.637-3.456-10.956-3.456-4.32 0-8.189 1.34-10.956 3.456z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <p>There are no messages yet. Use the text input below to chat.</p>
+                </div>
+              </div> -->
+              <!-- Chat Messages -->
+              <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <div class="active-chat">
+                    <div class="chat-avatar">
+                      <img src="../img/virtual/Alice.png" class="chat-avatar">
+                    </div>
+                    <div class="chat-info">
+                      <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Alice
+                          Todd</span><span class="chat-time" data-control-secondary-text="virtual">12:15 PM</span><br>
+                        This is just a chat line that can get as long as needed</p>
+                    </div>
+                  </div>
+                  <div class="active-chat">
+                    <div class="options-icons">
+                      <ul>
+                        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M3.18182 5.72733C3.18182 5.19915 3.60818 4.77278 4.13636 4.77278C4.66455 4.77278 5.09091 5.19915 5.09091 5.72733C5.09091 6.25551 4.66455 6.68187 4.13636 6.68187C3.60818 6.68187 3.18182 6.25551 3.18182 5.72733ZM6.36364 10.8182C7.84636 10.8182 9.10636 9.88915 9.61545 8.59096H3.11182C3.62091 9.88915 4.88091 10.8182 6.36364 10.8182ZM8.59091 6.68187C9.11909 6.68187 9.54545 6.25551 9.54545 5.72733C9.54545 5.19915 9.11909 4.77278 8.59091 4.77278C8.06273 4.77278 7.63636 5.19915 7.63636 5.72733C7.63636 6.25551 8.06273 6.68187 8.59091 6.68187ZM12.7273 0.318237H11.4545V1.59096H10.1818V2.86369H11.4545V4.13642H12.7273V2.86369H14V1.59096H12.7273V0.318237ZM11.4545 7.31824C11.4545 10.131 9.17636 12.4091 6.36364 12.4091C3.55091 12.4091 1.27273 10.131 1.27273 7.31824C1.27273 4.50551 3.55091 2.22733 6.36364 2.22733C7.29273 2.22733 8.15818 2.48187 8.90909 2.9146V1.48915C8.12636 1.14551 7.26727 0.954601 6.35727 0.954601C2.84455 0.954601 0 3.80551 0 7.31824C0 10.831 2.84455 13.6819 6.35727 13.6819C9.87636 13.6819 12.7273 10.831 12.7273 7.31824C12.7273 6.65006 12.6191 6.01369 12.4282 5.40915H11.0727C11.3145 6.00096 11.4545 6.64369 11.4545 7.31824Z"
+                              fill="#3C4153"></path>
+                          </svg></li>
+                        <li class="active"><svg height="24" width="3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 64 512">
+                            <path
+                              d="M32 224c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM0 136c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32zm0 240c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32z"
+                              fill="#3C4153"></path>
+                          </svg></li>
+                      </ul>
+                    </div>
+                    <div class="chat-avatar">
+                      <img src="../img/virtual/Desmond.png" class="chat-avatar">
+                    </div>
+                    <div class="chat-info">
+                      <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Desmond
+                          Patrick</span><span class="chat-time" data-control-secondary-text="virtual">30 seconds
+                          ago</span><br>
+                        This is a different attendee adding to the chat</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-options">
+                  <div class="carot-block"></div>
+                  <ul>
+                    <li>Add reaction</li>
+                    <li>Pin message</li>
+                    <li>Send a direct message (DM)</li>
+                    <li>Invite to my private room</li>
+                    <li>Delete message</li>
+                    <li>Block chat</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chat-type" data-control-primary-text="virtual">
+                <p class="your-message">Type your message here...</p>
+                <div class="send-buttons">
+                  <button>
+                    <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                      <path
+                        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </button>
+                  <button class="send"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stage -->
+      <div class="page-container min-width hide" data-page="stage" data-panel="stage" data-editable="no"
+        data-control-theme="stage">
+        <div class="page" data-control-font="body" data-control-theme="page">
+          <!-- Header -->
+          <header class="virtual-header" data-page="virtual-header" data-panel="virtual-header" data-editable="yes"
+            data-control-header-bg="header" data-control-border="virtual-header">
+            <nav>
+              <img src="../img/logo-dark.svg" alt="Company Name" class="coverlogo light">
+              <img src="../img/logo-light.svg" alt="Company Name" class="coverlogo dark">
+              <ul>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.06061 15.5C7.33675 15.5 7.56061 15.2761 7.56061 15V10.5588H10.4394V15C10.4394 15.2761 10.6633 15.5 10.9394 15.5H15.3879C15.664 15.5 15.8879 15.2761 15.8879 15V8.91176H17C17.2057 8.91176 17.3904 8.78578 17.4655 8.59426C17.5406 8.40274 17.4907 8.18479 17.3398 8.04498L9.33981 0.633219C9.14809 0.455594 8.85191 0.455594 8.66019 0.633219L0.660188 8.04498C0.509289 8.18479 0.459413 8.40274 0.534495 8.59426C0.609576 8.78578 0.794292 8.91176 1 8.91176H2.11212V15C2.11212 15.2761 2.33598 15.5 2.61212 15.5H7.06061Z"
+                        stroke="currentColor" stroke-linejoin="round"></path>
+                    </svg>
+                    Lobby
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="">
+                      <path
+                        d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                    Agenda
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="activenav" data-page="virtual-header" data-panel="virtual-header"
+                    data-editable="no" data-control-nav-active="virtual-header">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="path-1-inside-3" fill="white">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2 0C0.895431 0 0 0.89543 0 2V8.57992C0 9.68449 0.895431 10.5799 2 10.5799H14.2225C15.3271 10.5799 16.2225 9.68449 16.2225 8.57992V2C16.2225 0.895431 15.3271 0 14.2225 0H2ZM2 11.6473C0.895431 11.6473 0 12.5427 0 13.6473V13.9999C0 15.1045 0.895429 15.9999 2 15.9999H2.35266C3.45723 15.9999 4.35266 15.1045 4.35266 13.9999V13.6473C4.35266 12.5427 3.45723 11.6473 2.35266 11.6473H2ZM5.82363 13.6473C5.82363 12.5427 6.71906 11.6473 7.82363 11.6473H8.17629C9.28086 11.6473 10.1763 12.5427 10.1763 13.6473V13.9999C10.1763 15.1045 9.28086 15.9999 8.17629 15.9999H7.82363C6.71906 15.9999 5.82363 15.1045 5.82363 13.9999V13.6473ZM13.6473 11.6473C12.5427 11.6473 11.6473 12.5427 11.6473 13.6473V13.9999C11.6473 15.1045 12.5427 15.9999 13.6473 15.9999H13.9999C15.1045 15.9999 15.9999 15.1045 15.9999 13.9999V13.6473C15.9999 12.5427 15.1045 11.6473 13.9999 11.6473H13.6473Z">
+                        </path>
+                      </mask>
+                      <path
+                        d="M1 2C1 1.44772 1.44772 1 2 1V-1C0.343146 -1 -1 0.343145 -1 2H1ZM1 8.57992V2H-1V8.57992H1ZM2 9.57992C1.44772 9.57992 1 9.13221 1 8.57992H-1C-1 10.2368 0.343147 11.5799 2 11.5799V9.57992ZM14.2225 9.57992H2V11.5799H14.2225V9.57992ZM15.2225 8.57992C15.2225 9.13221 14.7748 9.57992 14.2225 9.57992V11.5799C15.8794 11.5799 17.2225 10.2368 17.2225 8.57992H15.2225ZM15.2225 2V8.57992H17.2225V2H15.2225ZM14.2225 1C14.7748 1 15.2225 1.44772 15.2225 2H17.2225C17.2225 0.343145 15.8794 -1 14.2225 -1V1ZM2 1H14.2225V-1H2V1ZM1 13.6473C1 13.095 1.44771 12.6473 2 12.6473V10.6473C0.343147 10.6473 -1 11.9904 -1 13.6473H1ZM1 13.9999V13.6473H-1V13.9999H1ZM2 14.9999C1.44771 14.9999 1 14.5522 1 13.9999H-1C-1 15.6568 0.343143 16.9999 2 16.9999V14.9999ZM2.35266 14.9999H2V16.9999H2.35266V14.9999ZM3.35266 13.9999C3.35266 14.5522 2.90494 14.9999 2.35266 14.9999V16.9999C4.00951 16.9999 5.35266 15.6568 5.35266 13.9999H3.35266ZM3.35266 13.6473V13.9999H5.35266V13.6473H3.35266ZM2.35266 12.6473C2.90494 12.6473 3.35266 13.095 3.35266 13.6473H5.35266C5.35266 11.9904 4.00951 10.6473 2.35266 10.6473V12.6473ZM2 12.6473H2.35266V10.6473H2V12.6473ZM7.82363 10.6473C6.16678 10.6473 4.82363 11.9904 4.82363 13.6473H6.82363C6.82363 13.095 7.27135 12.6473 7.82363 12.6473V10.6473ZM8.17629 10.6473H7.82363V12.6473H8.17629V10.6473ZM11.1763 13.6473C11.1763 11.9904 9.83315 10.6473 8.17629 10.6473V12.6473C8.72857 12.6473 9.17629 13.095 9.17629 13.6473H11.1763ZM11.1763 13.9999V13.6473H9.17629V13.9999H11.1763ZM8.17629 16.9999C9.83314 16.9999 11.1763 15.6568 11.1763 13.9999H9.17629C9.17629 14.5522 8.72857 14.9999 8.17629 14.9999V16.9999ZM7.82363 16.9999H8.17629V14.9999H7.82363V16.9999ZM4.82363 13.9999C4.82363 15.6568 6.16677 16.9999 7.82363 16.9999V14.9999C7.27135 14.9999 6.82363 14.5522 6.82363 13.9999H4.82363ZM4.82363 13.6473V13.9999H6.82363V13.6473H4.82363ZM12.6473 13.6473C12.6473 13.095 13.095 12.6473 13.6473 12.6473V10.6473C11.9904 10.6473 10.6473 11.9904 10.6473 13.6473H12.6473ZM12.6473 13.9999V13.6473H10.6473V13.9999H12.6473ZM13.6473 14.9999C13.095 14.9999 12.6473 14.5522 12.6473 13.9999H10.6473C10.6473 15.6568 11.9904 16.9999 13.6473 16.9999V14.9999ZM13.9999 14.9999H13.6473V16.9999H13.9999V14.9999ZM14.9999 13.9999C14.9999 14.5522 14.5522 14.9999 13.9999 14.9999V16.9999C15.6568 16.9999 16.9999 15.6568 16.9999 13.9999H14.9999ZM14.9999 13.6473V13.9999H16.9999V13.6473H14.9999ZM13.9999 12.6473C14.5522 12.6473 14.9999 13.095 14.9999 13.6473H16.9999C16.9999 11.9904 15.6568 10.6473 13.9999 10.6473V12.6473ZM13.6473 12.6473H13.9999V10.6473H13.6473V12.6473Z"
+                        fill="currentColor" mask="url(#path-1-inside-3)"></path>
+                    </svg>
+                    Stage
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.5 11.5C4.5 12.6046 3.60457 13.5 2.5 13.5C1.39543 13.5 0.5 12.6046 0.5 11.5C0.5 10.3954 1.39543 9.5 2.5 9.5C3.60457 9.5 4.5 10.3954 4.5 11.5Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M15.1665 11.5C15.1665 12.6046 14.2711 13.5 13.1665 13.5C12.0619 13.5 11.1665 12.6046 11.1665 11.5C11.1665 10.3954 12.0619 9.5 13.1665 9.5C14.2711 9.5 15.1665 10.3954 15.1665 11.5Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M14.3018 7.59717C14.2081 6.70039 13.9473 5.89067 13.5193 5.168C13.0912 4.44532 12.4959 3.8097 11.7335 3.26113"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M5.3418 14C6.21774 14.3709 7.09652 14.5625 7.97814 14.5747C8.85977 14.587 9.74424 14.42 10.6316 14.0737"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M1.78174 8C1.80691 7.09925 2.00548 6.27415 2.37747 5.5247C2.74946 4.77525 3.29486 4.10145 4.01367 3.5033"
+                        stroke="currentColor" stroke-linecap="round"></path>
+                      <path
+                        d="M9.8335 2.5C9.8335 3.60457 8.93807 4.5 7.8335 4.5C6.72893 4.5 5.8335 3.60457 5.8335 2.5C5.8335 1.39543 6.72893 0.5 7.8335 0.5C8.93807 0.5 9.8335 1.39543 9.8335 2.5Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                    Networking
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                    data-control-nav="virtual-header">
+                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.5713 3.99243L14.7912 1.25611C14.6179 0.512361 14.389 0 13.6719 0H2.7274C2.01825 0 1.88433 0.520625 1.71886 1.25611L0.844247 3.99243C0.65514 4.83535 0.649189 5.26495 0.844247 5.62907C1.10991 6.125 1.46731 6.33041 1.52488 6.45339V12.3472C1.52488 13.2562 1.77399 14 2.64073 14H13.6719C14.5387 14 14.7912 13.2562 14.7912 12.3472V6.125C14.8622 6.05062 15.0746 6.03493 15.4685 5.50569C15.7437 5.13576 15.7683 4.83535 15.5713 3.99243ZM13.601 0.866736L14.4284 4.38083C14.5072 4.72792 14.4363 5.075 14.2314 5.34771C14.1211 5.49646 13.8847 5.73611 13.4907 5.73611C13.0101 5.73611 12.5925 5.33118 12.5373 4.79403L12.0803 0.875L13.601 0.866736ZM8.94428 0.875H10.4887L10.9141 4.51306C10.9535 4.83535 10.859 5.15764 10.6541 5.39729C10.4808 5.61215 10.2286 5.73611 9.90557 5.73611C9.37765 5.73611 8.94428 5.24854 8.94428 4.65354V0.875ZM5.39065 4.51306L5.82402 0.875H7.3684V4.65354C7.3684 5.24854 6.93502 5.73611 6.35195 5.73611C6.08404 5.73611 5.83978 5.61215 5.65068 5.39729C5.45369 5.15764 5.35914 4.83535 5.39065 4.51306ZM1.8843 4.38083L2.68013 0.875H4.23238L3.77537 4.79403C3.71233 5.33118 3.3026 5.73611 2.82196 5.73611C2.43586 5.73611 2.1916 5.49646 2.08917 5.34771C1.87643 5.08326 1.80551 4.72792 1.8843 4.38083ZM2.64073 13.125V6.4891C2.70377 6.49736 2.75892 6.51389 2.82196 6.51389C3.50747 6.51389 4.12994 6.21639 4.58695 5.72882C5.05972 6.22465 5.69007 6.51389 6.4071 6.51389C7.09261 6.51389 7.70721 6.21639 8.16422 5.74535C8.62911 6.21639 9.25946 6.51389 9.96861 6.51389C10.6305 6.51389 11.2608 6.22465 11.7336 5.72882C12.1906 6.21639 12.8131 6.51389 13.4986 6.51389C13.5616 6.51389 13.6168 6.49736 13.6798 6.4891V13.125H2.64073Z"
+                        fill="currentColor"></path>
+                    </svg>
+                    Booths
+                  </a>
+                </li>
+              </ul>
+              <!-- Empty UL for spacing -->
+              <ul></ul>
+            </nav>
+          </header>
+          <div class="virtual-body">
+            <!-- Center Content -->
+            <div class="outer-content" data-panel="stage" data-editable="yes">
+              <div class="virtual-main-content-col">
+                <div class="page-title-container" data-panel="stage-header">
+                  <div class="agenda-min" data-control-tab-active="virtual">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="">
+                      <path
+                        d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                  </div>
+                  <div class="page-title" data-control-textcolor="stage" data-control-title-bg="page-title">
+                    Stage
+                  </div>
+                </div>
+                <div class="stage" data-panel="stage-screen" data-control-stage-bg="stage">
+                  <div class="placeholder">
+                    Your video will begin shortly
+                  </div>
+                </div>
+                <div class="stage-footer" data-panel="stage-controls" data-control-background="stage">
+                  <div class="controls">
+                    <div class="single-control">
+                      <button class="control-btn">
+                        <span class="icon">
+                          <svg width="60%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path
+                              d="M633.82 458.1l-157.8-121.96C488.61 312.13 496 285.01 496 256v-48c0-8.84-7.16-16-16-16h-16c-8.84 0-16 7.16-16 16v48c0 17.92-3.96 34.8-10.72 50.2l-26.55-20.52c3.1-9.4 5.28-19.22 5.28-29.67V96c0-53.02-42.98-96-96-96s-96 42.98-96 96v45.36L45.47 3.37C38.49-2.05 28.43-.8 23.01 6.18L3.37 31.45C-2.05 38.42-.8 48.47 6.18 53.9l588.36 454.73c6.98 5.43 17.03 4.17 22.46-2.81l19.64-25.27c5.41-6.97 4.16-17.02-2.82-22.45zM400 464h-56v-33.77c11.66-1.6 22.85-4.54 33.67-8.31l-50.11-38.73c-6.71.4-13.41.87-20.35.2-55.85-5.45-98.74-48.63-111.18-101.85L144 241.31v6.85c0 89.64 63.97 169.55 152 181.69V464h-56c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16z"
+                              fill="#FF5A64"></path>
+                          </svg>
+                        </span>
+                        <span class="label">
+                          Unmute
+                        </span>
+                      </button>
+                      <button class="control-btn">
+                        <span class="icon">
+                          <svg width="60%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path
+                              d="M633.8 458.1l-55-42.5c15.4-1.4 29.2-13.7 29.2-31.1v-257c0-25.5-29.1-40.4-50.4-25.8L448 177.3v137.2l-32-24.7v-178c0-26.4-21.4-47.8-47.8-47.8H123.9L45.5 3.4C38.5-2 28.5-.8 23 6.2L3.4 31.4c-5.4 7-4.2 17 2.8 22.4L42.7 82 416 370.6l178.5 138c7 5.4 17 4.2 22.5-2.8l19.6-25.3c5.5-6.9 4.2-17-2.8-22.4zM32 400.2c0 26.4 21.4 47.8 47.8 47.8h288.4c11.2 0 21.4-4 29.6-10.5L32 154.7v245.5z"
+                              fill="#FF5A64"></path>
+                          </svg> </span>
+                        <span class="label">
+                          Start video
+                        </span>
+                      </button>
+                      <button class="control-btn">
+                        <span class="icon">
+                          <svg width="60%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path
+                              d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"
+                              fill="#6c7a8c"></path>
+                          </svg> </span>
+                        <span class="label">
+                          Share screen
+                        </span>
+                      </button>
+                      <button class="control-btn">
+                        <span class="icon">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="6" cy="6" r="6" fill="#FF5A64"></circle>
+                          </svg> </span>
+                        <span class="label">
+                          Record
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Rightside bar / Chat -->
+            <div class="sidebar-right" data-panel="chat-sidebar" data-editable="yes">
+              <div class="tabs" data-control-tab-bg="chat-tabs">
+                <div class="close">
+                  <button data-control-tab-static="virtual">
+                    <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.4423 1.0575L14.1273 3.75L3.49976 3.75V5.25L14.1273 5.25L11.4348 7.9425L12.4998 9L16.9998 4.5L12.4998 0L11.4423 1.0575ZM0 1.2458e-06L0 9H1.5L1.5 1.2458e-06L0 1.2458e-06Z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </button>
+                </div>
+                <button class="active" data-control-tab-active="virtual" data-control-active-background="chat-tabs">
+                  <span>
+                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.3175C1 3.10389 4.40554 0.5 8.6075 0.5C12.8095 0.5 16.215 3.10389 16.215 6.3175C16.215 9.53111 12.8095 12.135 8.6075 12.135C7.46637 12.135 6.38765 11.9364 5.41592 11.5924C4.68488 12.1406 3.20796 13.03 1.23773 13.03C1.14264 13.03 1.05943 12.9797 1.0208 12.8958C0.98217 12.8118 1 12.7168 1.06538 12.6524C1.08024 12.6384 2.3224 11.3826 2.69386 9.97302C1.63594 8.97453 1 7.70475 1 6.3175Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                  </span>
+                  Chat
+                </button>
+                <button data-control-tab-static="virtual">
+                  <span>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.51515 3.95775C4.51515 2.32113 5.8827 1 7.57683 1C9.27096 1 10.6385 2.32113 10.6385 3.95775C10.6385 5.59437 9.27096 6.91549 7.57683 6.91549C5.8827 6.91549 4.51515 5.59437 4.51515 3.95775Z"
+                        stroke="currentColor"></path>
+                      <path
+                        d="M13.7002 11.8254C12.3837 13.738 10.1282 15 7.57683 15C5.02543 15 2.77 13.738 1.45347 11.8254C1.48409 9.86338 5.54592 8.78873 7.57683 8.78873C9.61795 8.78873 13.6696 9.86338 13.7002 11.8254Z"
+                        stroke="currentColor"></path>
+                    </svg>
+                  </span>
+                  Attendees
+                </button>
+                <button data-control-tab-static="virtual">
+                  <span>
+                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.26392 14.1765H5.19529C4.58886 14.1765 4.09725 13.6849 4.09725 13.0784C4.09725 12.472 4.58886 11.9804 5.19529 11.9804H5.26392C5.87035 11.9804 6.36196 12.472 6.36196 13.0784C6.36196 13.6849 5.87035 14.1765 5.26392 14.1765Z"
+                        stroke="currentColor" stroke-width="0.75"></path>
+                      <path
+                        d="M0.729085 4.89305C0.98443 2.70161 2.90115 1 5.22961 1C7.73211 1 9.75902 2.96549 9.75902 5.39216C9.75902 7.94116 6.82996 8.35994 6.41149 10.3848C6.3556 10.6552 6.1381 10.8824 5.86196 10.8824H4.59725C4.32111 10.8824 4.09395 10.6555 4.12132 10.3807C4.42467 7.33482 7.49431 7.47972 7.49431 5.39216C7.49431 4.18431 6.47519 3.19608 5.22961 3.19608C4.1596 3.19608 3.25671 3.92535 3.02343 4.89663C2.95894 5.16513 2.74104 5.39216 2.4649 5.39216H1.2002C0.924053 5.39216 0.697126 5.16733 0.729085 4.89305Z"
+                        stroke="currentColor" stroke-width="0.75"></path>
+                    </svg>
+                  </span>
+                  Help
+                </button>
+                <ul></ul>
+              </div>
+              <ul class="sub-tabs">
+                <li><button class="active" data-control-tab-active="virtual">General</button></li>
+                <li><button data-control-tab-static="virtual">DMs</button></li>
+              </ul>
+              <!-- Chat Empty -->
+              <!-- <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 35 35">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.23284 6.81591C8.40867 4.38743 12.7492 2.91667 17.5 2.91667C22.2508 2.91667 26.5913 4.38743 29.7672 6.81591C32.944 9.24518 35 12.6779 35 16.553C35 20.428 32.944 23.8607 29.7672 26.29C26.5913 28.7185 22.2508 30.1893 17.5 30.1893C15.1211 30.1893 12.859 29.8088 10.7921 29.1396C8.994 30.3943 5.78084 32.1211 1.5924 32.1211C0.997467 32.1211 0.416274 31.7952 0.143817 31.2034C-0.130849 30.6069 -0.000325137 29.9139 0.463416 29.4576L0.480503 29.4408C0.480503 29.4408 0.486665 29.4343 0.493003 29.4276C0.587912 29.3283 1.16194 28.7272 1.81734 27.8288C2.44967 26.9619 3.11251 25.879 3.51151 24.751C1.33661 22.5015 0 19.6718 0 16.553C0 12.6779 2.05597 9.24518 5.23284 6.81591ZM6.54398 8.53055C3.77795 10.6457 2.1585 13.4915 2.1585 16.553C2.1585 19.1981 3.36761 21.6684 5.47621 23.6585L5.9424 24.0985L5.77905 24.7184C5.32863 26.4277 4.36961 27.9926 3.56116 29.1008C3.34889 29.3918 3.14274 29.6571 2.95281 29.8912C6.2027 29.5493 8.6571 28.055 9.9635 27.0754L10.4261 26.7285L10.9712 26.9215C12.9554 27.6239 15.1621 28.0308 17.5 28.0308C21.8191 28.0308 25.6889 26.6913 28.456 24.5754C31.222 22.4603 32.8415 19.6144 32.8415 16.553C32.8415 13.4915 31.222 10.6457 28.456 8.53055C25.6889 6.41464 21.8191 5.07516 17.5 5.07516C13.1809 5.07516 9.31106 6.41464 6.54398 8.53055Z"
+                      fill="currentColor"></path>
+                    <path fill="currentColor" fill-rule="evenodd"
+                      d="M5.233 6.816c3.176-2.429 7.516-3.9 12.267-3.9 4.75 0 9.091 1.471 12.267 3.9C32.944 9.246 35 12.678 35 16.553s-2.056 7.308-5.233 9.737c-3.176 2.428-7.516 3.9-12.267 3.9-2.379 0-4.641-.381-6.708-1.05-1.798 1.254-5.011 2.981-9.2 2.981a1.583 1.583 0 01-1.448-.918 1.538 1.538 0 01.32-1.745l.017-.017.012-.013c.095-.1.669-.7 1.324-1.6.633-.866 1.296-1.949 1.695-3.077C1.337 22.501 0 19.671 0 16.553c0-3.875 2.056-7.308 5.233-9.737zM6.544 8.53c-2.766 2.115-4.385 4.96-4.385 8.022 0 2.645 1.209 5.115 3.317 7.105l.466.44-.163.62c-.45 1.71-1.41 3.275-2.218 4.383a19.47 19.47 0 01-.608.79c3.25-.342 5.704-1.836 7.01-2.816l.463-.346.545.193c1.984.702 4.191 1.109 6.529 1.109 4.32 0 8.189-1.34 10.956-3.456 2.766-2.115 4.386-4.96 4.386-8.022 0-3.062-1.62-5.907-4.386-8.022-2.767-2.116-6.637-3.456-10.956-3.456-4.32 0-8.189 1.34-10.956 3.456z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <p>There are no messages yet. Use the text input below to chat.</p>
+                </div>
+              </div> -->
+              <!-- Chat Messages -->
+              <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <div class="active-chat">
+                    <div class="chat-avatar">
+                      <img src="../img/virtual/Alice.png" class="chat-avatar">
+                    </div>
+                    <div class="chat-info">
+                      <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Alice
+                          Todd</span><span class="chat-time" data-control-secondary-text="virtual">12:15 PM</span><br>
+                        This is just a chat line that can get as long as needed</p>
+                    </div>
+                  </div>
+                  <div class="active-chat">
+                    <div class="options-icons">
+                      <ul>
+                        <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M3.18182 5.72733C3.18182 5.19915 3.60818 4.77278 4.13636 4.77278C4.66455 4.77278 5.09091 5.19915 5.09091 5.72733C5.09091 6.25551 4.66455 6.68187 4.13636 6.68187C3.60818 6.68187 3.18182 6.25551 3.18182 5.72733ZM6.36364 10.8182C7.84636 10.8182 9.10636 9.88915 9.61545 8.59096H3.11182C3.62091 9.88915 4.88091 10.8182 6.36364 10.8182ZM8.59091 6.68187C9.11909 6.68187 9.54545 6.25551 9.54545 5.72733C9.54545 5.19915 9.11909 4.77278 8.59091 4.77278C8.06273 4.77278 7.63636 5.19915 7.63636 5.72733C7.63636 6.25551 8.06273 6.68187 8.59091 6.68187ZM12.7273 0.318237H11.4545V1.59096H10.1818V2.86369H11.4545V4.13642H12.7273V2.86369H14V1.59096H12.7273V0.318237ZM11.4545 7.31824C11.4545 10.131 9.17636 12.4091 6.36364 12.4091C3.55091 12.4091 1.27273 10.131 1.27273 7.31824C1.27273 4.50551 3.55091 2.22733 6.36364 2.22733C7.29273 2.22733 8.15818 2.48187 8.90909 2.9146V1.48915C8.12636 1.14551 7.26727 0.954601 6.35727 0.954601C2.84455 0.954601 0 3.80551 0 7.31824C0 10.831 2.84455 13.6819 6.35727 13.6819C9.87636 13.6819 12.7273 10.831 12.7273 7.31824C12.7273 6.65006 12.6191 6.01369 12.4282 5.40915H11.0727C11.3145 6.00096 11.4545 6.64369 11.4545 7.31824Z"
+                              fill="#3C4153"></path>
+                          </svg></li>
+                        <li class="active"><svg height="24" width="3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 64 512">
+                            <path
+                              d="M32 224c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM0 136c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32zm0 240c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32z"
+                              fill="#3C4153"></path>
+                          </svg></li>
+                      </ul>
+                    </div>
+                    <div class="chat-avatar">
+                      <img src="../img/virtual/Desmond.png" class="chat-avatar">
+                    </div>
+                    <div class="chat-info">
+                      <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Desmond
+                          Patrick</span><span class="chat-time" data-control-secondary-text="virtual">30 seconds
+                          ago</span><br>
+                        This is a different attendee adding to the chat</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-options">
+                  <div class="carot-block"></div>
+                  <ul>
+                    <li>Add reaction</li>
+                    <li>Pin message</li>
+                    <li>Send a direct message (DM)</li>
+                    <li>Invite to my private room</li>
+                    <li>Delete message</li>
+                    <li>Block chat</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chat-type" data-control-primary-text="virtual">
+                <p class="your-message">Type your message here...</p>
+                <div class="send-buttons">
+                  <button>
+                    <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                      <path
+                        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                        fill="currentColor"></path>
+                    </svg>
+                  </button>
+                  <button class="send"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========== -->
+      <!-- Networking -->
+      <div class="page-container min-width hide" data-page="networking" data-panel="networking" data-editable="no"">
+          <div class=" page" data-control-font="body" data-control-theme="page">
+        <!-- Header -->
+        <header class="virtual-header" data-page="virtual-header" data-panel="virtual-header" data-editable="yes"
+          data-control-header-bg="header" data-control-border="virtual-header">
+          <nav>
+            <img src="../img/logo-dark.svg" alt="Company Name" class="coverlogo light">
+            <img src="../img/logo-light.svg" alt="Company Name" class="coverlogo dark">
+            <ul>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.06061 15.5C7.33675 15.5 7.56061 15.2761 7.56061 15V10.5588H10.4394V15C10.4394 15.2761 10.6633 15.5 10.9394 15.5H15.3879C15.664 15.5 15.8879 15.2761 15.8879 15V8.91176H17C17.2057 8.91176 17.3904 8.78578 17.4655 8.59426C17.5406 8.40274 17.4907 8.18479 17.3398 8.04498L9.33981 0.633219C9.14809 0.455594 8.85191 0.455594 8.66019 0.633219L0.660188 8.04498C0.509289 8.18479 0.459413 8.40274 0.534495 8.59426C0.609576 8.78578 0.794292 8.91176 1 8.91176H2.11212V15C2.11212 15.2761 2.33598 15.5 2.61212 15.5H7.06061Z"
+                      stroke="currentColor" stroke-linejoin="round"></path>
+                  </svg>
+                  Lobby
+                </a>
+              </li>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="">
+                    <path
+                      d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                  Agenda
+                </a>
+              </li>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="path-1-inside-4" fill="white">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2 0C0.895431 0 0 0.89543 0 2V8.57992C0 9.68449 0.895431 10.5799 2 10.5799H14.2225C15.3271 10.5799 16.2225 9.68449 16.2225 8.57992V2C16.2225 0.895431 15.3271 0 14.2225 0H2ZM2 11.6473C0.895431 11.6473 0 12.5427 0 13.6473V13.9999C0 15.1045 0.895429 15.9999 2 15.9999H2.35266C3.45723 15.9999 4.35266 15.1045 4.35266 13.9999V13.6473C4.35266 12.5427 3.45723 11.6473 2.35266 11.6473H2ZM5.82363 13.6473C5.82363 12.5427 6.71906 11.6473 7.82363 11.6473H8.17629C9.28086 11.6473 10.1763 12.5427 10.1763 13.6473V13.9999C10.1763 15.1045 9.28086 15.9999 8.17629 15.9999H7.82363C6.71906 15.9999 5.82363 15.1045 5.82363 13.9999V13.6473ZM13.6473 11.6473C12.5427 11.6473 11.6473 12.5427 11.6473 13.6473V13.9999C11.6473 15.1045 12.5427 15.9999 13.6473 15.9999H13.9999C15.1045 15.9999 15.9999 15.1045 15.9999 13.9999V13.6473C15.9999 12.5427 15.1045 11.6473 13.9999 11.6473H13.6473Z">
+                      </path>
+                    </mask>
+                    <path
+                      d="M1 2C1 1.44772 1.44772 1 2 1V-1C0.343146 -1 -1 0.343145 -1 2H1ZM1 8.57992V2H-1V8.57992H1ZM2 9.57992C1.44772 9.57992 1 9.13221 1 8.57992H-1C-1 10.2368 0.343147 11.5799 2 11.5799V9.57992ZM14.2225 9.57992H2V11.5799H14.2225V9.57992ZM15.2225 8.57992C15.2225 9.13221 14.7748 9.57992 14.2225 9.57992V11.5799C15.8794 11.5799 17.2225 10.2368 17.2225 8.57992H15.2225ZM15.2225 2V8.57992H17.2225V2H15.2225ZM14.2225 1C14.7748 1 15.2225 1.44772 15.2225 2H17.2225C17.2225 0.343145 15.8794 -1 14.2225 -1V1ZM2 1H14.2225V-1H2V1ZM1 13.6473C1 13.095 1.44771 12.6473 2 12.6473V10.6473C0.343147 10.6473 -1 11.9904 -1 13.6473H1ZM1 13.9999V13.6473H-1V13.9999H1ZM2 14.9999C1.44771 14.9999 1 14.5522 1 13.9999H-1C-1 15.6568 0.343143 16.9999 2 16.9999V14.9999ZM2.35266 14.9999H2V16.9999H2.35266V14.9999ZM3.35266 13.9999C3.35266 14.5522 2.90494 14.9999 2.35266 14.9999V16.9999C4.00951 16.9999 5.35266 15.6568 5.35266 13.9999H3.35266ZM3.35266 13.6473V13.9999H5.35266V13.6473H3.35266ZM2.35266 12.6473C2.90494 12.6473 3.35266 13.095 3.35266 13.6473H5.35266C5.35266 11.9904 4.00951 10.6473 2.35266 10.6473V12.6473ZM2 12.6473H2.35266V10.6473H2V12.6473ZM7.82363 10.6473C6.16678 10.6473 4.82363 11.9904 4.82363 13.6473H6.82363C6.82363 13.095 7.27135 12.6473 7.82363 12.6473V10.6473ZM8.17629 10.6473H7.82363V12.6473H8.17629V10.6473ZM11.1763 13.6473C11.1763 11.9904 9.83315 10.6473 8.17629 10.6473V12.6473C8.72857 12.6473 9.17629 13.095 9.17629 13.6473H11.1763ZM11.1763 13.9999V13.6473H9.17629V13.9999H11.1763ZM8.17629 16.9999C9.83314 16.9999 11.1763 15.6568 11.1763 13.9999H9.17629C9.17629 14.5522 8.72857 14.9999 8.17629 14.9999V16.9999ZM7.82363 16.9999H8.17629V14.9999H7.82363V16.9999ZM4.82363 13.9999C4.82363 15.6568 6.16677 16.9999 7.82363 16.9999V14.9999C7.27135 14.9999 6.82363 14.5522 6.82363 13.9999H4.82363ZM4.82363 13.6473V13.9999H6.82363V13.6473H4.82363ZM12.6473 13.6473C12.6473 13.095 13.095 12.6473 13.6473 12.6473V10.6473C11.9904 10.6473 10.6473 11.9904 10.6473 13.6473H12.6473ZM12.6473 13.9999V13.6473H10.6473V13.9999H12.6473ZM13.6473 14.9999C13.095 14.9999 12.6473 14.5522 12.6473 13.9999H10.6473C10.6473 15.6568 11.9904 16.9999 13.6473 16.9999V14.9999ZM13.9999 14.9999H13.6473V16.9999H13.9999V14.9999ZM14.9999 13.9999C14.9999 14.5522 14.5522 14.9999 13.9999 14.9999V16.9999C15.6568 16.9999 16.9999 15.6568 16.9999 13.9999H14.9999ZM14.9999 13.6473V13.9999H16.9999V13.6473H14.9999ZM13.9999 12.6473C14.5522 12.6473 14.9999 13.095 14.9999 13.6473H16.9999C16.9999 11.9904 15.6568 10.6473 13.9999 10.6473V12.6473ZM13.6473 12.6473H13.9999V10.6473H13.6473V12.6473Z"
+                      fill="currentColor" mask="url(#path-1-inside-4)"></path>
+                  </svg>
+                  Stage
+                </a>
+              </li>
+              <li>
+                <a href="#" class="activenav" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav-active="virtual-header">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4.5 11.5C4.5 12.6046 3.60457 13.5 2.5 13.5C1.39543 13.5 0.5 12.6046 0.5 11.5C0.5 10.3954 1.39543 9.5 2.5 9.5C3.60457 9.5 4.5 10.3954 4.5 11.5Z"
+                      stroke="currentColor"></path>
+                    <path
+                      d="M15.1665 11.5C15.1665 12.6046 14.2711 13.5 13.1665 13.5C12.0619 13.5 11.1665 12.6046 11.1665 11.5C11.1665 10.3954 12.0619 9.5 13.1665 9.5C14.2711 9.5 15.1665 10.3954 15.1665 11.5Z"
+                      stroke="currentColor"></path>
+                    <path
+                      d="M14.3018 7.59717C14.2081 6.70039 13.9473 5.89067 13.5193 5.168C13.0912 4.44532 12.4959 3.8097 11.7335 3.26113"
+                      stroke="currentColor" stroke-linecap="round"></path>
+                    <path
+                      d="M5.3418 14C6.21774 14.3709 7.09652 14.5625 7.97814 14.5747C8.85977 14.587 9.74424 14.42 10.6316 14.0737"
+                      stroke="currentColor" stroke-linecap="round"></path>
+                    <path
+                      d="M1.78174 8C1.80691 7.09925 2.00548 6.27415 2.37747 5.5247C2.74946 4.77525 3.29486 4.10145 4.01367 3.5033"
+                      stroke="currentColor" stroke-linecap="round"></path>
+                    <path
+                      d="M9.8335 2.5C9.8335 3.60457 8.93807 4.5 7.8335 4.5C6.72893 4.5 5.8335 3.60457 5.8335 2.5C5.8335 1.39543 6.72893 0.5 7.8335 0.5C8.93807 0.5 9.8335 1.39543 9.8335 2.5Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                  Networking
+                </a>
+              </li>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.5713 3.99243L14.7912 1.25611C14.6179 0.512361 14.389 0 13.6719 0H2.7274C2.01825 0 1.88433 0.520625 1.71886 1.25611L0.844247 3.99243C0.65514 4.83535 0.649189 5.26495 0.844247 5.62907C1.10991 6.125 1.46731 6.33041 1.52488 6.45339V12.3472C1.52488 13.2562 1.77399 14 2.64073 14H13.6719C14.5387 14 14.7912 13.2562 14.7912 12.3472V6.125C14.8622 6.05062 15.0746 6.03493 15.4685 5.50569C15.7437 5.13576 15.7683 4.83535 15.5713 3.99243ZM13.601 0.866736L14.4284 4.38083C14.5072 4.72792 14.4363 5.075 14.2314 5.34771C14.1211 5.49646 13.8847 5.73611 13.4907 5.73611C13.0101 5.73611 12.5925 5.33118 12.5373 4.79403L12.0803 0.875L13.601 0.866736ZM8.94428 0.875H10.4887L10.9141 4.51306C10.9535 4.83535 10.859 5.15764 10.6541 5.39729C10.4808 5.61215 10.2286 5.73611 9.90557 5.73611C9.37765 5.73611 8.94428 5.24854 8.94428 4.65354V0.875ZM5.39065 4.51306L5.82402 0.875H7.3684V4.65354C7.3684 5.24854 6.93502 5.73611 6.35195 5.73611C6.08404 5.73611 5.83978 5.61215 5.65068 5.39729C5.45369 5.15764 5.35914 4.83535 5.39065 4.51306ZM1.8843 4.38083L2.68013 0.875H4.23238L3.77537 4.79403C3.71233 5.33118 3.3026 5.73611 2.82196 5.73611C2.43586 5.73611 2.1916 5.49646 2.08917 5.34771C1.87643 5.08326 1.80551 4.72792 1.8843 4.38083ZM2.64073 13.125V6.4891C2.70377 6.49736 2.75892 6.51389 2.82196 6.51389C3.50747 6.51389 4.12994 6.21639 4.58695 5.72882C5.05972 6.22465 5.69007 6.51389 6.4071 6.51389C7.09261 6.51389 7.70721 6.21639 8.16422 5.74535C8.62911 6.21639 9.25946 6.51389 9.96861 6.51389C10.6305 6.51389 11.2608 6.22465 11.7336 5.72882C12.1906 6.21639 12.8131 6.51389 13.4986 6.51389C13.5616 6.51389 13.6168 6.49736 13.6798 6.4891V13.125H2.64073Z"
+                      fill="currentColor"></path>
+                  </svg>
+                  Booths
+                </a>
+              </li>
+            </ul>
+            <!-- Empty UL for spacing -->
+            <ul></ul>
+          </nav>
+        </header>
+        <div class="virtual-body">
+          <!-- Center Content -->
+          <div class="outer-content" data-panel="networking" data-editable="yes">
+            <div class="virtual-main-content-col" data-control-content-bg="content">
+              <div class="page-title-container" data-control-title-bg="page-title">
+                <div class="agenda-min" data-control-tab-active="virtual">
+                  <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="">
+                    <path
+                      d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="page-title">
+                  Event Name
+                </div>
+              </div>
+              <div class="agenda-search" data-control-card-border="networking" data-control-card-bg="card">
+                <ul>
+                  <li data-control-primary-text="virtual" data-control-border="networking"><span>Search</span><svg
+                      width="20" height="24" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                        fill="currentColor"></path>
+                    </svg></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <div class="agenda-card" data-control-card-border="card-border" data-control-card-bg="card">
+                  <div class="agenda-name">
+                    <p data-control-primary-text="virtual">Networking Table</p>
+                  </div>
+                  <div class="agenda-description">
+                    <p data-control-primary-text="virtual">Quis nulla ut sit eu a vestibulum parturient ultricies
+                      consectetur sociosqu potenti egestas mus at tempor.</p>
+                  </div>
+                  <div class="agenda-actions">
+                    <div class="agenda-calendar">
+                      <button class="btn primary" data-control-btn-primary="primary">Join</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="agenda-card" data-control-card-border="card-border" data-control-card-bg="card">
+                  <div class="agenda-name">
+                    <p data-control-primary-text="virtual">Networking Table</p>
+                  </div>
+                  <div class="agenda-description">
+                    <p data-control-primary-text="virtual">Quis nulla ut sit eu a vestibulum parturient ultricies
+                      consectetur sociosqu potenti egestas mus at tempor.</p>
+                  </div>
+                  <div class="agenda-actions">
+                    <div class="agenda-calendar">
+                      <button class="btn primary" data-control-btn-primary="primary">Join</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="agenda-card" data-control-card-border="card-border" data-control-card-bg="card">
+                  <div class="agenda-name">
+                    <p data-control-primary-text="virtual">Networking Table</p>
+                  </div>
+                  <div class="agenda-description">
+                    <p data-control-primary-text="virtual">Quis nulla ut sit eu a vestibulum parturient ultricies
+                      consectetur sociosqu potenti egestas mus at tempor.</p>
+                  </div>
+                  <div class="agenda-actions">
+                    <div class="agenda-calendar">
+                      <button class="btn primary" data-control-btn-primary="primary">Join</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Rightside bar / Chat -->
+          <div class="sidebar-right" data-panel="chat-sidebar" data-editable="yes">
+            <div class="tabs" data-control-tab-bg="chat-tabs">
+              <div class="close">
+                <button data-control-tab-static="virtual">
+                  <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.4423 1.0575L14.1273 3.75L3.49976 3.75V5.25L14.1273 5.25L11.4348 7.9425L12.4998 9L16.9998 4.5L12.4998 0L11.4423 1.0575ZM0 1.2458e-06L0 9H1.5L1.5 1.2458e-06L0 1.2458e-06Z"
+                      fill="currentColor"></path>
+                  </svg>
+                </button>
+              </div>
+              <button class="active" data-control-tab-active="virtual" data-control-active-background="chat-tabs">
+                <span>
+                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 6.3175C1 3.10389 4.40554 0.5 8.6075 0.5C12.8095 0.5 16.215 3.10389 16.215 6.3175C16.215 9.53111 12.8095 12.135 8.6075 12.135C7.46637 12.135 6.38765 11.9364 5.41592 11.5924C4.68488 12.1406 3.20796 13.03 1.23773 13.03C1.14264 13.03 1.05943 12.9797 1.0208 12.8958C0.98217 12.8118 1 12.7168 1.06538 12.6524C1.08024 12.6384 2.3224 11.3826 2.69386 9.97302C1.63594 8.97453 1 7.70475 1 6.3175Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                </span>
+                Chat
+              </button>
+              <button data-control-tab-static="virtual">
+                <span>
+                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4.51515 3.95775C4.51515 2.32113 5.8827 1 7.57683 1C9.27096 1 10.6385 2.32113 10.6385 3.95775C10.6385 5.59437 9.27096 6.91549 7.57683 6.91549C5.8827 6.91549 4.51515 5.59437 4.51515 3.95775Z"
+                      stroke="currentColor"></path>
+                    <path
+                      d="M13.7002 11.8254C12.3837 13.738 10.1282 15 7.57683 15C5.02543 15 2.77 13.738 1.45347 11.8254C1.48409 9.86338 5.54592 8.78873 7.57683 8.78873C9.61795 8.78873 13.6696 9.86338 13.7002 11.8254Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                </span>
+                Attendees
+              </button>
+              <button data-control-tab-static="virtual">
+                <span>
+                  <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.26392 14.1765H5.19529C4.58886 14.1765 4.09725 13.6849 4.09725 13.0784C4.09725 12.472 4.58886 11.9804 5.19529 11.9804H5.26392C5.87035 11.9804 6.36196 12.472 6.36196 13.0784C6.36196 13.6849 5.87035 14.1765 5.26392 14.1765Z"
+                      stroke="currentColor" stroke-width="0.75"></path>
+                    <path
+                      d="M0.729085 4.89305C0.98443 2.70161 2.90115 1 5.22961 1C7.73211 1 9.75902 2.96549 9.75902 5.39216C9.75902 7.94116 6.82996 8.35994 6.41149 10.3848C6.3556 10.6552 6.1381 10.8824 5.86196 10.8824H4.59725C4.32111 10.8824 4.09395 10.6555 4.12132 10.3807C4.42467 7.33482 7.49431 7.47972 7.49431 5.39216C7.49431 4.18431 6.47519 3.19608 5.22961 3.19608C4.1596 3.19608 3.25671 3.92535 3.02343 4.89663C2.95894 5.16513 2.74104 5.39216 2.4649 5.39216H1.2002C0.924053 5.39216 0.697126 5.16733 0.729085 4.89305Z"
+                      stroke="currentColor" stroke-width="0.75"></path>
+                  </svg>
+                </span>
+                Help
+              </button>
+              <ul></ul>
+            </div>
+            <ul class="sub-tabs">
+              <li><button class="active" data-control-tab-active="virtual">General</button></li>
+              <li><button data-control-tab-static="virtual">DMs</button></li>
+            </ul>
+            <!-- Chat Empty -->
+            <!-- <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 35 35">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.23284 6.81591C8.40867 4.38743 12.7492 2.91667 17.5 2.91667C22.2508 2.91667 26.5913 4.38743 29.7672 6.81591C32.944 9.24518 35 12.6779 35 16.553C35 20.428 32.944 23.8607 29.7672 26.29C26.5913 28.7185 22.2508 30.1893 17.5 30.1893C15.1211 30.1893 12.859 29.8088 10.7921 29.1396C8.994 30.3943 5.78084 32.1211 1.5924 32.1211C0.997467 32.1211 0.416274 31.7952 0.143817 31.2034C-0.130849 30.6069 -0.000325137 29.9139 0.463416 29.4576L0.480503 29.4408C0.480503 29.4408 0.486665 29.4343 0.493003 29.4276C0.587912 29.3283 1.16194 28.7272 1.81734 27.8288C2.44967 26.9619 3.11251 25.879 3.51151 24.751C1.33661 22.5015 0 19.6718 0 16.553C0 12.6779 2.05597 9.24518 5.23284 6.81591ZM6.54398 8.53055C3.77795 10.6457 2.1585 13.4915 2.1585 16.553C2.1585 19.1981 3.36761 21.6684 5.47621 23.6585L5.9424 24.0985L5.77905 24.7184C5.32863 26.4277 4.36961 27.9926 3.56116 29.1008C3.34889 29.3918 3.14274 29.6571 2.95281 29.8912C6.2027 29.5493 8.6571 28.055 9.9635 27.0754L10.4261 26.7285L10.9712 26.9215C12.9554 27.6239 15.1621 28.0308 17.5 28.0308C21.8191 28.0308 25.6889 26.6913 28.456 24.5754C31.222 22.4603 32.8415 19.6144 32.8415 16.553C32.8415 13.4915 31.222 10.6457 28.456 8.53055C25.6889 6.41464 21.8191 5.07516 17.5 5.07516C13.1809 5.07516 9.31106 6.41464 6.54398 8.53055Z"
+                      fill="currentColor"></path>
+                    <path fill="currentColor" fill-rule="evenodd"
+                      d="M5.233 6.816c3.176-2.429 7.516-3.9 12.267-3.9 4.75 0 9.091 1.471 12.267 3.9C32.944 9.246 35 12.678 35 16.553s-2.056 7.308-5.233 9.737c-3.176 2.428-7.516 3.9-12.267 3.9-2.379 0-4.641-.381-6.708-1.05-1.798 1.254-5.011 2.981-9.2 2.981a1.583 1.583 0 01-1.448-.918 1.538 1.538 0 01.32-1.745l.017-.017.012-.013c.095-.1.669-.7 1.324-1.6.633-.866 1.296-1.949 1.695-3.077C1.337 22.501 0 19.671 0 16.553c0-3.875 2.056-7.308 5.233-9.737zM6.544 8.53c-2.766 2.115-4.385 4.96-4.385 8.022 0 2.645 1.209 5.115 3.317 7.105l.466.44-.163.62c-.45 1.71-1.41 3.275-2.218 4.383a19.47 19.47 0 01-.608.79c3.25-.342 5.704-1.836 7.01-2.816l.463-.346.545.193c1.984.702 4.191 1.109 6.529 1.109 4.32 0 8.189-1.34 10.956-3.456 2.766-2.115 4.386-4.96 4.386-8.022 0-3.062-1.62-5.907-4.386-8.022-2.767-2.116-6.637-3.456-10.956-3.456-4.32 0-8.189 1.34-10.956 3.456z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <p>There are no messages yet. Use the text input below to chat.</p>
+                </div>
+              </div> -->
+            <!-- Chat Messages -->
+            <div class="chat">
+              <div class="empty" data-control-secondary-text="virtual">
+                <div class="active-chat">
+                  <div class="chat-avatar">
+                    <img src="../img/virtual/Alice.png" class="chat-avatar">
+                  </div>
+                  <div class="chat-info">
+                    <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Alice
+                        Todd</span><span class="chat-time" data-control-secondary-text="virtual">12:15 PM</span><br>
+                      This is just a chat line that can get as long as needed</p>
+                  </div>
+                </div>
+                <div class="active-chat">
+                  <div class="options-icons">
+                    <ul>
+                      <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.18182 5.72733C3.18182 5.19915 3.60818 4.77278 4.13636 4.77278C4.66455 4.77278 5.09091 5.19915 5.09091 5.72733C5.09091 6.25551 4.66455 6.68187 4.13636 6.68187C3.60818 6.68187 3.18182 6.25551 3.18182 5.72733ZM6.36364 10.8182C7.84636 10.8182 9.10636 9.88915 9.61545 8.59096H3.11182C3.62091 9.88915 4.88091 10.8182 6.36364 10.8182ZM8.59091 6.68187C9.11909 6.68187 9.54545 6.25551 9.54545 5.72733C9.54545 5.19915 9.11909 4.77278 8.59091 4.77278C8.06273 4.77278 7.63636 5.19915 7.63636 5.72733C7.63636 6.25551 8.06273 6.68187 8.59091 6.68187ZM12.7273 0.318237H11.4545V1.59096H10.1818V2.86369H11.4545V4.13642H12.7273V2.86369H14V1.59096H12.7273V0.318237ZM11.4545 7.31824C11.4545 10.131 9.17636 12.4091 6.36364 12.4091C3.55091 12.4091 1.27273 10.131 1.27273 7.31824C1.27273 4.50551 3.55091 2.22733 6.36364 2.22733C7.29273 2.22733 8.15818 2.48187 8.90909 2.9146V1.48915C8.12636 1.14551 7.26727 0.954601 6.35727 0.954601C2.84455 0.954601 0 3.80551 0 7.31824C0 10.831 2.84455 13.6819 6.35727 13.6819C9.87636 13.6819 12.7273 10.831 12.7273 7.31824C12.7273 6.65006 12.6191 6.01369 12.4282 5.40915H11.0727C11.3145 6.00096 11.4545 6.64369 11.4545 7.31824Z"
+                            fill="#3C4153"></path>
+                        </svg></li>
+                      <li class="active"><svg height="24" width="3" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 64 512">
+                          <path
+                            d="M32 224c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM0 136c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32zm0 240c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32z"
+                            fill="#3C4153"></path>
+                        </svg></li>
+                    </ul>
+                  </div>
+                  <div class="chat-avatar">
+                    <img src="../img/virtual/Desmond.png" class="chat-avatar">
+                  </div>
+                  <div class="chat-info">
+                    <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Desmond
+                        Patrick</span><span class="chat-time" data-control-secondary-text="virtual">30 seconds
+                        ago</span><br>
+                      This is a different attendee adding to the chat</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-options">
+                <div class="carot-block"></div>
+                <ul>
+                  <li>Add reaction</li>
+                  <li>Pin message</li>
+                  <li>Send a direct message (DM)</li>
+                  <li>Invite to my private room</li>
+                  <li>Delete message</li>
+                  <li>Block chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="chat-type" data-control-primary-text="virtual">
+              <p class="your-message">Type your message here...</p>
+              <div class="send-buttons">
+                <button>
+                  <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                    <path
+                      d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                      fill="currentColor"></path>
+                  </svg>
+                </button>
+                <button class="send"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== -->
+    <!-- Booths -->
+    <div class="page-container min-width hide" data-page="booths" data-panel="booths" data-editable="no"
+      data-control-theme="booths">
+      <div class="page" data-control-font="body" data-control-theme="page">
+        <!-- Header -->
+        <header class="virtual-header" data-page="virtual-header" data-panel="virtual-header" data-editable="yes"
+          data-control-header-bg="header" data-control-border="virtual-header">
+          <nav>
+            <img src="../img/logo-dark.svg" alt="Company Name" class="coverlogo light">
+            <img src="../img/logo-light.svg" alt="Company Name" class="coverlogo dark">
+            <ul>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.06061 15.5C7.33675 15.5 7.56061 15.2761 7.56061 15V10.5588H10.4394V15C10.4394 15.2761 10.6633 15.5 10.9394 15.5H15.3879C15.664 15.5 15.8879 15.2761 15.8879 15V8.91176H17C17.2057 8.91176 17.3904 8.78578 17.4655 8.59426C17.5406 8.40274 17.4907 8.18479 17.3398 8.04498L9.33981 0.633219C9.14809 0.455594 8.85191 0.455594 8.66019 0.633219L0.660188 8.04498C0.509289 8.18479 0.459413 8.40274 0.534495 8.59426C0.609576 8.78578 0.794292 8.91176 1 8.91176H2.11212V15C2.11212 15.2761 2.33598 15.5 2.61212 15.5H7.06061Z"
+                      stroke="currentColor" stroke-linejoin="round"></path>
+                  </svg>
+                  Lobby
+                </a>
+              </li>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="">
+                    <path
+                      d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                  Agenda
+                </a>
+              </li>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="path-1-inside-5" fill="white">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2 0C0.895431 0 0 0.89543 0 2V8.57992C0 9.68449 0.895431 10.5799 2 10.5799H14.2225C15.3271 10.5799 16.2225 9.68449 16.2225 8.57992V2C16.2225 0.895431 15.3271 0 14.2225 0H2ZM2 11.6473C0.895431 11.6473 0 12.5427 0 13.6473V13.9999C0 15.1045 0.895429 15.9999 2 15.9999H2.35266C3.45723 15.9999 4.35266 15.1045 4.35266 13.9999V13.6473C4.35266 12.5427 3.45723 11.6473 2.35266 11.6473H2ZM5.82363 13.6473C5.82363 12.5427 6.71906 11.6473 7.82363 11.6473H8.17629C9.28086 11.6473 10.1763 12.5427 10.1763 13.6473V13.9999C10.1763 15.1045 9.28086 15.9999 8.17629 15.9999H7.82363C6.71906 15.9999 5.82363 15.1045 5.82363 13.9999V13.6473ZM13.6473 11.6473C12.5427 11.6473 11.6473 12.5427 11.6473 13.6473V13.9999C11.6473 15.1045 12.5427 15.9999 13.6473 15.9999H13.9999C15.1045 15.9999 15.9999 15.1045 15.9999 13.9999V13.6473C15.9999 12.5427 15.1045 11.6473 13.9999 11.6473H13.6473Z">
+                      </path>
+                    </mask>
+                    <path
+                      d="M1 2C1 1.44772 1.44772 1 2 1V-1C0.343146 -1 -1 0.343145 -1 2H1ZM1 8.57992V2H-1V8.57992H1ZM2 9.57992C1.44772 9.57992 1 9.13221 1 8.57992H-1C-1 10.2368 0.343147 11.5799 2 11.5799V9.57992ZM14.2225 9.57992H2V11.5799H14.2225V9.57992ZM15.2225 8.57992C15.2225 9.13221 14.7748 9.57992 14.2225 9.57992V11.5799C15.8794 11.5799 17.2225 10.2368 17.2225 8.57992H15.2225ZM15.2225 2V8.57992H17.2225V2H15.2225ZM14.2225 1C14.7748 1 15.2225 1.44772 15.2225 2H17.2225C17.2225 0.343145 15.8794 -1 14.2225 -1V1ZM2 1H14.2225V-1H2V1ZM1 13.6473C1 13.095 1.44771 12.6473 2 12.6473V10.6473C0.343147 10.6473 -1 11.9904 -1 13.6473H1ZM1 13.9999V13.6473H-1V13.9999H1ZM2 14.9999C1.44771 14.9999 1 14.5522 1 13.9999H-1C-1 15.6568 0.343143 16.9999 2 16.9999V14.9999ZM2.35266 14.9999H2V16.9999H2.35266V14.9999ZM3.35266 13.9999C3.35266 14.5522 2.90494 14.9999 2.35266 14.9999V16.9999C4.00951 16.9999 5.35266 15.6568 5.35266 13.9999H3.35266ZM3.35266 13.6473V13.9999H5.35266V13.6473H3.35266ZM2.35266 12.6473C2.90494 12.6473 3.35266 13.095 3.35266 13.6473H5.35266C5.35266 11.9904 4.00951 10.6473 2.35266 10.6473V12.6473ZM2 12.6473H2.35266V10.6473H2V12.6473ZM7.82363 10.6473C6.16678 10.6473 4.82363 11.9904 4.82363 13.6473H6.82363C6.82363 13.095 7.27135 12.6473 7.82363 12.6473V10.6473ZM8.17629 10.6473H7.82363V12.6473H8.17629V10.6473ZM11.1763 13.6473C11.1763 11.9904 9.83315 10.6473 8.17629 10.6473V12.6473C8.72857 12.6473 9.17629 13.095 9.17629 13.6473H11.1763ZM11.1763 13.9999V13.6473H9.17629V13.9999H11.1763ZM8.17629 16.9999C9.83314 16.9999 11.1763 15.6568 11.1763 13.9999H9.17629C9.17629 14.5522 8.72857 14.9999 8.17629 14.9999V16.9999ZM7.82363 16.9999H8.17629V14.9999H7.82363V16.9999ZM4.82363 13.9999C4.82363 15.6568 6.16677 16.9999 7.82363 16.9999V14.9999C7.27135 14.9999 6.82363 14.5522 6.82363 13.9999H4.82363ZM4.82363 13.6473V13.9999H6.82363V13.6473H4.82363ZM12.6473 13.6473C12.6473 13.095 13.095 12.6473 13.6473 12.6473V10.6473C11.9904 10.6473 10.6473 11.9904 10.6473 13.6473H12.6473ZM12.6473 13.9999V13.6473H10.6473V13.9999H12.6473ZM13.6473 14.9999C13.095 14.9999 12.6473 14.5522 12.6473 13.9999H10.6473C10.6473 15.6568 11.9904 16.9999 13.6473 16.9999V14.9999ZM13.9999 14.9999H13.6473V16.9999H13.9999V14.9999ZM14.9999 13.9999C14.9999 14.5522 14.5522 14.9999 13.9999 14.9999V16.9999C15.6568 16.9999 16.9999 15.6568 16.9999 13.9999H14.9999ZM14.9999 13.6473V13.9999H16.9999V13.6473H14.9999ZM13.9999 12.6473C14.5522 12.6473 14.9999 13.095 14.9999 13.6473H16.9999C16.9999 11.9904 15.6568 10.6473 13.9999 10.6473V12.6473ZM13.6473 12.6473H13.9999V10.6473H13.6473V12.6473Z"
+                      fill="currentColor" mask="url(#path-1-inside-5)"></path>
+                  </svg>
+                  Stage
+                </a>
+              </li>
+              <li>
+                <a href="#" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav="virtual-header">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4.5 11.5C4.5 12.6046 3.60457 13.5 2.5 13.5C1.39543 13.5 0.5 12.6046 0.5 11.5C0.5 10.3954 1.39543 9.5 2.5 9.5C3.60457 9.5 4.5 10.3954 4.5 11.5Z"
+                      stroke="currentColor"></path>
+                    <path
+                      d="M15.1665 11.5C15.1665 12.6046 14.2711 13.5 13.1665 13.5C12.0619 13.5 11.1665 12.6046 11.1665 11.5C11.1665 10.3954 12.0619 9.5 13.1665 9.5C14.2711 9.5 15.1665 10.3954 15.1665 11.5Z"
+                      stroke="currentColor"></path>
+                    <path
+                      d="M14.3018 7.59717C14.2081 6.70039 13.9473 5.89067 13.5193 5.168C13.0912 4.44532 12.4959 3.8097 11.7335 3.26113"
+                      stroke="currentColor" stroke-linecap="round"></path>
+                    <path
+                      d="M5.3418 14C6.21774 14.3709 7.09652 14.5625 7.97814 14.5747C8.85977 14.587 9.74424 14.42 10.6316 14.0737"
+                      stroke="currentColor" stroke-linecap="round"></path>
+                    <path
+                      d="M1.78174 8C1.80691 7.09925 2.00548 6.27415 2.37747 5.5247C2.74946 4.77525 3.29486 4.10145 4.01367 3.5033"
+                      stroke="currentColor" stroke-linecap="round"></path>
+                    <path
+                      d="M9.8335 2.5C9.8335 3.60457 8.93807 4.5 7.8335 4.5C6.72893 4.5 5.8335 3.60457 5.8335 2.5C5.8335 1.39543 6.72893 0.5 7.8335 0.5C8.93807 0.5 9.8335 1.39543 9.8335 2.5Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                  Networking
+                </a>
+              </li>
+              <li>
+                <a href="#" class="activenav" data-page="virtual-header" data-panel="virtual-header" data-editable="no"
+                  data-control-nav-active="virtual-header">
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.5713 3.99243L14.7912 1.25611C14.6179 0.512361 14.389 0 13.6719 0H2.7274C2.01825 0 1.88433 0.520625 1.71886 1.25611L0.844247 3.99243C0.65514 4.83535 0.649189 5.26495 0.844247 5.62907C1.10991 6.125 1.46731 6.33041 1.52488 6.45339V12.3472C1.52488 13.2562 1.77399 14 2.64073 14H13.6719C14.5387 14 14.7912 13.2562 14.7912 12.3472V6.125C14.8622 6.05062 15.0746 6.03493 15.4685 5.50569C15.7437 5.13576 15.7683 4.83535 15.5713 3.99243ZM13.601 0.866736L14.4284 4.38083C14.5072 4.72792 14.4363 5.075 14.2314 5.34771C14.1211 5.49646 13.8847 5.73611 13.4907 5.73611C13.0101 5.73611 12.5925 5.33118 12.5373 4.79403L12.0803 0.875L13.601 0.866736ZM8.94428 0.875H10.4887L10.9141 4.51306C10.9535 4.83535 10.859 5.15764 10.6541 5.39729C10.4808 5.61215 10.2286 5.73611 9.90557 5.73611C9.37765 5.73611 8.94428 5.24854 8.94428 4.65354V0.875ZM5.39065 4.51306L5.82402 0.875H7.3684V4.65354C7.3684 5.24854 6.93502 5.73611 6.35195 5.73611C6.08404 5.73611 5.83978 5.61215 5.65068 5.39729C5.45369 5.15764 5.35914 4.83535 5.39065 4.51306ZM1.8843 4.38083L2.68013 0.875H4.23238L3.77537 4.79403C3.71233 5.33118 3.3026 5.73611 2.82196 5.73611C2.43586 5.73611 2.1916 5.49646 2.08917 5.34771C1.87643 5.08326 1.80551 4.72792 1.8843 4.38083ZM2.64073 13.125V6.4891C2.70377 6.49736 2.75892 6.51389 2.82196 6.51389C3.50747 6.51389 4.12994 6.21639 4.58695 5.72882C5.05972 6.22465 5.69007 6.51389 6.4071 6.51389C7.09261 6.51389 7.70721 6.21639 8.16422 5.74535C8.62911 6.21639 9.25946 6.51389 9.96861 6.51389C10.6305 6.51389 11.2608 6.22465 11.7336 5.72882C12.1906 6.21639 12.8131 6.51389 13.4986 6.51389C13.5616 6.51389 13.6168 6.49736 13.6798 6.4891V13.125H2.64073Z"
+                      fill="currentColor"></path>
+                  </svg>
+                  Booths
+                </a>
+              </li>
+            </ul>
+            <!-- Empty UL for spacing -->
+            <ul></ul>
+          </nav>
+        </header>
+        <div class="virtual-body">
+          <!-- Center Content -->
+          <div class="outer-content" data-panel="booths" data-editable="yes">
+            <div class="virtual-main-content-col" data-control-content-bg="content">
+              <div class="page-title-container" data-control-title-bg="page-title">
+                <div class="agenda-min" data-control-tab-active="virtual">
+                  <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="">
+                    <path
+                      d="M4.38963 6.08875L3.39286 6.64694V2.8H5.875V6.64694L4.87823 6.08875L4.63393 5.95194L4.38963 6.08875ZM11.25 0.5H2.89286C1.88369 0.5 1 1.27693 1 2.3V12.7C1 13.7231 1.88369 14.5 2.89286 14.5H11.25C12.2592 14.5 13.1429 13.7231 13.1429 12.7V2.3C13.1429 1.27693 12.2592 0.5 11.25 0.5Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="page-title">
+                  Event Name
+                </div>
+              </div>
+              <div class="agenda-search" data-control-card-bg="card" data-control-card-border="card-border">
+                <ul>
+                  <li data-control-primary-text="virtual" data-control-border="booths"><span>Search</span><svg
+                      width="20" height="24" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                        fill="currentColor"></path>
+                    </svg></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <div class="agenda-card" data-control-card-bg="card" data-control-card-border="card-border">
+                  <div class="booth-img-container" data-control-card-inner-border="card-divider">
+                    <img src="../img/virtual/booth_logo_1.png">
+                  </div>
+                  <div class="agenda-name">
+                    <p data-control-primary-text="virtual">Booth Title</p>
+                  </div>
+                  <div class="agenda-description">
+                    <p data-control-primary-text="virtual">Quis nulla ut sit eu a vestibulum parturient ultricies
+                      consectetur sociosqu potenti egestas mus at tempor.</p>
+                  </div>
+                  <div class="agenda-actions">
+                    <div class="agenda-calendar">
+                      <button class="btn primary" data-control-btn-primary="primary">Join</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="agenda-card" data-control-card-bg="card" data-control-card-border="card-border">
+                  <div class="booth-img-container" data-control-card-inner-border="card-divider">
+                    <img src="../img/virtual/booth_logo_2.png">
+                  </div>
+                  <div class="agenda-name">
+                    <p data-control-primary-text="virtual">Booth Title</p>
+                  </div>
+                  <div class="agenda-description">
+                    <p data-control-primary-text="virtual">Quis nulla ut sit eu a vestibulum parturient ultricies
+                      consectetur sociosqu potenti egestas mus at tempor.</p>
+                  </div>
+                  <div class="agenda-actions">
+                    <div class="agenda-calendar">
+                      <button class="btn primary" data-control-btn-primary="primary">Join</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="agenda-card" data-control-card-bg="card" data-control-card-border="card-border">
+                  <div class="booth-img-container" data-control-card-inner-border="card-divider">
+                    <img src="../img/virtual/booth_logo_2.png">
+                  </div>
+                  <div class="agenda-name">
+                    <p data-control-primary-text="virtual">Booth Title</p>
+                  </div>
+                  <div class="agenda-description">
+                    <p data-control-primary-text="virtual">Quis nulla ut sit eu a vestibulum parturient ultricies
+                      consectetur sociosqu potenti egestas mus at tempor.</p>
+                  </div>
+                  <div class="agenda-actions">
+                    <div class="agenda-calendar">
+                      <button class="btn primary" data-control-btn-primary="primary">Join</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Rightside bar / Chat -->
+          <div class="sidebar-right" data-panel="chat-sidebar" data-editable="yes">
+            <div class="tabs" data-control-tab-bg="chat-tabs">
+              <div class="close">
+                <button data-control-tab-static="virtual">
+                  <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.4423 1.0575L14.1273 3.75L3.49976 3.75V5.25L14.1273 5.25L11.4348 7.9425L12.4998 9L16.9998 4.5L12.4998 0L11.4423 1.0575ZM0 1.2458e-06L0 9H1.5L1.5 1.2458e-06L0 1.2458e-06Z"
+                      fill="currentColor"></path>
+                  </svg>
+                </button>
+              </div>
+              <button class="active" data-control-tab-active="virtual" data-control-active-background="chat-tabs">
+                <span>
+                  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 6.3175C1 3.10389 4.40554 0.5 8.6075 0.5C12.8095 0.5 16.215 3.10389 16.215 6.3175C16.215 9.53111 12.8095 12.135 8.6075 12.135C7.46637 12.135 6.38765 11.9364 5.41592 11.5924C4.68488 12.1406 3.20796 13.03 1.23773 13.03C1.14264 13.03 1.05943 12.9797 1.0208 12.8958C0.98217 12.8118 1 12.7168 1.06538 12.6524C1.08024 12.6384 2.3224 11.3826 2.69386 9.97302C1.63594 8.97453 1 7.70475 1 6.3175Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                </span>
+                Chat
+              </button>
+              <button data-control-tab-static="virtual">
+                <span>
+                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4.51515 3.95775C4.51515 2.32113 5.8827 1 7.57683 1C9.27096 1 10.6385 2.32113 10.6385 3.95775C10.6385 5.59437 9.27096 6.91549 7.57683 6.91549C5.8827 6.91549 4.51515 5.59437 4.51515 3.95775Z"
+                      stroke="currentColor"></path>
+                    <path
+                      d="M13.7002 11.8254C12.3837 13.738 10.1282 15 7.57683 15C5.02543 15 2.77 13.738 1.45347 11.8254C1.48409 9.86338 5.54592 8.78873 7.57683 8.78873C9.61795 8.78873 13.6696 9.86338 13.7002 11.8254Z"
+                      stroke="currentColor"></path>
+                  </svg>
+                </span>
+                Attendees
+              </button>
+              <button data-control-tab-static="virtual">
+                <span>
+                  <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.26392 14.1765H5.19529C4.58886 14.1765 4.09725 13.6849 4.09725 13.0784C4.09725 12.472 4.58886 11.9804 5.19529 11.9804H5.26392C5.87035 11.9804 6.36196 12.472 6.36196 13.0784C6.36196 13.6849 5.87035 14.1765 5.26392 14.1765Z"
+                      stroke="currentColor" stroke-width="0.75"></path>
+                    <path
+                      d="M0.729085 4.89305C0.98443 2.70161 2.90115 1 5.22961 1C7.73211 1 9.75902 2.96549 9.75902 5.39216C9.75902 7.94116 6.82996 8.35994 6.41149 10.3848C6.3556 10.6552 6.1381 10.8824 5.86196 10.8824H4.59725C4.32111 10.8824 4.09395 10.6555 4.12132 10.3807C4.42467 7.33482 7.49431 7.47972 7.49431 5.39216C7.49431 4.18431 6.47519 3.19608 5.22961 3.19608C4.1596 3.19608 3.25671 3.92535 3.02343 4.89663C2.95894 5.16513 2.74104 5.39216 2.4649 5.39216H1.2002C0.924053 5.39216 0.697126 5.16733 0.729085 4.89305Z"
+                      stroke="currentColor" stroke-width="0.75"></path>
+                  </svg>
+                </span>
+                Help
+              </button>
+              <ul></ul>
+            </div>
+            <ul class="sub-tabs">
+              <li><button class="active" data-control-tab-active="virtual">General</button></li>
+              <li><button data-control-tab-static="virtual">DMs</button></li>
+            </ul>
+            <!-- Chat Empty -->
+            <!-- <div class="chat">
+                <div class="empty" data-control-secondary-text="virtual">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 35 35">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.23284 6.81591C8.40867 4.38743 12.7492 2.91667 17.5 2.91667C22.2508 2.91667 26.5913 4.38743 29.7672 6.81591C32.944 9.24518 35 12.6779 35 16.553C35 20.428 32.944 23.8607 29.7672 26.29C26.5913 28.7185 22.2508 30.1893 17.5 30.1893C15.1211 30.1893 12.859 29.8088 10.7921 29.1396C8.994 30.3943 5.78084 32.1211 1.5924 32.1211C0.997467 32.1211 0.416274 31.7952 0.143817 31.2034C-0.130849 30.6069 -0.000325137 29.9139 0.463416 29.4576L0.480503 29.4408C0.480503 29.4408 0.486665 29.4343 0.493003 29.4276C0.587912 29.3283 1.16194 28.7272 1.81734 27.8288C2.44967 26.9619 3.11251 25.879 3.51151 24.751C1.33661 22.5015 0 19.6718 0 16.553C0 12.6779 2.05597 9.24518 5.23284 6.81591ZM6.54398 8.53055C3.77795 10.6457 2.1585 13.4915 2.1585 16.553C2.1585 19.1981 3.36761 21.6684 5.47621 23.6585L5.9424 24.0985L5.77905 24.7184C5.32863 26.4277 4.36961 27.9926 3.56116 29.1008C3.34889 29.3918 3.14274 29.6571 2.95281 29.8912C6.2027 29.5493 8.6571 28.055 9.9635 27.0754L10.4261 26.7285L10.9712 26.9215C12.9554 27.6239 15.1621 28.0308 17.5 28.0308C21.8191 28.0308 25.6889 26.6913 28.456 24.5754C31.222 22.4603 32.8415 19.6144 32.8415 16.553C32.8415 13.4915 31.222 10.6457 28.456 8.53055C25.6889 6.41464 21.8191 5.07516 17.5 5.07516C13.1809 5.07516 9.31106 6.41464 6.54398 8.53055Z"
+                      fill="currentColor"></path>
+                    <path fill="currentColor" fill-rule="evenodd"
+                      d="M5.233 6.816c3.176-2.429 7.516-3.9 12.267-3.9 4.75 0 9.091 1.471 12.267 3.9C32.944 9.246 35 12.678 35 16.553s-2.056 7.308-5.233 9.737c-3.176 2.428-7.516 3.9-12.267 3.9-2.379 0-4.641-.381-6.708-1.05-1.798 1.254-5.011 2.981-9.2 2.981a1.583 1.583 0 01-1.448-.918 1.538 1.538 0 01.32-1.745l.017-.017.012-.013c.095-.1.669-.7 1.324-1.6.633-.866 1.296-1.949 1.695-3.077C1.337 22.501 0 19.671 0 16.553c0-3.875 2.056-7.308 5.233-9.737zM6.544 8.53c-2.766 2.115-4.385 4.96-4.385 8.022 0 2.645 1.209 5.115 3.317 7.105l.466.44-.163.62c-.45 1.71-1.41 3.275-2.218 4.383a19.47 19.47 0 01-.608.79c3.25-.342 5.704-1.836 7.01-2.816l.463-.346.545.193c1.984.702 4.191 1.109 6.529 1.109 4.32 0 8.189-1.34 10.956-3.456 2.766-2.115 4.386-4.96 4.386-8.022 0-3.062-1.62-5.907-4.386-8.022-2.767-2.116-6.637-3.456-10.956-3.456-4.32 0-8.189 1.34-10.956 3.456z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <p>There are no messages yet. Use the text input below to chat.</p>
+                </div>
+              </div> -->
+            <!-- Chat Messages -->
+            <div class="chat">
+              <div class="empty" data-control-secondary-text="virtual">
+                <div class="active-chat">
+                  <div class="chat-avatar">
+                    <img src="../img/virtual/Alice.png" class="chat-avatar">
+                  </div>
+                  <div class="chat-info">
+                    <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Alice
+                        Todd</span><span class="chat-time" data-control-secondary-text="virtual">12:15 PM</span><br>
+                      This is just a chat line that can get as long as needed</p>
+                  </div>
+                </div>
+                <div class="active-chat">
+                  <div class="options-icons">
+                    <ul>
+                      <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.18182 5.72733C3.18182 5.19915 3.60818 4.77278 4.13636 4.77278C4.66455 4.77278 5.09091 5.19915 5.09091 5.72733C5.09091 6.25551 4.66455 6.68187 4.13636 6.68187C3.60818 6.68187 3.18182 6.25551 3.18182 5.72733ZM6.36364 10.8182C7.84636 10.8182 9.10636 9.88915 9.61545 8.59096H3.11182C3.62091 9.88915 4.88091 10.8182 6.36364 10.8182ZM8.59091 6.68187C9.11909 6.68187 9.54545 6.25551 9.54545 5.72733C9.54545 5.19915 9.11909 4.77278 8.59091 4.77278C8.06273 4.77278 7.63636 5.19915 7.63636 5.72733C7.63636 6.25551 8.06273 6.68187 8.59091 6.68187ZM12.7273 0.318237H11.4545V1.59096H10.1818V2.86369H11.4545V4.13642H12.7273V2.86369H14V1.59096H12.7273V0.318237ZM11.4545 7.31824C11.4545 10.131 9.17636 12.4091 6.36364 12.4091C3.55091 12.4091 1.27273 10.131 1.27273 7.31824C1.27273 4.50551 3.55091 2.22733 6.36364 2.22733C7.29273 2.22733 8.15818 2.48187 8.90909 2.9146V1.48915C8.12636 1.14551 7.26727 0.954601 6.35727 0.954601C2.84455 0.954601 0 3.80551 0 7.31824C0 10.831 2.84455 13.6819 6.35727 13.6819C9.87636 13.6819 12.7273 10.831 12.7273 7.31824C12.7273 6.65006 12.6191 6.01369 12.4282 5.40915H11.0727C11.3145 6.00096 11.4545 6.64369 11.4545 7.31824Z"
+                            fill="#3C4153"></path>
+                        </svg></li>
+                      <li class="active"><svg height="24" width="3" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 64 512">
+                          <path
+                            d="M32 224c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM0 136c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32zm0 240c0 17.7 14.3 32 32 32s32-14.3 32-32-14.3-32-32-32-32 14.3-32 32z"
+                            fill="#3C4153"></path>
+                        </svg></li>
+                    </ul>
+                  </div>
+                  <div class="chat-avatar">
+                    <img src="../img/virtual/Desmond.png" class="chat-avatar">
+                  </div>
+                  <div class="chat-info">
+                    <p class="chat-message"><span class="chat-name" data-control-primary-text="virtual">Desmond
+                        Patrick</span><span class="chat-time" data-control-secondary-text="virtual">30 seconds
+                        ago</span><br>
+                      This is a different attendee adding to the chat</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-options">
+                <div class="carot-block"></div>
+                <ul>
+                  <li>Add reaction</li>
+                  <li>Pin message</li>
+                  <li>Send a direct message (DM)</li>
+                  <li>Invite to my private room</li>
+                  <li>Delete message</li>
+                  <li>Block chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="chat-type" data-control-primary-text="virtual">
+              <p class="your-message">Type your message here...</p>
+              <div class="send-buttons">
+                <button>
+                  <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                    <path
+                      d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                      fill="currentColor"></path>
+                  </svg>
+                </button>
+                <button class="send"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== -->
+  <!-- Settings Start Here -->
+  <!-- ==================== -->
+  <div class="settings">
+    <!-- Close Button -->
+    <a href="#" class="close"><i class="las la-times-circle"></i></a>
+    <!-- Cover Page -->
+    <div class="section-settings virtual-settings" data-panel="cover">
+      <h3>Welcome screen options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may also
+          reflect in other sections of Bevy Virual.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Background color</strong>
+          <button class="switch" data-control-cover-bg="cover">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <p><strong>Font color</strong></p>
+          <button class="switch" data-control-textcolor="cover">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <p><strong>Primary buttons</strong></p>
+          <button class="switch" data-control-btn-primary="primary">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <p><strong>Link color</strong></p>
+          <button class="switch" data-control-links="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+      <ul id="dynamic-controls" class="controls bt hide">
+        <li>
+          <p><strong>Secondary text</strong></p>
+          <button class="switch" data-control-secondary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <p><strong>Secondary buttons</strong></p>
+          <button class="switch" data-control-btn-secondary="secondary">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+      <ul class="cover-interaction bt">
+        <li>
+          <button id="open-test" class="flex col btn show-dynamic" data-control-test="start">
+            <div class="las la-video btn-icons"></div>
+            Test audio and video
+          </button>
+          <button id="show-results" class="flex col btn show-dynamic hide" data-control-results="results">
+            <div class="las la-arrow-alt-circle-right btn-icons"></div>
+            Show test results
+          </button>
+          <button id="close-test" class="flex col btn show-dynamic hide" data-control-close="close">
+            <div class="las la-times-circle btn-icons"></div>
+            Close test
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- BVC Header Panel-->
+    <div class="section-settings virtual-settings" data-panel="virtual-header">
+      <h3>Header options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Background</strong>
+          <button class="switch" data-control-header-bg="header">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Border</strong>
+          <button class="switch" data-control-border="virtual-header">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Nav static color</strong>
+          <button class="switch" data-control-nav="virtual-header">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Nav active color</strong>
+          <button class="switch" data-control-nav-active="virtual-header">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Left Sidebar Panels -->
+    <div class="section-settings virtual-settings" data-panel="agenda-sidebar">
+      <h3>Agenda sidebar options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Primary text</strong>
+          <button class="switch" data-control-primary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Secondary text</strong>
+          <button class="switch" data-control-secondary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Tab icon color</strong>
+          <button class="switch" data-control-tab-static="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Primary buttons</strong>
+          <button class="switch" data-control-btn-primary="primary">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Secondary buttons</strong>
+          <button class="switch" data-control-btn-secondary="secondary">
+            <span class=" track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Right Sidebar Panels -->
+    <div class="section-settings virtual-settings" data-panel="chat-sidebar">
+      <h3>Chat sidebar options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Tabs background</strong>
+          <button class="switch" data-control-tab-bg="chat-tabs">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Tab icons color</strong>
+          <button class="switch" data-control-tab-static="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Active tab background</strong>
+          <button class="switch" data-control-active-background="chat-tabs">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Active tab color</strong>
+          <button class="switch" data-control-tab-active="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li class="divider">
+          <strong>Primary text</strong>
+          <button class="switch" data-control-primary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Secondary text</strong>
+          <button class="switch" data-control-secondary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Lobby Panel -->
+    <div class="section-settings virtual-settings" data-panel="lobby">
+      <h3>Lobby page options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Primary text</strong>
+          <button class="switch" data-control-primary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Secondary text</strong>
+          <button class="switch" data-control-secondary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Agenda Panels -->
+    <div class="section-settings virtual-settings" data-panel="agenda">
+      <h3>Agenda page options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Page title background</strong>
+          <button class="switch" data-control-title-bg="page-title">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Page background</strong>
+          <button class="switch" data-control-content-bg="content">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Primary text</strong>
+          <button class="switch" data-control-primary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Secondary text</strong>
+          <button class="switch" data-control-secondary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Active tab</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-links="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Add to calendar</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-links="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Add to my Agenda</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-btn-secondary="secondary">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Primary button</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-btn-primary="primary">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card background</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-bg="card">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card border</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-border="card-border">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card internal border</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-inner-border="card-divider">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card corners</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-radius="agenda">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Stage Panels -->
+    <div class="section-settings virtual-settings" data-panel="stage">
+      <h3>Stage options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Header text color</strong>
+          <button class="switch" data-control-textcolor="stage" data-control-title-bg="page-title">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Stage background</strong>
+          <button class="switch" data-control-stage-bg="stage">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <!-- <li>
+          <strong>Controls background</strong>
+          <button class="switch" data-control-background="stage">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li> -->
+      </ul>
+    </div>
+    <!-- Networking Panels -->
+    <div class="section-settings virtual-settings" data-panel="networking">
+      <h3>Networking page options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Page title background</strong>
+          <button class="switch" data-control-title-bg="page-title">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Page background</strong>
+          <button class="switch" data-control-content-bg="content">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Primary text</strong>
+          <button class="switch" data-control-primary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Primary button</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-btn-primary="primary">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card background</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-bg="card">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card border</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-border="card-border">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Booths Panel -->
+    <div class="section-settings virtual-settings" data-panel="booths">
+      <h3>Booths page options</h3>
+      <p class="settings-info" data-control-info="settings-info">
+        <i class="las la-exclamation-circle flex settings-icon"></i>
+        <span class="flex">Most color options are universal across the Bevy virtual experience. Color changes may
+          reflect in more than one section.</span>
+      </p>
+      <ul class="controls">
+        <li>
+          <strong>Page title background</strong>
+          <button class="switch" data-control-title-bg="page-title">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Page background</strong>
+          <button class="switch" data-control-content-bg="content">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Primary text</strong>
+          <button class="switch" data-control-primary-text="virtual">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Primary button</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-btn-primary="primary">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card background</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-bg="card">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card border</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-border="card-border">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <strong>Card inner border</strong>
+          <!-- Uses Link color from SE -->
+          <button class="switch" data-control-card-inner-border="card-divider">
+            <span class="track">
+              <span class="thumb"></span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</body>
+<!-- Original Scrript -->
+<script type="text/javascript" src="../js/functions.js"></script>
+<script type="text/javascript" src="../js/virtual.js"></script>
+
+</html>
