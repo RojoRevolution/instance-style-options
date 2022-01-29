@@ -1,5 +1,5 @@
 # Styling Options
-:zap: [Visit Site](https://www.rojorevolution.com/) - Use the password: *SEdemo*
+:zap: [Visit Site](https://rojorevolution.github.io/instance-style-options/) - Use the password: *SEdemo*
 
 ![alt text](/img/instance-styler.png)
 
